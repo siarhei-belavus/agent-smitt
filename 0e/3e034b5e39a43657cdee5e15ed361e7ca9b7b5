@@ -1,0 +1,25 @@
+skills/engineering/README.md
+  s_ad86528117e54a::t_12df42c872ae3a 28-29
+skills/engineering/pr/CREDITS.md
+  s_ad86528117e54a::t_db4144a214a371 1-5
+skills/engineering/pr/SKILL.md
+  s_ad86528117e54a::t_ea314a54ba50bb 1-174
+skills/engineering/pr/agents/openai.yaml
+  s_ad86528117e54a::t_c0069ee87ce93a 1-3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0e3e034b5e39a43657cdee5e15ed361e7ca9b7b5",
+  "prompts": {},
+  "sessions": {
+    "s_ad86528117e54a": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a15e73-fac3-78d2-b233-08c75d0e24ca",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    }
+  }
+}
