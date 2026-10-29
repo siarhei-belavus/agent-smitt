@@ -1,0 +1,19 @@
+README.md
+  s_d3a8ab2d8c9596::t_4914266cb7ae53 3-4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "43a0c9081013e416beee3fffbc3d5c1b710cd8f2",
+  "prompts": {},
+  "sessions": {
+    "s_d3a8ab2d8c9596": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1871d-cf62-77a1-ac59-0395377d97b1",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    }
+  }
+}
