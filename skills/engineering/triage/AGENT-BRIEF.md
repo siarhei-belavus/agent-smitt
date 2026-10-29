@@ -2,7 +2,7 @@
 
 An Agent Brief is the self-contained public executable contract attached to one triaged request before it becomes `ready-for-agent`. The original body and discussion remain context.
 
-Read the [acceptance criteria contract](../federated-workflow/PLANNING-ARTIFACTS.md#acceptance-criteria) before drafting or validating criteria, including for standalone requests without a Specification.
+Read the [acceptance criteria contract](references/bundled/federated-workflow/PLANNING-ARTIFACTS.md#acceptance-criteria) before drafting or validating criteria, including for standalone requests without a Specification.
 
 ## Principles
 

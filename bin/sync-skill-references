@@ -1,0 +1,142 @@
+#!/usr/bin/env python3
+"""Bundle linked Markdown references so each skill survives an isolated install."""
+from __future__ import annotations
+
+import argparse
+import os
+import re
+from pathlib import Path
+from urllib.parse import unquote, urlsplit
+
+
+ROOT = Path(__file__).resolve().parents[1]
+SKILLS = ROOT / "skills"
+BUNDLE = "references/bundled"
+LINK = re.compile(r"(?<!!)\[[^\]\n]*\]\(([^\s)]+)\)")
+FENCE = re.compile(r"^\s*(`{3,}|~{3,})")
+
+
+def markdown_links(text: str):
+    """Ignore fenced examples, whose paths belong to the example project."""
+    fence = None
+    offset = 0
+    for line in text.splitlines(keepends=True):
+        marker = FENCE.match(line)
+        if marker:
+            token = marker.group(1)
+            if fence is None:
+                fence = token
+            elif token[0] == fence[0] and len(token) >= len(fence):
+                fence = None
+        elif fence is None:
+            for match in LINK.finditer(line):
+                yield offset + match.start(1), offset + match.end(1), match.group(1)
+        offset += len(line)
+
+
+def canonical_target(source: Path, url: str) -> Path | None:
+    parts = urlsplit(url)
+    if parts.scheme or parts.netloc or not parts.path:
+        return None
+    path = unquote(parts.path)
+    # Bundled links in a canonical source point back to their editable source.
+    if path.startswith(BUNDLE + "/"):
+        package, relative = path[len(BUNDLE) + 1:].split("/", 1)
+        if relative == "SKILL.reference.md":
+            relative = "SKILL.md"
+        candidates = list(SKILLS.glob(f"*/{package}/{relative}"))
+        if len(candidates) != 1:
+            raise ValueError(f"Cannot resolve {url} in {source}")
+        target = candidates[0]
+    else:
+        target = (source.parent / path).resolve()
+    if not target.is_relative_to(SKILLS) or not target.is_file():
+        raise ValueError(f"Missing or external local reference {url} in {source}")
+    return target
+
+
+def bundled_path(source: Path, skill: Path) -> Path:
+    if source.is_relative_to(skill):
+        return source
+    _, package, *relative = source.relative_to(SKILLS).parts
+    if relative == ["SKILL.md"]:
+        relative = ["SKILL.reference.md"]
+    return skill / BUNDLE / package / Path(*relative)
+
+
+def package_skill(skill: Path) -> tuple[dict[Path, bytes], dict[Path, bytes]]:
+    originals = [p for p in skill.rglob("*.md") if BUNDLE not in p.relative_to(skill).as_posix()]
+    pending = list(originals)
+    visited = set()
+    canonical = {}
+    bundled = {}
+    while pending:
+        source = pending.pop()
+        if source in visited:
+            continue
+        visited.add(source)
+        destination = bundled_path(source, skill)
+        text = source.read_text(encoding="utf-8")
+        changes = []
+        for start, end, url in markdown_links(text):
+            target = canonical_target(source, url)
+            if target is None:
+                continue
+            pending.append(target)
+            if source.is_relative_to(skill) and target.is_relative_to(skill):
+                continue
+            output = bundled_path(target, skill)
+            path = os.path.relpath(output, destination.parent).replace(os.sep, "/")
+            fragment = urlsplit(url).fragment
+            replacement = path + ("#" + fragment if fragment else "")
+            if replacement != url:
+                changes.append((start, end, replacement))
+        for start, end, replacement in reversed(changes):
+            text = text[:start] + replacement + text[end:]
+        payload = text.encode("utf-8")
+        if source.is_relative_to(skill):
+            canonical[destination] = payload
+        else:
+            bundled[destination] = payload
+    return canonical, bundled
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--check", action="store_true", help="Check without writing")
+    args = parser.parse_args()
+    outputs = {}
+    expected_bundles = set()
+    existing_bundles = set()
+    skills = sorted(p.parent for p in SKILLS.glob("*/*/SKILL.md"))
+    for skill in skills:
+        canonical, bundled = package_skill(skill)
+        outputs.update(canonical)
+        outputs.update(bundled)
+        outputs[skill / "LICENSE"] = (ROOT / "LICENSE").read_bytes()
+        expected_bundles.update(bundled)
+        existing_bundles.update(p for p in (skill / BUNDLE).rglob("*") if p.is_file())
+    stale = existing_bundles - expected_bundles
+    changed = [p for p, data in outputs.items() if not p.is_file() or p.read_bytes() != data]
+    if args.check:
+        for path in sorted(set(changed) | stale):
+            print(f"Out of sync: {path.relative_to(ROOT)}")
+        return int(bool(changed or stale))
+    for path in stale:
+        path.unlink()
+    for path in changed:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(outputs[path])
+    # Remove empty generated directories after dependency removal.
+    for skill in skills:
+        bundle = skill / BUNDLE
+        if bundle.exists():
+            for directory in sorted(bundle.rglob("*"), reverse=True):
+                if directory.is_dir() and not any(directory.iterdir()):
+                    directory.rmdir()
+    print(f"Checked {len(skills)} skills; updated {len(changed)} files; removed {len(stale)} stale files.")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

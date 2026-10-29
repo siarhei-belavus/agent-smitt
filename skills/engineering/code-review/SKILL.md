@@ -5,7 +5,7 @@ description: Review fixed Repository Targets. Use when the user asks to review a
 
 Review committed or worktree changes since fixed points without modifying the reviewed repositories or external collaboration state.
 
-Read [delivery records](../federated-workflow/DELIVERY-RECORDS.md) before resolving targets or review authority. When review authority is Work Tracker-backed, read [Work Tracker context assembly](../federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md) before accepting a target.
+Read [delivery records](references/bundled/federated-workflow/DELIVERY-RECORDS.md) before resolving targets or review authority. When review authority is Work Tracker-backed, read [Work Tracker context assembly](references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md) before accepting a target.
 
 ## Public input
 

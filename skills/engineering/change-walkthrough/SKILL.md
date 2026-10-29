@@ -73,7 +73,7 @@ Render the scenario map, then exactly one logical step per response through [FOR
 
 The walkthrough is a guide, not an examination: navigation never requires the human to approve the design or prove understanding.
 
-When discussion meets the Follow-up candidate conditions in [FORMAT.md](FORMAT.md), trace the concern to exact code, authority, or observable behaviour, then use [review feedback](../review-feedback/SKILL.md) in Draft mode. Render the resulting draft through `FORMAT.md` and:
+When discussion meets the Follow-up candidate conditions in [FORMAT.md](FORMAT.md), trace the concern to exact code, authority, or observable behaviour, then use [review feedback](references/bundled/review-feedback/SKILL.reference.md) in Draft mode. Render the resulting draft through `FORMAT.md` and:
 
 - explicitly offer to add that comment to the merge request;
 - keep the walkthrough and its navigation state read-only.

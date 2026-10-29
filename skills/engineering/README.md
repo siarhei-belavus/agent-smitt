@@ -1,42 +1,45 @@
 # Engineering
 
-Skills I use daily for code work.
+Skills for planning, implementing, reviewing, and delivering software. See the [workflow guide](../../docs/workflow.md) for how they compose and the [full catalog](../../docs/skills.md) for invocation details.
+
+## Planning and setup
+
+| Skill | Purpose |
+| --- | --- |
+| [setup-federated-workflow](setup-federated-workflow/SKILL.md) | Configure provider bindings and domain orientation for a repository or federation. |
+| [ask-smitt](ask-smitt/SKILL.md) | Choose a route through the workflow. |
+| [grill-with-docs](grill-with-docs/SKILL.md) | Sharpen a design against the codebase and its domain language. |
+| [wayfinder](wayfinder/SKILL.md) | Resolve a large uncertain effort through decision tickets. |
+| [to-spec](to-spec/SKILL.md) | Turn accepted planning authority into a specification. |
+| [to-tickets](to-tickets/SKILL.md) | Split settled authority into executable vertical slices. |
+| [triage](triage/SKILL.md) | Prepare incoming reports and requests for execution. |
+| [prototype](prototype/SKILL.md) | Gather runnable evidence for a design question. |
+| [research](research/SKILL.md) | Investigate a question using primary sources. |
+
+## Design and implementation
+
+| Skill | Purpose |
+| --- | --- |
+| [domain-modeling](domain-modeling/SKILL.md) | Clarify domain language and route documentation changes. |
+| [codebase-design](codebase-design/SKILL.md) | Design deep modules and testable interfaces. |
+| [improve-codebase-architecture](improve-codebase-architecture/SKILL.md) | Find opportunities to improve module boundaries. |
+| [implement](implement/SKILL.md) | Implement authorized repository deliveries. |
+| [tdd](tdd/SKILL.md) | Develop behavior through a red, green, refactor loop. |
+| [diagnosing-bugs](diagnosing-bugs/SKILL.md) | Reproduce and investigate failures before fixing them. |
+| [resolving-merge-conflicts](resolving-merge-conflicts/SKILL.md) | Resolve merge or rebase conflicts by tracing intent. |
+
+## Review and delivery
+
+| Skill | Purpose |
+| --- | --- |
+| [coordinate-delivery](coordinate-delivery/SKILL.md) | Deliver one ready ticket across its authorized repositories. |
+| [code-review](code-review/SKILL.md) | Review fixed revisions against standards and specification. |
+| [review-feedback](review-feedback/SKILL.md) | Draft and publish actionable human review feedback. |
+| [change-walkthrough](change-walkthrough/SKILL.md) | Explore a change through end-to-end scenarios. |
+| [pr](pr/SKILL.md) | Write a PR or MR description grounded in the final change. |
+| [closeout](closeout/SKILL.md) | Record completion and remove verified disposable resources. |
+| [wizard](wizard/SKILL.md) | Generate a guided shell workflow for steps a human must perform. |
 
 ## Shared contracts
 
-- **[Federated workflow contracts](./federated-workflow/)** — Delivery and planning records, provider concepts and bindings, domain orientation and federation configuration, and durable lifecycle records loaded directly by the skills that need them.
-
-## User-invoked
-
-Reachable only when you invoke them explicitly.
-
-- [closeout](./closeout/SKILL.md). Close a completed delivery, record acceptance, and remove its worktrees and branches.
-- **[ask-matt](./ask-matt/SKILL.md)** — Ask which skill or flow fits your situation. A router over the user-invoked skills in this repo.
-- **[change-walkthrough](./change-walkthrough/SKILL.md)** — Explore a change set as a semantic zoom through end-to-end scenarios, one logical hop at a time.
-- **[grill-with-docs](./grill-with-docs/SKILL.md)** — One-session grilling with output-only domain modeling that returns a sharpened plan or design with complete Domain Model Deltas.
-- **[triage](./triage/SKILL.md)** — Move configured Work Tracker requests through triage and require a complete executable Agent Brief before `ready-for-agent`.
-- **[improve-codebase-architecture](./improve-codebase-architecture/SKILL.md)** — Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.
-- **[to-spec](./to-spec/SKILL.md)** — Synthesize a solution-level specification with Repository References, Context Scope, and complete Testing Decisions, then publish it to the configured Work Tracker.
-- **[to-tickets](./to-tickets/SKILL.md)** — Transform settled source authority into self-contained tracer-bullet delivery tickets, one file per ticket locally or provider-native items on the configured Work Tracker.
-- **[coordinate-delivery](./coordinate-delivery/SKILL.md)** — Coordinate one named or next agent-ready ticket through its complete federated delivery and human handoff.
-- **[wayfinder](./wayfinder/SKILL.md)** — Plan a huge, foggy effort as a configured Work Tracker map of decision tickets while preserving its planning-only frontier.
-
-## Model-invoked
-
-Model- or user-reachable (rich trigger phrasing so the model can reach for them).
-
-- [pr](./pr/SKILL.md). Write pull request and merge request descriptions with evidence and merge risk, following repository templates and provider bindings.
-
-- **[setup-federated-workflow](./setup-federated-workflow/SKILL.md)** — Configure one repository or establish or join a Domain Federation through repository-owned bindings.
-- **[prototype](./prototype/SKILL.md)** — Build a throwaway prototype to answer a design question: a terminal app or shareable HTML file for state/logic, or several toggleable UI variations.
-- **[review-feedback](./review-feedback/SKILL.md)** — Draft and publish human review feedback, then return a completed review round's delivery ticket for correction when explicitly requested.
-
-- **[diagnosing-bugs](./diagnosing-bugs/SKILL.md)** — Disciplined diagnosis loop for hard bugs and performance regressions: reproduce → minimise → hypothesise → instrument → fix → regression-test.
-- **[research](./research/SKILL.md)** — Investigate a question against high-trust primary sources and capture the findings as a cited Markdown file in the repo, run as a background agent.
-- **[tdd](./tdd/SKILL.md)** — Test-driven development with a red-green-refactor loop. Builds features or fixes bugs one vertical slice at a time.
-- **[domain-modeling](./domain-modeling/SKILL.md)** — Sharpen domain language and return complete Domain Model Deltas, with default canonical capture for explicit standalone use.
-- **[codebase-design](./codebase-design/SKILL.md)** — Shared discipline and vocabulary for designing deep modules: small interfaces, clean seams, testable through the interface.
-- **[implement](./implement/SKILL.md)** — Build one or more authorized Repository Deliveries with `tdd`, exact-head validation evidence, and standalone bundle review or one complete Coordinator narrowing assignment.
-- **[code-review](./code-review/SKILL.md)** — Selectable Standards and Spec review for one or more fixed Repository Targets: repository-local Standards results and one whole-bundle Spec result.
-- **[resolving-merge-conflicts](./resolving-merge-conflicts/SKILL.md)** — Work through an in-progress git merge or rebase conflict hunk by hunk, resolving by intent traced to each side's primary source, then finish the operation — never `--abort`.
-- **[wizard](./wizard/SKILL.md)**: Generate an interactive bash wizard that walks a human through steps only they can perform: provisioning infrastructure, setting up credentials or CI secrets, walking an unfamiliar third-party dashboard, or running a one-off migration or cutover.
+[Federated workflow](federated-workflow/) owns planning, delivery, provider, domain, and lifecycle contracts. It is reference material, not an installable skill. Required documents are bundled into each consuming skill for distribution.

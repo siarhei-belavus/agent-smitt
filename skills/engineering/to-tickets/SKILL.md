@@ -8,7 +8,7 @@ disable-model-invocation: true
 
 Break a plan, spec, or conversation into a set of **tickets** — tracer-bullet vertical slices, each declaring the tickets that **block** it.
 
-Read [planning artifact contracts](../federated-workflow/PLANNING-ARTIFACTS.md) and [Work Tracker context assembly](../federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md) first.
+Read [planning artifact contracts](references/bundled/federated-workflow/PLANNING-ARTIFACTS.md) and [Work Tracker context assembly](references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md) first.
 Use the configured Work Tracker, Routing Label mapping, and Domain Orientation when their bindings exist; preserve standalone Local Markdown behavior when they do not.
 
 ## Process
@@ -36,7 +36,7 @@ Break the work into **tracer bullet** tickets.
 - Each slice is sized to fit in a single fresh context window
 - Carry every source Implementation Decision and architecture decision relevant to the slice inside What to build
 - Carry every source Testing Decision relevant to the slice, including its settled seams, selected test approaches, and nearest prior art
-- Carry source acceptance criteria under the [shared criterion contract](../federated-workflow/PLANNING-ARTIFACTS.md#acceptance-criteria). When a criterion spans slices, state each slice's contribution and assign the remaining end-to-end acceptance to an identified delivery ticket before publication. A partial slice does not satisfy the whole criterion.
+- Carry source acceptance criteria under the [shared criterion contract](references/bundled/federated-workflow/PLANNING-ARTIFACTS.md#acceptance-criteria). When a criterion spans slices, state each slice's contribution and assign the remaining end-to-end acceptance to an identified delivery ticket before publication. A partial slice does not satisfy the whole criterion.
 </vertical-slice-rules>
 
 Give each ticket its **blocking edges** — the other tickets that must complete before it can start. A ticket with no blockers can start immediately.

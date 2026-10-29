@@ -9,7 +9,7 @@ Actively build and sharpen the project's domain model as you design. This is the
 
 ## Orient before modeling
 
-Load [DOMAIN-ORIENTATION.md](../federated-workflow/DOMAIN-ORIENTATION.md). If `docs/agents/domain.md` exists, read it and perform the configured Domain Orientation.
+Load [DOMAIN-ORIENTATION.md](references/bundled/federated-workflow/DOMAIN-ORIENTATION.md). If `docs/agents/domain.md` exists, read it and perform the configured Domain Orientation.
 
 Follow Repository-qualified Context Pointers through the configured portable repository identities. Checkout proximity may help resolve an already selected owner; it never selects an owner or grants write authority.
 

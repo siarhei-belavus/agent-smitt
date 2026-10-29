@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Triage
 
-Move requests through a small state machine of triage roles. Read [planning artifact contracts](../federated-workflow/PLANNING-ARTIFACTS.md) and [Work Tracker context assembly](../federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md) before acting. Preserve standalone behavior when the configured Work Tracker or Domain Orientation bindings do not exist.
+Move requests through a small state machine of triage roles. Read [planning artifact contracts](references/bundled/federated-workflow/PLANNING-ARTIFACTS.md) and [Work Tracker context assembly](references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md) before acting. Preserve standalone behavior when the configured Work Tracker or Domain Orientation bindings do not exist.
 
 If this repository treats external Review Proposals as a request surface (see the Work Tracker binding), triage applies the same roles and states to those proposals, with the differences marked below. Resolve a bare `#42` through the configured binding rather than Git-remote inference.
 

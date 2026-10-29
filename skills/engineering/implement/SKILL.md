@@ -5,7 +5,7 @@ description: "Implement repository deliveries from authoritative specs or ticket
 
 Implement the work described by the user in the authoritative spec or tickets.
 
-Read [delivery records](../federated-workflow/DELIVERY-RECORDS.md) before resolving the assignment.
+Read [delivery records](references/bundled/federated-workflow/DELIVERY-RECORDS.md) before resolving the assignment.
 
 ## Resolve the assignment
 

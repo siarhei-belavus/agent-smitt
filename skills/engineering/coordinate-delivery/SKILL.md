@@ -4,7 +4,7 @@ description: "Coordinate one agent-ready ticket through its complete federated d
 disable-model-invocation: true
 ---
 
-Read [Work Tracker context assembly](../federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md) before accepting ticket authority or preparing a repository delivery.
+Read [Work Tracker context assembly](references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md) before accepting ticket authority or preparing a repository delivery.
 
 A Coordinator Activation is one invocation that selects or resumes at most one ticket and owns only a claim it acquires and verifies.
 
@@ -32,7 +32,7 @@ For a ticketless activation, any pre-claim change or failed post-claim verificat
 
 After the claim is verified, select the activation's **Authority input**. Reuse an existing `Complete` Delivery Context Pack when its unchanged path remains available in the live Coordinator context, the file is readable, and its permanent root matches the claimed ticket. Otherwise invoke the shared Context Assembly contract with the Ticket Origin Repository, `Delivery Context`, and the claimed ticket's exact permanent reference. Reassembly is required only when no usable matching path remains. Accept only `Complete`, retain the selected path unchanged, and keep its private directory while the live Coordinator context may still resume. The Coordinator does not read the provider again to rebuild or augment it. For `Incomplete` or `Ambiguous`, enter the [human-boundary branch](HUMAN-BOUNDARY.md) with the claim and safe state preserved.
 
-Read [`../federated-workflow/PLANNING-ARTIFACTS.md`](../federated-workflow/PLANNING-ARTIFACTS.md) completely. Validate the assembled Delivery Context against the planning contracts. Require complete Repository References, resolvable Context Scope, non-empty Repository Scope with repository-owned outcomes, every applicable Settled Seam and Validation Obligation, and consistent ticket, dependency, user, canonical-context, ADR, and accepted-decision authority.
+Read [`../federated-workflow/PLANNING-ARTIFACTS.md`](references/bundled/federated-workflow/PLANNING-ARTIFACTS.md) completely. Validate the assembled Delivery Context against the planning contracts. Require complete Repository References, resolvable Context Scope, non-empty Repository Scope with repository-owned outcomes, every applicable Settled Seam and Validation Obligation, and consistent ticket, dependency, user, canonical-context, ADR, and accepted-decision authority.
 
 A Delivery Bundle is one ticket's complete delivery state: its Repository Deliveries; any Published Delivery Heads, Review Proposals, and lifecycle records; current validation and review evidence; and handoff state.
 
@@ -90,7 +90,7 @@ After every mandatory obligation has current passing evidence, use the `code-rev
 
 Re-read the ticket, claim, Published Delivery Heads, proposals, feedback, and current evidence. Return any drift to its earliest invalidated prerequisite. Mark every verified proposal ready and re-read it. Build `coordinate-delivery:<canonical ticket reference>:<SHA-256 of sorted Repository ID=exact head lines>`.
 
-Read [lifecycle artifact contracts](../federated-workflow/LIFECYCLE-ARTIFACTS.md) completely before writing the final handoff. Reuse a matching handoff; otherwise append one note recording every base, head, branch, proposal, validation and review result, Advisory finding, human action, merge/rollout order, unchanged delivery, preserved state, and limitation. Include no local path, credential, or secret. The complete handoff is the final Execution Checkpoint, so create no duplicate checkpoint note. Apply only missing final effects in order: replace `ready-for-agent` with exactly `ready-for-human`, release the Workflow Identity claim, re-read both effects, and leave the ticket open.
+Read [lifecycle artifact contracts](references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md) completely before writing the final handoff. Reuse a matching handoff; otherwise append one note recording every base, head, branch, proposal, validation and review result, Advisory finding, human action, merge/rollout order, unchanged delivery, preserved state, and limitation. Include no local path, credential, or secret. The complete handoff is the final Execution Checkpoint, so create no duplicate checkpoint note. Apply only missing final effects in order: replace `ready-for-agent` with exactly `ready-for-human`, release the Workflow Identity claim, re-read both effects, and leave the ticket open.
 
 **Complete when:** exactly one matching handoff exists, every proposal is ready at its recorded head, and the ticket is open, unassigned, and carries exactly `ready-for-human` among Routing Labels.
 

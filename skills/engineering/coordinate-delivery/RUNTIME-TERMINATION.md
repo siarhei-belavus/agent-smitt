@@ -1,6 +1,6 @@
 # Runtime Termination
 
-Read [lifecycle artifact contracts](../federated-workflow/LIFECYCLE-ARTIFACTS.md) before reconstructing a checkpoint.
+Read [lifecycle artifact contracts](references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md) before reconstructing a checkpoint.
 
 Read authoritative runtime state through the execution-host binding and resolve liveness through its provider evidence. A termination source is valid only when its provider record identifies the interrupted Coordinator Activation through its runtime-provided URL or equivalent reference, reconstructed checkpoint, and observed termination outcome. Use runtime-reference evidence only for observability and liveness diagnosis. Indeterminate liveness enters the [human-boundary branch](HUMAN-BOUNDARY.md) before claim release.
 

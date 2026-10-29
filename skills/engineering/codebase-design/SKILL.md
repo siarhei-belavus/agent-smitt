@@ -77,10 +77,10 @@ Treat the smallest coherent area as the full peer set within the same logical ow
 
 Keep current-truth documentation proportional to its purpose and audience. Select its document role as well as its repository owner:
 
-- `CONTEXT.md` describes the domain model through [CONTEXT-FORMAT.md](../domain-modeling/CONTEXT-FORMAT.md).
+- `CONTEXT.md` describes the domain model through [CONTEXT-FORMAT.md](references/bundled/domain-modeling/CONTEXT-FORMAT.md).
 - `README.md` gives a repository overview, essential usage, and navigation to detail.
 - `AGENTS.md` gives working rules and pointers that say when to consult their targets.
-- Architectural rationale follows [domain-modeling's ADR selection](../domain-modeling/SKILL.md#architecture-decisions).
+- Architectural rationale follows [domain-modeling's ADR selection](references/bundled/domain-modeling/SKILL.reference.md#architecture-decisions).
 - Necessary feature and mechanism details belong in module or API documentation when code and tests do not already explain them adequately.
 
 Read each affected overview as a whole. Its emphasis must reflect the significance of the system's responsibilities, not which feature changed most recently. Complete the documentation audit when each document serves its role and each overview remains representative of its full scope. Keep detailed documents discoverable through existing navigation without copying their contents into the overview. Update affected knowledge without requiring a new section or document for every delivery; keep delivery narration and one-off validation evidence in delivery records.

@@ -1,12 +1,12 @@
 # Human Boundary
 
-Read [lifecycle artifact contracts](../federated-workflow/LIFECYCLE-ARTIFACTS.md) completely before writing a checkpoint or request.
+Read [lifecycle artifact contracts](references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md) completely before writing a checkpoint or request.
 
 Preserve safe work and publish each recoverable changed head when authorized and safe. Create or update its single draft Review Proposal before an asynchronous or recoverable boundary; when publication is blocked, record that exact limitation. Record local-only work without treating it as a Published Delivery Head. Pause affected and dependent deliveries while preserving unrelated valid work.
 
 An Environment Preparation Blocker is a preparation failure that still needs human action after bounded recovery without destructive repair. A Specification Contradiction is conflicting or missing authority that execution cannot resolve. A Material Design Opportunity is an evidence-backed alternative that would reopen a settled decision; record the settled decision and required human choice.
 
-Create or refresh one [Execution Checkpoint](../federated-workflow/LIFECYCLE-ARTIFACTS.md#execution-checkpoint). Reuse the active [Human Action Request](../federated-workflow/LIFECYCLE-ARTIFACTS.md#human-action-request) when it already asks for the required action; otherwise create one only when none is active. State the exact obstacle, evidence, affected authority and deliveries, required human action, and next permissible step through those contracts.
+Create or refresh one [Execution Checkpoint](references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md#execution-checkpoint). Reuse the active [Human Action Request](references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md#human-action-request) when it already asks for the required action; otherwise create one only when none is active. State the exact obstacle, evidence, affected authority and deliveries, required human action, and next permissible step through those contracts.
 
 For planned human verification, use the complete request contract. When its response cannot determine the declared result after bounded diagnosis, read [Validation Indeterminacy](VALIDATION-INDETERMINACY.md).
 

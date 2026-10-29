@@ -4,7 +4,7 @@ description: Plan work too large for one agent session as durable Work Tracker d
 disable-model-invocation: true
 ---
 
-Read [Work Tracker context assembly](../federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md) before charting a Map, navigating one, or resolving a Decision Ticket.
+Read [Work Tracker context assembly](references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md) before charting a Map, navigating one, or resolving a Decision Ticket.
 
 A loose idea has arrived — too big for one agent session, and wrapped in fog: the way from here to the **destination** isn't visible yet. Wayfinding is about finding that way, not charging at the destination. Chart the way as a **shared map** on the configured Work Tracker, then resolve its **decision tickets** one at a time until the route is clear. Each ticket resolves a decision rather than a build slice.
 
@@ -14,14 +14,14 @@ The destination varies per effort, and naming it is the first act of charting �
 
 Wayfinder is **planning** by default: each ticket resolves a decision, and the map is done when the way is clear — nothing left to decide before someone goes and does the thing. The pull to just do the work is usually the signal you've reached the edge of the map and it's time to hand off. An effort can override this in its **Notes** — carrying execution into the map itself — but absent that, produce decisions, not deliverables.
 
-Ordinary planning does not write future-state terms, map changes, or architecture decisions into canonical repository documents. While resolving an active ticket, maintain every returned [Domain Model Delta](../domain-modeling/DOMAIN-MODEL-DELTA.md) at full fidelity in that ticket's single `## Resolution draft`.
+Ordinary planning does not write future-state terms, map changes, or architecture decisions into canonical repository documents. While resolving an active ticket, maintain every returned [Domain Model Delta](references/bundled/domain-modeling/DOMAIN-MODEL-DELTA.md) at full fidelity in that ticket's single `## Resolution draft`.
 
 ## Configured authority
 
 Before charting or resolving a map:
 
 1. Read `docs/agents/issue-tracker.md` when present and use its configured Work Tracker locator, terminology, claim, dependency, comment, and Wayfinding operations. Do not infer the tracker from a Git remote.
-2. When `docs/agents/domain.md` is present, read [domain orientation](../federated-workflow/DOMAIN-ORIENTATION.md), then the configured file, before selecting domain sources or composing `grill-with-docs`.
+2. When `docs/agents/domain.md` is present, read [domain orientation](references/bundled/federated-workflow/DOMAIN-ORIENTATION.md), then the configured file, before selecting domain sources or composing `grill-with-docs`.
 3. If a Domain Federation is relevant, put its portable Home identity and the relevant Repository-qualified Context Pointers in the map's Notes so later sessions can orient without checkout-local paths.
 
 For every durable Map or Decision source whose content informs the work, invoke the shared Context Assembly contract with the Ticket Origin Repository, the selected profile, and one permanent root. Tracker metadata used only to locate, select, or claim a ticket may be read directly through the configured Wayfinding operations. Accept only `Complete` and retain its returned file path unchanged. The active Wayfinder session consumes that file instead of reading the provider. Pass its path unchanged to any `research` subagent working from the source; the subagent consumes the file and performs no provider read or Context Assembly.

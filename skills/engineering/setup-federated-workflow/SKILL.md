@@ -11,7 +11,7 @@ Prepare final-state repository-owned workflow configuration. Research and human 
 
 ### 1. Classify the operation
 
-Read the current repository instructions and `docs/agents/`, then read [provider concepts](../federated-workflow/PROVIDER-CONCEPTS.md) and [domain orientation](../federated-workflow/DOMAIN-ORIENTATION.md). When the request or current configuration establishes, joins, or changes a federation, read [domain federation configuration](../federated-workflow/DOMAIN-FEDERATION.md) before classifying the request as:
+Read the current repository instructions and `docs/agents/`, then read [provider concepts](references/bundled/federated-workflow/PROVIDER-CONCEPTS.md) and [domain orientation](references/bundled/federated-workflow/DOMAIN-ORIENTATION.md). When the request or current configuration establishes, joins, or changes a federation, read [domain federation configuration](references/bundled/federated-workflow/DOMAIN-FEDERATION.md) before classifying the request as:
 
 - configure one repository without federation membership;
 - **Establish Domain Federation** with the current or explicitly selected repository as Home and one or more initial members;
@@ -27,7 +27,7 @@ If an existing binding points to another Home, or the requested change would mov
 
 For a single repository without federation, research only that repository. For Establish, discover broadly but grant no membership from discovery. Spawn repository research subagents for candidate repositories, then context research subagents across every repository that may own or participate in each candidate context. For Join, research the joining repository and Home only.
 
-Read [provider binding contracts](../federated-workflow/PROVIDER-BINDINGS.md). Inspect repository identity, remote, Base Branch, instructions, existing bindings, maps, canonical contexts, ADRs, CI/deployment evidence, provider capabilities, and user changes.
+Read [provider binding contracts](references/bundled/federated-workflow/PROVIDER-BINDINGS.md). Inspect repository identity, remote, Base Branch, instructions, existing bindings, maps, canonical contexts, ADRs, CI/deployment evidence, provider capabilities, and user changes.
 
 For every proposed Ticket Origin, inspect provider documentation, capability metadata, and representative existing artifacts against every Work Tracker requirement in the loaded contracts before asking the human about the mapping. Require one binding-directed Context Assembly acquisition and translation procedure for every public profile, with provider-specific commands, pagination, relationship traversal, credential use, diagnostics, and authorized fallbacks owned only by that binding. Prefer native operations and identify a durable body or comment fallback for every missing native mechanism.
 

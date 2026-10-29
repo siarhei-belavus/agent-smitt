@@ -2,7 +2,7 @@
 
 Return for correction is the human-authorized end of one review round. It changes Work Tracker routing only after the Review Feedback already exists as durable Code Host state.
 
-Read [lifecycle artifact contracts](../federated-workflow/LIFECYCLE-ARTIFACTS.md), then read the Ticket Origin Repository's instructions, Work Tracker binding, Routing Label binding, and affected repositories' Code Host bindings.
+Read [lifecycle artifact contracts](references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md), then read the Ticket Origin Repository's instructions, Work Tracker binding, Routing Label binding, and affected repositories' Code Host bindings.
 
 Resolve the delivery ticket through its matching Delivery Bundle handoff and affected Review Proposals. A supplied ticket reference narrows the lookup but does not replace the handoff relationship. Re-read the handoff, ticket, dependencies, routing, assignee, active lifecycle records, proposal heads, and complete affected feedback.
 

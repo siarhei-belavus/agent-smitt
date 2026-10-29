@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 Synthesize a specification from accepted planning authority and codebase understanding. Planning authority may be the current conversation, a supplied Wayfinder map reference, or both. Do not interview the user; use only what the selected sources establish.
 
-Read [planning artifact contracts](../federated-workflow/PLANNING-ARTIFACTS.md) and [Work Tracker context assembly](../federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md) before producing the specification.
+Read [planning artifact contracts](references/bundled/federated-workflow/PLANNING-ARTIFACTS.md) and [Work Tracker context assembly](references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md) before producing the specification.
 Use the configured Work Tracker and Domain Orientation when their bindings exist; preserve standalone behavior when they do not.
 
 ## Process
@@ -58,7 +58,7 @@ Keep behavioral detail in Acceptance criteria and technical detail in the applic
 
 ## Acceptance criteria
 
-Write the complete source-authorized behavior using the shared [acceptance criteria contract](../federated-workflow/PLANNING-ARTIFACTS.md#acceptance-criteria). Keep this section after User Stories; retain the existing sections below in full.
+Write the complete source-authorized behavior using the shared [acceptance criteria contract](references/bundled/federated-workflow/PLANNING-ARTIFACTS.md#acceptance-criteria). Keep this section after User Stories; retain the existing sections below in full.
 
 Use a short descriptive heading or list entry for each identifier. For example:
 

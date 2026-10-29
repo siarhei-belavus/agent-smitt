@@ -7,7 +7,7 @@ description: Draft and publish human review feedback on an existing MR or PR, or
 
 Turn a concern raised by the human into durable Review Feedback that a fresh delivery workflow can recover from. This skill records human judgement. It does not inspect a whole change set for new findings, approve a Review Proposal, merge it, or change product code.
 
-Read [provider concepts](../federated-workflow/PROVIDER-CONCEPTS.md) before resolving the operation. Use only repository-owned Code Host and Work Tracker bindings for provider reads and mutations.
+Read [provider concepts](references/bundled/federated-workflow/PROVIDER-CONCEPTS.md) before resolving the operation. Use only repository-owned Code Host and Work Tracker bindings for provider reads and mutations.
 
 ## Resolve the operation
 
