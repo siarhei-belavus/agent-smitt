@@ -1,0 +1,362 @@
+skills/engineering/triage/references/bundled/federated-workflow/PLANNING-ARTIFACTS.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-49
+skills/engineering/implement/references/bundled/federated-workflow/DOMAIN-FEDERATION.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-43
+skills/engineering/review-feedback/references/bundled/federated-workflow/REPOSITORY-IDENTITY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-3
+docs/installation.md
+  s_d3a8ab2d8c9596::t_8ec7d50edb7aed 1-78
+skills/engineering/prototype/LICENSE
+  s_d3a8ab2d8c9596::t_c9d88f63db44a8 1-22
+skills/engineering/change-walkthrough/references/bundled/review-feedback/SKILL.reference.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-47
+skills/engineering/to-spec/LICENSE
+  s_d3a8ab2d8c9596::t_c9d88f63db44a8 1-22
+skills/engineering/review-feedback/references/bundled/domain-modeling/DOMAIN-MODEL-DELTA.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-7
+skills/engineering/coordinate-delivery/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-205
+skills/productivity/writing-for-agents/LICENSE
+  s_d3a8ab2d8c9596::t_c9d88f63db44a8 1-22
+skills/engineering/implement/SKILL.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 8
+skills/engineering/domain-modeling/references/bundled/federated-workflow/REPOSITORY-IDENTITY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-3
+skills/engineering/review-feedback/references/bundled/federated-workflow/PLANNING-ARTIFACTS.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-49
+skills/engineering/pr/LICENSE
+  s_d3a8ab2d8c9596::t_c9d88f63db44a8 1-22
+skills/engineering/codebase-design/references/bundled/domain-modeling/CONTEXT-FORMAT.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-31
+skills/engineering/tdd/references/bundled/codebase-design/TEST-SURFACE.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-9
+skills/engineering/to-spec/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-63
+skills/engineering/to-tickets/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-63
+skills/engineering/wayfinder/LICENSE
+  s_d3a8ab2d8c9596::t_c9d88f63db44a8 1-22
+skills/engineering/code-review/SKILL.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 8
+skills/engineering/domain-modeling/references/bundled/federated-workflow/DOMAIN-FEDERATION.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-43
+skills/engineering/review-feedback/RETURN-FOR-CORRECTION.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 5
+skills/engineering/change-walkthrough/references/bundled/codebase-design/MODULE-VOCABULARY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-9
+tests/smoke_skills_cli.py
+  s_d3a8ab2d8c9596::t_e4018287a96365 1-40
+skills/engineering/code-review/references/bundled/federated-workflow/DOMAIN-FEDERATION.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-43
+skills/engineering/triage/LICENSE
+  s_d3a8ab2d8c9596::t_c9d88f63db44a8 1-22
+skills/engineering/wayfinder/references/bundled/federated-workflow/PROVIDER-CONCEPTS.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-17
+skills/productivity/wait-what/LICENSE
+  s_d3a8ab2d8c9596::t_c9d88f63db44a8 1-22
+skills/engineering/triage/references/bundled/federated-workflow/DOMAIN-ORIENTATION.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-48
+skills/engineering/review-feedback/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-63
+skills/engineering/review-feedback/SKILL.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 10
+skills/engineering/to-spec/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-205
+skills/engineering/wayfinder/references/bundled/federated-workflow/REPOSITORY-IDENTITY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-3
+skills/engineering/coordinate-delivery/VALIDATION-INDETERMINACY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 5
+skills/engineering/setup-federated-workflow/references/bundled/federated-workflow/REPOSITORY-IDENTITY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-3
+skills/engineering/README.md
+  s_d3a8ab2d8c9596::t_db6165feb456ee 3-9,11-41,45
+  s_d3a8ab2d8c9596::t_4a1277eb39ef5c 10
+skills/productivity/handoff/LICENSE
+  s_d3a8ab2d8c9596::t_c9d88f63db44a8 1-22
+skills/engineering/implement/STANDALONE.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 5,15
+skills/engineering/wizard/LICENSE
+  s_d3a8ab2d8c9596::t_c9d88f63db44a8 1-22
+skills/engineering/to-tickets/references/bundled/federated-workflow/REPOSITORY-IDENTITY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-3
+skills/engineering/coordinate-delivery/references/bundled/federated-workflow/PLANNING-ARTIFACTS.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-49
+skills/engineering/to-spec/references/bundled/codebase-design/MODULE-VOCABULARY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-9
+skills/engineering/to-tickets/references/bundled/domain-modeling/DOMAIN-MODEL-DELTA.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-7
+skills/engineering/triage/references/bundled/domain-modeling/DOMAIN-MODEL-DELTA.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-7
+skills/engineering/setup-federated-workflow/references/bundled/federated-workflow/PROVIDER-CONCEPTS.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-17
+skills/engineering/coordinate-delivery/references/bundled/federated-workflow/DOMAIN-FEDERATION.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-43
+skills/engineering/wayfinder/SKILL.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 7,17,24
+skills/engineering/codebase-design/references/bundled/federated-workflow/REPOSITORY-IDENTITY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-3
+skills/engineering/domain-modeling/LICENSE
+  s_d3a8ab2d8c9596::t_c9d88f63db44a8 1-22
+skills/engineering/implement/references/bundled/codebase-design/MODULE-VOCABULARY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-9
+skills/engineering/tdd/SKILL.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 8
+skills/engineering/wayfinder/references/bundled/federated-workflow/DOMAIN-ORIENTATION.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-48
+skills/engineering/triage/SKILL.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 9
+skills/engineering/coordinate-delivery/RUNTIME-TERMINATION.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 3
+skills/engineering/coordinate-delivery/RECOVERY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 3,7,29
+.github/workflows/validate.yml
+  s_d3a8ab2d8c9596::t_6fff379fe5fd07 1-35
+skills/engineering/implement/references/bundled/federated-workflow/REPOSITORY-IDENTITY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-3
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/DOMAIN-ORIENTATION.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-48
+skills/engineering/to-tickets/references/bundled/federated-workflow/DOMAIN-ORIENTATION.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-48
+skills/engineering/coordinate-delivery/references/bundled/codebase-design/MODULE-VOCABULARY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-9
+skills/engineering/implement/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-205
+skills/engineering/to-spec/references/bundled/domain-modeling/DOMAIN-MODEL-DELTA.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-7
+skills/engineering/change-walkthrough/references/bundled/review-feedback/RETURN-FOR-CORRECTION.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-26
+skills/engineering/change-walkthrough/references/bundled/domain-modeling/DOMAIN-MODEL-DELTA.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-7
+skills/engineering/triage/AGENT-BRIEF.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 5
+skills/engineering/triage/references/bundled/federated-workflow/REPOSITORY-IDENTITY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-3
+skills/engineering/wayfinder/references/bundled/domain-modeling/DOMAIN-MODEL-DELTA.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-7
+bin/sync-skill-references
+  s_d3a8ab2d8c9596::t_445ad3fb85ac8d 86-87,116
+  s_d3a8ab2d8c9596::t_3b88030bfdb373 1-85,88-115,117-142
+skills/engineering/domain-modeling/references/bundled/federated-workflow/DOMAIN-ORIENTATION.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-48
+skills/engineering/setup-federated-workflow/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-205
+skills/engineering/tdd/references/bundled/codebase-design/MODULE-VOCABULARY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-9
+.github/ISSUE_TEMPLATE/bug_report.md
+  s_d3a8ab2d8c9596::t_6fff379fe5fd07 1-24
+skills/engineering/implement/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-63
+skills/engineering/code-review/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-205
+skills/engineering/to-tickets/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-205
+skills/productivity/README.md
+  s_d3a8ab2d8c9596::t_3ea5b6325e3b33 3-13
+skills/productivity/grilling/LICENSE
+  s_d3a8ab2d8c9596::t_c9d88f63db44a8 1-22
+skills/engineering/triage/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-63
+skills/engineering/to-tickets/LICENSE
+  s_d3a8ab2d8c9596::t_c9d88f63db44a8 1-22
+skills/engineering/coordinate-delivery/references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-68
+skills/engineering/triage/references/bundled/federated-workflow/DOMAIN-FEDERATION.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-43
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/PROVIDER-CONCEPTS.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-17
+skills/engineering/codebase-design/LICENSE
+  s_d3a8ab2d8c9596::t_c9d88f63db44a8 1-22
+skills/engineering/domain-modeling/SKILL.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 12
+skills/engineering/codebase-design/references/bundled/domain-modeling/ADR-FORMAT.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-27
+skills/engineering/to-tickets/SKILL.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 11,39
+skills/engineering/implement/references/bundled/federated-workflow/DOMAIN-ORIENTATION.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-48
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/DOMAIN-FEDERATION.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-43
+skills/engineering/to-spec/references/bundled/federated-workflow/DOMAIN-ORIENTATION.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-48
+skills/engineering/triage/references/bundled/codebase-design/MODULE-VOCABULARY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-9
+skills/engineering/to-spec/references/bundled/federated-workflow/DOMAIN-FEDERATION.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-43
+skills/engineering/change-walkthrough/LICENSE
+  s_d3a8ab2d8c9596::t_c9d88f63db44a8 1-22
+skills/productivity/teach/LICENSE
+  s_d3a8ab2d8c9596::t_c9d88f63db44a8 1-22
+skills/engineering/to-spec/SKILL.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 9,61
+skills/productivity/to-questionnaire/LICENSE
+  s_d3a8ab2d8c9596::t_c9d88f63db44a8 1-22
+skills/engineering/triage/references/bundled/federated-workflow/PROVIDER-CONCEPTS.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-17
+skills/engineering/codebase-design/references/bundled/federated-workflow/DOMAIN-FEDERATION.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-43
+skills/engineering/setup-federated-workflow/references/bundled/federated-workflow/DOMAIN-FEDERATION.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-43
+skills/engineering/codebase-design/references/bundled/domain-modeling/DOMAIN-MODEL-DELTA.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-7
+LICENSE
+  s_d3a8ab2d8c9596::t_8ec7d50edb7aed 1-22
+skills/engineering/research/LICENSE
+  s_d3a8ab2d8c9596::t_c9d88f63db44a8 1-22
+skills/engineering/coordinate-delivery/references/bundled/domain-modeling/DOMAIN-MODEL-DELTA.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-7
+skills/engineering/coordinate-delivery/HUMAN-BOUNDARY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 3,9
+skills/engineering/closeout/LICENSE
+  s_d3a8ab2d8c9596::t_c9d88f63db44a8 1-22
+skills/engineering/review-feedback/references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-68
+skills/engineering/review-feedback/references/bundled/federated-workflow/PROVIDER-CONCEPTS.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-17
+skills/engineering/improve-codebase-architecture/LICENSE
+  s_d3a8ab2d8c9596::t_c9d88f63db44a8 1-22
+skills/engineering/codebase-design/references/bundled/domain-modeling/SKILL.reference.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-59
+skills/engineering/ask-smitt/agents/openai.yaml
+  s_d3a8ab2d8c9596::t_4a1277eb39ef5c 1-5
+skills/engineering/resolving-merge-conflicts/LICENSE
+  s_d3a8ab2d8c9596::t_c9d88f63db44a8 1-22
+skills/engineering/tdd/LICENSE
+  s_d3a8ab2d8c9596::t_c9d88f63db44a8 1-22
+skills/engineering/coordinate-delivery/references/bundled/federated-workflow/REPOSITORY-IDENTITY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-3
+skills/engineering/code-review/references/bundled/federated-workflow/DOMAIN-ORIENTATION.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-48
+skills/engineering/review-feedback/LICENSE
+  s_d3a8ab2d8c9596::t_c9d88f63db44a8 1-22
+skills/engineering/coordinate-delivery/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-63
+docs/workflow.md
+  s_d3a8ab2d8c9596::t_6fff379fe5fd07 1-159
+skills/engineering/to-tickets/references/bundled/codebase-design/MODULE-VOCABULARY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-9
+README.md
+  s_d3a8ab2d8c9596::t_726219630ef5a4 68
+  s_d3a8ab2d8c9596::t_4a1277eb39ef5c 47,100
+  s_d3a8ab2d8c9596::t_8e80bd5c7ba7fd 59-62,64-67,69-71,73,75-85
+  s_d3a8ab2d8c9596::t_8ec7d50edb7aed 3-4,6,8-12,15,18-22,24,27,30,32,34-46,48-52,55,57-58,63,72,87-99,101-110
+.github/pull_request_template.md
+  s_d3a8ab2d8c9596::t_6fff379fe5fd07 1-7
+skills/engineering/diagnosing-bugs/LICENSE
+  s_d3a8ab2d8c9596::t_c9d88f63db44a8 1-22
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/PLANNING-ARTIFACTS.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-49
+skills/engineering/to-spec/references/bundled/federated-workflow/PROVIDER-CONCEPTS.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-17
+docs/skills.md
+  s_d3a8ab2d8c9596::t_fae9eda55f4bf7 59
+  s_d3a8ab2d8c9596::t_e4018287a96365 1-11,13-58,60-61
+  s_d3a8ab2d8c9596::t_4a1277eb39ef5c 12
+skills/engineering/coordinate-delivery/LICENSE
+  s_d3a8ab2d8c9596::t_c9d88f63db44a8 1-22
+skills/engineering/coordinate-delivery/references/bundled/federated-workflow/PROVIDER-CONCEPTS.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-17
+skills/engineering/code-review/references/bundled/codebase-design/MODULE-VOCABULARY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-9
+skills/engineering/setup-federated-workflow/references/bundled/federated-workflow/PROVIDER-BINDINGS.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-78
+skills/engineering/review-feedback/references/bundled/codebase-design/MODULE-VOCABULARY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-9
+skills/engineering/change-walkthrough/references/bundled/review-feedback/PUBLISH.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-18
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/REPOSITORY-IDENTITY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-3
+skills/engineering/code-review/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-63
+skills/engineering/wayfinder/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-205
+skills/engineering/codebase-design/references/bundled/domain-modeling/CONTEXT-MAP-FORMAT.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-29
+skills/engineering/code-review/LICENSE
+  s_d3a8ab2d8c9596::t_c9d88f63db44a8 1-22
+skills/engineering/review-feedback/references/bundled/federated-workflow/DOMAIN-FEDERATION.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-43
+docs/credits.md
+  s_d3a8ab2d8c9596::t_4a1277eb39ef5c 7
+  s_d3a8ab2d8c9596::t_8ec7d50edb7aed 1-6,8-19
+skills/engineering/implement/LICENSE
+  s_d3a8ab2d8c9596::t_c9d88f63db44a8 1-22
+skills/productivity/grill-me/LICENSE
+  s_d3a8ab2d8c9596::t_c9d88f63db44a8 1-22
+skills/engineering/code-review/references/bundled/federated-workflow/REPOSITORY-IDENTITY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-3
+skills/engineering/ask-smitt/SKILL.md
+  s_d3a8ab2d8c9596::t_4a1277eb39ef5c 1-18,20-80
+  s_d3a8ab2d8c9596::t_726219630ef5a4 19
+skills/engineering/codebase-design/SKILL.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 80,83
+skills/engineering/setup-federated-workflow/SKILL.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 14,30
+skills/engineering/to-spec/references/bundled/federated-workflow/PLANNING-ARTIFACTS.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-49
+skills/engineering/grill-with-docs/LICENSE
+  s_d3a8ab2d8c9596::t_c9d88f63db44a8 1-22
+skills/engineering/to-tickets/references/bundled/federated-workflow/PLANNING-ARTIFACTS.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-49
+skills/engineering/codebase-design/references/bundled/federated-workflow/DOMAIN-ORIENTATION.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-48
+skills/engineering/triage/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-205
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-63
+skills/engineering/change-walkthrough/SKILL.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 76
+skills/engineering/to-tickets/references/bundled/federated-workflow/PROVIDER-CONCEPTS.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-17
+CONTRIBUTING.md
+  s_d3a8ab2d8c9596::t_6fff379fe5fd07 1-31,33-67
+  s_d3a8ab2d8c9596::t_445ad3fb85ac8d 32
+skills/engineering/review-feedback/references/bundled/federated-workflow/DOMAIN-ORIENTATION.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-48
+AGENTS.md
+  s_d3a8ab2d8c9596::t_e300972aab9d58 9-10
+  s_d3a8ab2d8c9596::t_6fff379fe5fd07 13-17
+skills/engineering/setup-federated-workflow/LICENSE
+  s_d3a8ab2d8c9596::t_c9d88f63db44a8 1-22
+skills/engineering/coordinate-delivery/SKILL.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 7,35,93
+.gitignore
+  s_d3a8ab2d8c9596::t_3b88030bfdb373 3-4
+skills/engineering/coordinate-delivery/references/bundled/federated-workflow/DOMAIN-ORIENTATION.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-48
+skills/engineering/setup-federated-workflow/references/bundled/federated-workflow/DOMAIN-ORIENTATION.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-48
+tests/test_distribution.py
+  s_d3a8ab2d8c9596::t_445ad3fb85ac8d 36
+  s_d3a8ab2d8c9596::t_4270346480d3ab 45-78
+  s_d3a8ab2d8c9596::t_e4018287a96365 1-35,37-44,79-102
+skills/engineering/to-tickets/references/bundled/federated-workflow/DOMAIN-FEDERATION.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-43
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-68
+skills/engineering/wayfinder/references/bundled/federated-workflow/DOMAIN-FEDERATION.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-43
+skills/engineering/code-review/references/bundled/federated-workflow/PROVIDER-CONCEPTS.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-17
+skills/engineering/to-spec/references/bundled/federated-workflow/REPOSITORY-IDENTITY.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-3
+skills/engineering/implement/references/bundled/federated-workflow/PROVIDER-CONCEPTS.md
+  s_d3a8ab2d8c9596::t_31ec5de02c2d03 1-17
+skills/engineering/ask-smitt/LICENSE
+  s_d3a8ab2d8c9596::t_78213bdb16f2de 1-22
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "1d9482e5b443557c0e018f5ca1f5ed08616ac466",
+  "prompts": {},
+  "sessions": {
+    "s_d3a8ab2d8c9596": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1871d-cf62-77a1-ac59-0395377d97b1",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    }
+  }
+}
