@@ -1,0 +1,46 @@
+README.md
+  s_d3a8ab2d8c9596::t_47cd3c9b8435a7 3
+  s_d3a8ab2d8c9596::t_c96c894e7b9c61 108
+  s_d3a8ab2d8c9596::t_576f35ec51d446 15
+  s_d3a8ab2d8c9596::t_66675aa56c3edf 21
+  s_d3a8ab2d8c9596::t_80f0c99dda159a 27
+  s_d3a8ab2d8c9596::t_baa5259056b340 1
+CONTRIBUTING.md
+  s_d3a8ab2d8c9596::t_630309017e6e01 3
+  s_d3a8ab2d8c9596::t_61734776db02ab 56
+tests/test_install_codex_skills.py
+  s_d3a8ab2d8c9596::t_6efe58bacc2135 19
+tests/smoke_skills_cli.py
+  s_d3a8ab2d8c9596::t_97b36892e4657e 20
+docs/installation.md
+  s_d3a8ab2d8c9596::t_44f84321607c01 20
+  s_d3a8ab2d8c9596::t_42c222d34bd7aa 42
+  s_d3a8ab2d8c9596::t_d02224622e1d96 14
+  s_d3a8ab2d8c9596::t_ee13591b47b2fb 74
+  s_d3a8ab2d8c9596::t_a6a210a477c81f 8
+  s_d3a8ab2d8c9596::t_12b973bd4f8952 26
+  s_d3a8ab2d8c9596::t_6cc5028227bf23 43
+  s_d3a8ab2d8c9596::t_baa78183919c73 32
+  s_d3a8ab2d8c9596::t_6115168e74b892 73
+  s_d3a8ab2d8c9596::t_6f2a71389b59f8 75
+docs/credits.md
+  s_d3a8ab2d8c9596::t_43b603b7051371 3
+bin/install-codex-skills
+  s_d3a8ab2d8c9596::t_644e23127cca8c 2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2656a519266122f82179105df30b12749733c3f4",
+  "prompts": {},
+  "sessions": {
+    "s_d3a8ab2d8c9596": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1871d-cf62-77a1-ac59-0395377d97b1",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    }
+  }
+}
