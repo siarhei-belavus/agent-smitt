@@ -1,5 +1,3 @@
-# Agent Smitt
-
 ![Agent Smitt workshop: an idea becomes a specification, delivery tasks, coordinated repositories, and a result approved by a human.](docs/assets/agent-smitt-banner.png)
 
 [![Validate](https://github.com/siarhei-belavus/agent-smitt/actions/workflows/validate.yml/badge.svg)](https://github.com/siarhei-belavus/agent-smitt/actions/workflows/validate.yml)
