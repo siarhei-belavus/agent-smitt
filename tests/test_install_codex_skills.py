@@ -16,7 +16,7 @@ class InstallCodexSkillsTest(unittest.TestCase):
     def run_from_copy(self, skill_text: str) -> subprocess.CompletedProcess[str]:
         temporary_directory = tempfile.TemporaryDirectory()
         self.addCleanup(temporary_directory.cleanup)
-        repository = Path(temporary_directory.name) / "agent-smitty"
+        repository = Path(temporary_directory.name) / "agent-smitt"
         shutil.copytree(ROOT, repository, ignore=shutil.ignore_patterns(".git", "__pycache__"))
         skill_file = repository / "skills" / "engineering" / "coordinate-delivery" / "SKILL.md"
         skill_file.write_text(skill_text, encoding="utf-8")

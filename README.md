@@ -1,6 +1,6 @@
-# Agent Smitty
+# Agent Smitt
 
-[![Validate](https://github.com/siarhei-belavus/agent-smitty/actions/workflows/validate.yml/badge.svg)](https://github.com/siarhei-belavus/agent-smitty/actions/workflows/validate.yml)
+[![Validate](https://github.com/siarhei-belavus/agent-smitt/actions/workflows/validate.yml/badge.svg)](https://github.com/siarhei-belavus/agent-smitt/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 Agent skills for taking an idea through design, specification, implementation, review, and delivery across one or several repositories.
@@ -12,19 +12,19 @@ This is my evolution of [Matt Pocock's skills](https://github.com/mattpocock/ski
 With Node.js and npm available, run this in your project:
 
 ```sh
-npx skills add siarhei-belavus/agent-smitty
+npx skills add siarhei-belavus/agent-smitt
 ```
 
 Choose the skills and agents in the installer. To install the complete workflow for Codex:
 
 ```sh
-npx skills add siarhei-belavus/agent-smitty --skill '*' --agent codex
+npx skills add siarhei-belavus/agent-smitt --skill '*' --agent codex
 ```
 
 Add `--global` to install across projects. To browse the catalog first:
 
 ```sh
-npx skills add siarhei-belavus/agent-smitty --list
+npx skills add siarhei-belavus/agent-smitt --list
 ```
 
 You can install an individual skill with `--skill diagnosing-bugs`. Its linked reference files travel with it. Skills that compose other skills, such as `implement` using `tdd`, also need those skills installed. Install the full pack for the complete workflow.
@@ -105,6 +105,6 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the repository layout, reference pack
 
 ## Credits and license
 
-Derived from [Matt Pocock's skills](https://github.com/mattpocock/skills), under the MIT license. Agent Smitty develops that foundation for my own engineering workflow. This is an independent project.
+Derived from [Matt Pocock's skills](https://github.com/mattpocock/skills), under the MIT license. Agent Smitt develops that foundation for my own engineering workflow. This is an independent project.
 
 See [credits](docs/credits.md) for attribution and [LICENSE](LICENSE) for reuse terms.

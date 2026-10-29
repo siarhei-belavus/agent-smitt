@@ -5,31 +5,31 @@
 The [Skills CLI](https://github.com/vercel-labs/skills) installs the `SKILL.md` format used by this repository. Use a Node.js version supported by the current CLI.
 
 ```sh
-npx skills add siarhei-belavus/agent-smitty
+npx skills add siarhei-belavus/agent-smitt
 ```
 
 The interactive installer selects skills and agents. Project installation is the default. For all skills in a specific agent:
 
 ```sh
-npx skills add siarhei-belavus/agent-smitty --skill '*' --agent codex
+npx skills add siarhei-belavus/agent-smitt --skill '*' --agent codex
 ```
 
 For a global installation:
 
 ```sh
-npx skills add siarhei-belavus/agent-smitty --skill '*' --agent codex --global
+npx skills add siarhei-belavus/agent-smitt --skill '*' --agent codex --global
 ```
 
 For a single standalone tool:
 
 ```sh
-npx skills add siarhei-belavus/agent-smitty --skill diagnosing-bugs
+npx skills add siarhei-belavus/agent-smitt --skill diagnosing-bugs
 ```
 
 List the available skills without installing:
 
 ```sh
-npx skills add siarhei-belavus/agent-smitty --list
+npx skills add siarhei-belavus/agent-smitt --list
 ```
 
 Each skill includes the Markdown references it links to. A reference copy does not install another skill's invocation entry. Install the complete pack when using the planning and delivery workflow, because its skills invoke each other by name.
@@ -39,8 +39,8 @@ To inspect or update installations, use `npx skills list`, `npx skills check`, a
 ## Develop from a checkout
 
 ```sh
-git clone https://github.com/siarhei-belavus/agent-smitty.git
-cd agent-smitty
+git clone https://github.com/siarhei-belavus/agent-smitt.git
+cd agent-smitt
 npx skills add . --skill '*' --agent codex
 ```
 
@@ -70,9 +70,9 @@ Start with [repository setup](workflow.md#configure-the-repositories). Simple in
 For CI or a shared team setup, check out a reviewed commit and install that local source. Record the chosen revision in your own configuration. The main branch changes as the skills evolve.
 
 ```sh
-git clone https://github.com/siarhei-belavus/agent-smitty.git
-git -C agent-smitty checkout "$SKILLS_REF"
-agent-smitty/bin/install-codex-skills --target "$HOME/.agents/skills"
+git clone https://github.com/siarhei-belavus/agent-smitt.git
+git -C agent-smitt checkout "$SKILLS_REF"
+agent-smitt/bin/install-codex-skills --target "$HOME/.agents/skills"
 ```
 
 Set `SKILLS_REF` to the revision you reviewed. Python 3.10 or later is required for the local installer and repository checks.

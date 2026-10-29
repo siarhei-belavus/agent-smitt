@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Link every Agent Smitty skill into a Codex skill directory."""
+"""Link every Agent Smitt skill into a Codex skill directory."""
 from __future__ import annotations
 
 import argparse

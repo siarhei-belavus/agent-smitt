@@ -17,7 +17,7 @@ CLI_VERSION = os.environ.get("SKILLS_CLI_VERSION", "1.7.4")
 def main() -> None:
     expected = {p.parent.name for p in (ROOT / "skills").glob("*/*/SKILL.md")}
     for selection, copy in [("*", False), ("*", True), ("coordinate-delivery", True)]:
-        with tempfile.TemporaryDirectory(prefix="agent-smitty-cli-") as temp:
+        with tempfile.TemporaryDirectory(prefix="agent-smitt-cli-") as temp:
             command = ["npx", "--yes", f"skills@{CLI_VERSION}", "add", str(ROOT),
                        "--skill", selection, "--agent", "codex", "--yes"]
             if copy:

@@ -1,6 +1,6 @@
 # Contributing
 
-Agent Smitty maintains a curated engineering workflow. A new skill should solve a distinct recurring problem and explain when to invoke it. Changes to existing skills should name the behavior they change and the failure they prevent.
+Agent Smitt maintains a curated engineering workflow. A new skill should solve a distinct recurring problem and explain when to invoke it. Changes to existing skills should name the behavior they change and the failure they prevent.
 
 ## Layout
 
@@ -53,7 +53,7 @@ git diff --check
 For a distribution smoke test, create a temporary project outside this checkout and run the CLI there, pointing it at this repository's absolute path:
 
 ```sh
-npx skills add /absolute/path/to/agent-smitty --skill '*' --agent codex --yes
+npx skills add /absolute/path/to/agent-smitt --skill '*' --agent codex --yes
 ```
 
 Check discovery with `--list` and repeat with `--copy` when changing packaging. Never add generated agent installation links to this repository.

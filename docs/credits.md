@@ -1,6 +1,6 @@
 # Credits
 
-Agent Smitty began as a customized version of [Matt Pocock's skills](https://github.com/mattpocock/skills). Matt's work established the collection's planning flow, interviewing approach, deep-module design discipline, and test-driven development workflow. This repository retains and adapts that work under its MIT license.
+Agent Smitt began as a customized version of [Matt Pocock's skills](https://github.com/mattpocock/skills). Matt's work established the collection's planning flow, interviewing approach, deep-module design discipline, and test-driven development workflow. This repository retains and adapts that work under its MIT license.
 
 The local evolution adds repository-owned Code Host and Work Tracker bindings, domain federation, planning contracts, coordinated delivery across repositories, recovery records, review feedback, and closeout. Individual retained skills may also have local changes. This collection does not claim to track every upstream release.
 
