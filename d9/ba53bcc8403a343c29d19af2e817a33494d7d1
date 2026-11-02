@@ -1,0 +1,78 @@
+skills/engineering/deliver-spec/agents/openai.yaml
+  s_eb4488c0c5009c::t_268d37ba434bf3 1-5
+tests/test_install_codex_skills.py
+  s_eb4488c0c5009c::t_1d8aa5a5824fe0 21,43-46,90,106,113,120
+docs/skills.md
+  s_eb4488c0c5009c::t_854a74d6fbce6c 3,37-38,43
+docs/installation.md
+  s_eb4488c0c5009c::t_854a74d6fbce6c 60
+skills/engineering/deliver-spec/CORRECTIONS.md
+  s_eb4488c0c5009c::t_2f55a6e5547f41 1-25
+tests/smoke_skills_cli.py
+  s_eb4488c0c5009c::t_854a74d6fbce6c 19
+skills/engineering/README.md
+  s_eb4488c0c5009c::t_854a74d6fbce6c 35
+  s_eb4488c0c5009c::t_1a12da5447c24b 36
+skills/engineering/deliver-spec/SKILL.md
+  s_eb4488c0c5009c::t_2f55a6e5547f41 1-77
+skills/engineering/deliver-ticket/SKILL.md
+  s_eb4488c0c5009c::t_1a12da5447c24b 1-2,4-102
+  s_eb4488c0c5009c::t_854a74d6fbce6c 3
+skills/engineering/deliver-spec/RECOVERY.md
+  s_eb4488c0c5009c::t_2f55a6e5547f41 1-51
+skills/engineering/ask-smitt/SKILL.md
+  s_eb4488c0c5009c::t_854a74d6fbce6c 27,38-40
+  s_eb4488c0c5009c::t_1a12da5447c24b 44,50
+skills/engineering/closeout/SKILL.md
+  s_eb4488c0c5009c::t_854a74d6fbce6c 3,8,28
+skills/engineering/implement/STANDALONE.md
+  s_eb4488c0c5009c::t_854a74d6fbce6c 5-7
+docs/workflow.md
+  s_eb4488c0c5009c::t_1a12da5447c24b 117,123,128,161
+  s_eb4488c0c5009c::t_854a74d6fbce6c 94-112
+skills/engineering/deliver-ticket/agents/openai.yaml
+  s_eb4488c0c5009c::t_268d37ba434bf3 1-5
+skills/engineering/implement/SKILL.md
+  s_eb4488c0c5009c::t_1a12da5447c24b 3,15
+README.md
+  s_eb4488c0c5009c::t_854a74d6fbce6c 44,71,73,86,93-95
+  s_eb4488c0c5009c::t_1a12da5447c24b 45,72
+skills/engineering/deliver-ticket/LICENSE
+  s_eb4488c0c5009c::t_b85f83073a2b46 1-22
+skills/engineering/deliver-ticket/references/bundled/codebase-design/MODULE-VOCABULARY.md
+  s_eb4488c0c5009c::t_4dc25722f9b5f6 1-9
+skills/engineering/deliver-ticket/references/bundled/domain-modeling/DOMAIN-MODEL-DELTA.md
+  s_eb4488c0c5009c::t_61c2d86155018a 1-7
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_516554dc156041 1-67
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/DOMAIN-FEDERATION.md
+  s_eb4488c0c5009c::t_21ba7c704437ff 1-43
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/DOMAIN-ORIENTATION.md
+  s_eb4488c0c5009c::t_388825b532710b 1-48
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md
+  s_eb4488c0c5009c::t_84f39fdc57eb75 1-81
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/PLANNING-ARTIFACTS.md
+  s_eb4488c0c5009c::t_5750dbed99aa3d 1-49
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/PROVIDER-CONCEPTS.md
+  s_eb4488c0c5009c::t_c921aa3fb9e54c 1-17
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/REPOSITORY-IDENTITY.md
+  s_eb4488c0c5009c::t_08b9d9070f3588 1-3
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_eb4488c0c5009c::t_c9bd0e43c60fe6 1-205
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d9ba53bcc8403a343c29d19af2e817a33494d7d1",
+  "prompts": {},
+  "sessions": {
+    "s_eb4488c0c5009c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19b9d-86f7-7ac3-8b35-1b6a5e43ecfb",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    }
+  }
+}
