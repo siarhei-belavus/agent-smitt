@@ -25,7 +25,7 @@ Before publishing, verify that the opening agrees with the recorded evidence and
 
 - Every record ID is unique and every relationship resolves bidirectionally to the named record.
 - One current Execution Checkpoint has at most one active Human Action Request and one linked free-form Human Response.
-- Repository evidence names its repository and exact head. Cross-repository evidence names its complete influencing delivery-head set and every repository-backed Validation Source with its recorded exact source commit. Bundle Spec evidence names the complete bundle head set and the cross-repository evidence with those source commits. A mismatch is stale evidence.
+- Repository evidence names its repository and exact head. Review evidence also names its Fixed Review Base. Cross-repository evidence names its complete influencing delivery-head set and every repository-backed Validation Source with its recorded exact source commit. Bundle Spec evidence names the complete bundle head set, review bases, and the cross-repository evidence with those source commits. A mismatch is stale evidence.
 - Runtime termination evidence names the provider record, its execution URL or equivalent runtime reference when available, the checkpoint, and the observed termination outcome. The runtime reference supports observability and liveness diagnosis; it establishes neither the claim nor recovery authority. Elapsed time is not evidence.
 - Durable records identify preserved Execution Worktrees by Repository Delivery, branch, base, exact Git state, and provenance disposition. Local paths remain execution-host inputs and never enter a checkpoint, request, response, Resumption Record, or handoff.
 - A runtime-local Context Pack path remains activation state and never enters a checkpoint, request, response, Resumption Record, or handoff. Durable records identify authority by selected profile, permanent root, result, and provider references, never by retaining the pack or its local path.
@@ -33,11 +33,22 @@ Before publishing, verify that the opening agrees with the recorded evidence and
 
 ## Execution Checkpoint
 
-Open with where work stopped, why, what was verified and preserved, and what permits the next step. For a final handoff, explain what is ready for review, link the proposals, summarize verification results, and state the human review, merge, or rollout actions in their required order.
+Open with where work stopped, why, what was verified and preserved, and what permits the next step. For a final handoff, distinguish proposals ready for human review/merge from confirmed merged results, link the proposals, summarize verification results, and state remaining acceptance, explicit closeout, or rollout actions in their required order.
 
 The opening may focus on changes since the previous record; the complete checkpoint, including a final handoff, carries a current snapshot rather than a delta requiring reconstruction from earlier comments.
 
-An Execution Checkpoint is the current durable snapshot of a Delivery Bundle. Record the checkpoint, ticket, Execution Attempt ID, trigger, provider timestamp, ticket/routing/claim snapshot, resolved dependencies and authority, and the next permissible step with prerequisites. For every Repository Delivery record its base, branch, exact Published Delivery Head, Review Proposal, preserved worktree state, and outcome. Record exact repository-backed Validation Source commits; exact-head repository, Standards, cross-repository, and Bundle Spec evidence; affected and preserved deliveries; invalidated, preserved, and pending evidence; the active request ID or explicit absence; local-only exclusions; an execution URL or equivalent runtime reference when the runtime provides one; and limitations.
+An Execution Checkpoint is the current durable snapshot of a Delivery Bundle. Include all of these field groups:
+
+| Group | Required contents |
+| --- | --- |
+| Identity and authority | Checkpoint and ticket references, Execution Attempt ID, trigger, provider timestamp, ticket/routing/claim snapshot, resolved dependencies and authority. |
+| Execution choices | Target Branch per writable Repository ID, configured Base Branch, Automatic merge permission as `allowed` or `disabled`, and the instruction or response authorizing those choices. |
+| Repository state | Each delivery's immutable launch commit, current Fixed Review Base, source branch, exact Published Delivery Head, Review Proposal, preserved worktree state, and outcome. |
+| Merge state | Per repository: unattempted, pending/unconfirmed, failed, or confirmed merged; exact proposal/source/observed-target pair; operation reference when available. A confirmed merge also records its selected target, provider merge reference, original source, exact result revision, and applicable evidence. |
+| Evidence | Exact repository-backed Validation Source commits; repository, Standards, cross-repository, and Bundle Spec results with their required revision bindings; preserved, invalidated, and pending evidence. |
+| Continuation | Affected and preserved deliveries, active request ID or explicit absence, local-only exclusions, runtime execution reference when available, limitations, and next permissible step with prerequisites. |
+
+Before a field can be established, mark it pending rather than inventing a value. If ticket authority or option resolution is incomplete, preserve the supplied option instructions and mark resolution pending. The workflow must resolve them against accepted scope before preparation. Pending or absent fields grant no merge permission. Partial success retains the full snapshot for every repository.
 
 ## Human Action Request
 
@@ -64,5 +75,7 @@ A Resumption Plan is a human-produced or explicitly delegated execution-ready pl
 Open with the source authorizing resumption, where work will restart, what is reused, and which checks must run again and why.
 
 A Resumption Record is the durable gate result written before a resumed Execution Attempt. Record its ID, ticket, next Execution Attempt ID, exactly one response/feedback/runtime source, `continue` or `replan`, checkpoint, plan when applicable, affected and preserved deliveries, previous and launch exact delivery heads and repository-backed Validation Source commits, reused proposals, invalidated evidence, preserved unchanged-dependency evidence, required refresh, re-read routing/claim state, next step, and limitations.
+
+Carry the restored execution choices, current review bases, and per-repository merge states from the checkpoint, including any explicit reconciliation of changed options. A merge result does not replace the required response, feedback, or runtime source.
 
 Publish and re-read this record after a successful Resume Gate and before the named Execution Attempt. Verify its launch heads against provider truth.

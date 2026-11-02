@@ -6,6 +6,10 @@ Read [repository identity](REPOSITORY-IDENTITY.md) and [module vocabulary](../co
 
 A Repository Delivery is one repository's authorized unit of work from fixed base to attributable exact-head result, including its repository-owned validation evidence.
 
+A **Target Branch** is the existing remote branch selected for that delivery's execution, defaulting to the Repository Reference's configured Base Branch. It supplies the initial launch commit and receives the Review Proposal. Selecting it neither rewrites the Repository Reference nor expands Repository Scope.
+
+The exact launch commit records where execution began and remains immutable. The **Fixed Review Base** is the exact commit bounding the current delivery diff, initially the launch commit. A target synchronization may advance the review base while preserving launch provenance and refreshing evidence for the new review bounds.
+
 ## Repository Store
 
 A Repository Store is the validated Git checkout selected by Repository Resolution to supply Git storage without becoming a delivery workspace. Delivery preparation may fetch and register its own worktree while preserving the Store's checked-out branch, index, files, remotes, hooks, and configuration.

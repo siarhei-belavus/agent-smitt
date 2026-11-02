@@ -4,7 +4,7 @@ Read [repository identity](REPOSITORY-IDENTITY.md) before applying these concept
 
 A **Code Host** is the configured provider repository that owns Git revisions and review artifacts for one Repository ID.
 
-A **Published Delivery Head** is the exact provider-retrievable commit at the tip of a published delivery branch. A **Review Proposal** is one provider review artifact from that branch to its configured Base Branch. **Review Feedback** is durable actionable provider feedback attached to that proposal. Review Proposals and provider-bound evidence name the Published Delivery Head.
+A **Published Delivery Head** is the exact provider-retrievable commit at the tip of a published delivery branch. A **Review Proposal** is one provider review artifact from that branch to its selected Target Branch, defaulting to the configured Base Branch. **Review Feedback** is durable actionable provider feedback attached to that proposal. Review Proposals and provider-bound evidence name the Published Delivery Head. After merge, preserve that exact source revision separately from the provider-confirmed merge result; later target advancement does not change either recorded revision.
 
 A **Work Tracker** is the configured provider location that owns ticket lifecycle, dependencies, claims, routing, and durable coordination state. The **Ticket Origin Repository** is the human-confirmed repository whose Work Tracker owns a ticket.
 

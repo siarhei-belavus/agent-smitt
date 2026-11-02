@@ -1,6 +1,6 @@
 ---
 name: coordinate-delivery
-description: "Coordinate one agent-ready ticket through its complete federated delivery and human handoff."
+description: "Coordinate one ready ticket through its complete federated delivery and human handoff."
 disable-model-invocation: true
 ---
 
@@ -10,7 +10,9 @@ A Coordinator Activation is one invocation that selects or resumes at most one t
 
 Coordinate `/coordinate-delivery [<ticket reference>]` fail closed. A supplied reference selects that ticket only. Without a reference, select and claim at most one ticket from the configured Delivery frontier. An empty frontier is a successful no-op.
 
-Use repository-owned bindings for every provider operation. Persist no provider commands, credentials, or account identity. Preserve recoverable work. Never merge a Review Proposal, push a protected Base Branch, or close the ticket.
+Accept optional execution instructions naming a Target Branch per writable Repository ID and Automatic merge permission, either `allowed` or `disabled`. On a new delivery, omitted targets use the configured Base Branch and omitted permission is `disabled`. These options are independent and belong to this ticket's execution. Permission replaces only the final wait for human review and merge; intermediate human boundaries and host policy still apply. On an existing delivery, restore the options through [recovery](RECOVERY.md) before applying defaults. They change neither planning artifacts nor Repository Scope, and add no dependency checks beyond the existing tracker eligibility rules.
+
+Use repository-owned bindings for every provider operation. Persist no provider commands, credentials, or account identity. Preserve recoverable work. Merge only through the explicitly authorized [automatic merge branch](AUTOMATIC-MERGE.md). Never push a protected branch directly, close the ticket, invoke closeout, or remove delivery worktrees or branches.
 
 ## 1. Establish activation authority
 
@@ -36,7 +38,9 @@ Read [`../federated-workflow/PLANNING-ARTIFACTS.md`](references/bundled/federate
 
 A Delivery Bundle is one ticket's complete delivery state: its Repository Deliveries; any Published Delivery Heads, Review Proposals, and lifecycle records; current validation and review evidence; and handoff state.
 
-**Complete when:** the claimed ticket's Delivery Context gate passes, its Authority input is retained, and the planning contract validates; otherwise the delivery has entered the [human-boundary branch](HUMAN-BOUNDARY.md) before repository mutation.
+Resolve execution options against the complete writable Repository Scope. Require each override to name exactly one writable Repository ID and one target branch on its declared remote; verify branch existence after repository resolution. Reject ambiguous or out-of-scope instructions through the human boundary. Read [lifecycle artifact contracts](references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md) and publish and re-read an initial Execution Checkpoint carrying the resolved choices and their invocation authority before preparing repository work. Record unprepared delivery fields as pending, never as invented revisions.
+
+**Complete when:** the claimed ticket's Delivery Context gate passes, its Authority input is retained, the planning contract validates, and the resolved execution choices have a verified durable checkpoint; otherwise the delivery has entered the [human-boundary branch](HUMAN-BOUNDARY.md) before repository mutation.
 
 ## 3. Resolve repository references
 
@@ -48,17 +52,19 @@ Resolve every Repository Reference before fetching a Base Branch or creating an 
 
 Validate each candidate against its Repository ID, remote, Base Branch, Git and worktree identity, and repository-local Code Host binding. Record a material inferred or prepared binding by its portable repository identity and validation evidence, without its local path. After binding, read the repository's instructions, canonical context, ADRs, Context Scope targets, and repository-backed Validation Sources. Preserve each Repository Store's checkout state and use it only as a Git source for worktree creation, never as a delivery workspace.
 
-**Complete when:** every Repository Reference resolves to one validated Repository Store and every referenced instruction, context, ADR, binding, and Validation Source is readable; a missing or contradictory authority has entered the [human-boundary branch](HUMAN-BOUNDARY.md) as a Specification Contradiction, or a bounded access or host-capability failure has entered it as an Environment Preparation Blocker, before preparation.
+Verify every selected Target Branch exists and is readable through its binding. When automatic merge is allowed, validate each writable repository's binding against the [conditional merge capability](references/bundled/federated-workflow/PROVIDER-BINDINGS.md#conditional-merge-capability) before preparing or implementing deliveries. Missing target access or a missing, unverified, or prohibitive merge capability is an Environment Preparation Blocker; request explicit binding reconciliation through the human boundary without changing choices or repository settings.
+
+**Complete when:** every Repository Reference resolves to one validated Repository Store, selected targets are readable, requested merge capabilities pass their binding gate, and every referenced instruction, context, ADR, binding, and Validation Source is readable; otherwise the applicable Specification Contradiction or Environment Preparation Blocker has entered the [human-boundary branch](HUMAN-BOUNDARY.md) before preparation.
 
 ## 4. Prepare repository deliveries
 
-Apply the loaded execution-preparation rules. Fetch every configured Base Branch without switching its Repository Store and pin its fresh exact commit. Prepare or reuse one clean isolated Execution Worktree and unique delivery branch per Repository Scope entry. Keep deliveries later classified as no-change at their pins and read-only repositories outside writable scope. Keep the Repository ID-to-worktree mapping in execution-host state; portable records identify the delivery, branch, base, and exact head without a local path.
+Apply the loaded execution-preparation rules. Fetch every selected Target Branch without switching its Repository Store and pin its fresh exact launch commit and initial Fixed Review Base. Prepare or reuse one clean isolated Execution Worktree and unique delivery branch per Repository Scope entry. Keep deliveries later classified as no-change at their pins and read-only repositories outside writable scope. Keep the Repository ID-to-worktree mapping in execution-host state; portable records identify the delivery, target, branch, launch commit, current Fixed Review Base, and exact head without a local path. Publish and re-read the prepared snapshot before dispatch.
 
 **Complete when:** every Repository Delivery has a provenance-verified persistent worktree at its intended branch and fixed base, its immediate mandatory bootstrap has succeeded, existing user checkout state is unchanged, and any persistent preparation failure has entered the [human-boundary branch](HUMAN-BOUNDARY.md) with all safe work preserved.
 
 ## 5. Execute one flat attempt
 
-Start exactly one direct-child Implementation Agent for each delivery requiring changes. Give it one complete textual narrowing assignment for its Repository Scope entry and run `implement`. Include the Repository ID and Reference, Execution Worktree, branch, fixed base, the unchanged accepted Context Pack path as Authority input, repository-specific outcome, Settled Seams and test approaches, Validation Obligations, repository instructions, and validation commands. Require its one Repository Delivery result. Record validation-only and no-change deliveries directly. The Implementation Agent reuses that file and performs no Context Assembly or provider read.
+Start exactly one direct-child Implementation Agent for each delivery requiring changes. Give it one complete textual narrowing assignment for its Repository Scope entry and run `implement`. Include the Repository ID and Reference, Execution Worktree, branch, fixed base, the unchanged accepted Context Pack path as Authority input, repository-specific outcome, Settled Seams and test approaches, Validation Obligations, repository instructions, and validation commands. For corrections, include actionable feedback by permanent provider ID and require an attributable disposition for every item. Require its one Repository Delivery result. Record validation-only and no-change deliveries directly. The Implementation Agent reuses that file and performs no Context Assembly or provider read.
 
 Verify every result against its assigned worktree and base; classify an expected change with no diff as unchanged.
 
@@ -72,9 +78,9 @@ For each changed delivery, verify its fixed-base diff and exact-head validation,
 
 ## 7. Publish Review Proposals
 
-Using each changed repository's Code Host binding, publish its delivery branch and verify its remote exact head. Create exactly one Draft Review Proposal to the configured Base Branch; re-read its source, target, draft state, and head. Publish nothing for unchanged deliveries.
+Using each changed repository's Code Host binding, publish its delivery branch and verify its remote exact head. Create or update its single Draft Review Proposal to the selected Target Branch; re-read its source, target, draft state, and head. Publish nothing for unchanged deliveries. On resumed or partially merged work, preserve confirmed merged proposals and their recorded source/result revisions; publish updates only for still-open proposals.
 
-**Complete when:** each changed delivery has one verified Draft Review Proposal at its exact Published Delivery Head and every Base Branch remains unchanged.
+**Complete when:** each pending changed delivery has one verified Draft Review Proposal at its exact Published Delivery Head, confirmed merged deliveries remain preserved, and this publication step has changed no Target Branch.
 
 ## 8. Validate the bundle
 
@@ -88,10 +94,10 @@ After every mandatory obligation has current passing evidence, use the `code-rev
 
 ## 9. Hand off idempotently
 
-Re-read the ticket, claim, Published Delivery Heads, proposals, feedback, and current evidence. Return any drift to its earliest invalidated prerequisite. Mark every verified proposal ready and re-read it. Build `coordinate-delivery:<canonical ticket reference>:<SHA-256 of sorted Repository ID=exact head lines>`.
+Re-read the ticket, claim, Published Delivery Heads, proposals, feedback, and current evidence. Return any drift to its earliest invalidated prerequisite. When Automatic merge is allowed, execute [automatic merge](AUTOMATIC-MERGE.md) before final handoff; otherwise mark every verified open proposal ready and re-read it. Preserve already merged proposals. Build `coordinate-delivery:<canonical ticket reference>:<SHA-256 of sorted Repository ID=exact head lines>`. A matching key also requires matching execution choices and proposal states; the key alone is not completion proof.
 
-Read [lifecycle artifact contracts](references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md) completely before writing the final handoff. Reuse a matching handoff; otherwise append one note recording every base, head, branch, proposal, validation and review result, Advisory finding, human action, merge/rollout order, unchanged delivery, preserved state, and limitation. Include no local path, credential, or secret. The complete handoff is the final Execution Checkpoint, so create no duplicate checkpoint note. Apply only missing final effects in order: replace `ready-for-agent` with exactly `ready-for-human`, release the Workflow Identity claim, re-read both effects, and leave the ticket open.
+Read [lifecycle artifact contracts](references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md) completely before writing the final handoff. Reuse a matching handoff; otherwise append one complete Execution Checkpoint under that contract. Include Advisory findings and the remaining human actions in merge, rollout, and acceptance order. The handoff is the final checkpoint, so create no duplicate note. Apply only missing final effects in order: replace `ready-for-agent` with exactly `ready-for-human`, release the Workflow Identity claim, re-read both effects, and leave the ticket open.
 
-**Complete when:** exactly one matching handoff exists, every proposal is ready at its recorded head, and the ticket is open, unassigned, and carries exactly `ready-for-human` among Routing Labels.
+**Complete when:** exactly one matching handoff exists and the ticket is open, unassigned, and carries exactly `ready-for-human` among Routing Labels. With automatic merge disabled, every proposal is ready at its recorded head or independently confirmed merged. With automatic merge allowed, every changed delivery has a confirmed merge result. No-change deliveries require no proposal or merge.
 
 Report the ticket, host-local worktree disposition, fixed bases and heads, validation, proposals, review outcomes, and final Work Tracker state.

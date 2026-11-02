@@ -24,11 +24,21 @@ Use this semantic structure:
 ## Binding validation
 ```
 
-The binding names the explicit host/repository locator, CLI/API and Git interfaces, permanent repository/revision references, exact-revision fetch and publication, one Review Proposal per changed delivery, draft/WIP state, proposal-revision verification, actionable feedback reads, human-approved feedback publication, and non-destructive validation.
+The binding names the explicit host/repository locator, CLI/API and Git interfaces, permanent repository/revision references, exact-revision fetch and publication, existing-target resolution, one Review Proposal per changed delivery to its selected target, draft/WIP state, proposal source/target/revision verification, actionable feedback reads, human-approved feedback publication, and non-destructive validation. The configured Base Branch remains the default, including when an execution selects another existing target.
 
 For GitLab use `git`, `glab repo view`, `glab api`, and `glab mr`; for GitHub use `git`, `gh repo view`, `gh api`, and `gh pr`. Validate readable repository, Base Branch, proposal, feedback, and draft/revision metadata without creating branches, commits, comments, or proposals.
 
-The least-privilege envelope permits read/fetch, publishing a delivery head, creating/updating its single proposal, reading feedback, publishing feedback whose exact meaning the human approved, and updating proposal description/draft state. It excludes autonomous review submission, protected-base push, merge/accept, administration, and deletion of human artifacts. Record no account, credential, local path, Work Tracker routing, or ticket scope.
+The default least-privilege envelope permits read/fetch, publishing a delivery head, creating/updating its single proposal, reading feedback, publishing feedback whose exact meaning the human approved, and updating proposal description/draft state. Merge is permitted only under the conditional capability below and explicit execution authority. Autonomous review submission, direct protected-branch push, administration, and deletion of human artifacts remain excluded. Record no account, credential, local path, Work Tracker routing, or ticket scope.
+
+### Conditional merge capability
+
+In Review Proposals and Workflow Identity permissions, state whether explicitly authorized automatic merge is supported. A binding that does not support it remains valid for ordinary human handoff. Existing bindings that prohibit merge or lack the required operations cannot authorize this mode; surface the gap for explicit binding reconciliation without silently changing the binding or falling back to a different completion mode.
+
+A supporting binding provides provider-native instructions to read mergeability, source and target revisions, required approvals/checks, actionable blocking feedback, pending operations, and confirmed merge results. It describes the allowed merge strategy, revision guards, asynchronous operation lookup, and retrieval of historical source/result revisions after merge, including squash and rebase. It prevents source-branch deletion by this operation.
+
+Describe how the operation protects the caller-validated source/target pair through merge. A queue or host policy must hold a changed combination until the caller's complete readiness requirements are satisfied for it; host CI alone does not establish workflow readiness. Specify the guard or hold mechanism and how to retrieve the resulting revision and evidence. A preflight read or source-only guard does not protect against target advancement. An unsupported guarantee or unmet host requirement stops automatic merge; it authorizes neither an administrative bypass nor invented approval.
+
+Validate capabilities through read-only metadata and documented operations. Record unavailable or unverified capabilities explicitly; create no probe merge, branch, or proposal. Execution still verifies current policy, checks, permission, and feedback before each merge.
 
 ## Work Tracker
 

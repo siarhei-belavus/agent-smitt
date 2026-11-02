@@ -107,18 +107,20 @@ Use coordinate-delivery to take the next eligible ticket.
 
 One invocation owns at most one ticket. An empty frontier finishes successfully. A supplied reference selects that ticket only.
 
+For a new delivery, the configured Base Branch and human merge are the defaults. Invocation instructions can select an existing target per writable repository, such as `Target Branch: api=spec/catalog`, and independently allow `Automatic merge: allowed`. See [coordinate-delivery](../skills/engineering/coordinate-delivery/SKILL.md) for execution options and their contract.
+
 The coordinator:
 
 1. Rechecks eligibility and dependencies, acquires and verifies its claim, and assembles complete ticket authority.
 2. Resolves every referenced repository against its declared identity, remote, base branch, instructions, and provider binding.
-3. Pins fresh base commits and prepares one isolated execution worktree and branch per writable repository.
+3. Records execution choices, pins fresh selected-target commits, and prepares one isolated execution worktree and branch per writable repository.
 4. Delegates one repository delivery to each implementation agent using `implement`. Each receives the same accepted Context Pack and its own scope.
 5. Runs fresh Standards reviews against the exact changed heads and corrects in-scope blocking findings.
 6. Publishes one draft PR or MR per changed repository and verifies the remote revisions.
 7. Runs the declared cross-repository validation and a Spec review of the complete bundle. A changed input invalidates the evidence that depends on it.
-8. Marks verified proposals ready, records the handoff and merge or rollout order, changes the ticket to `ready-for-human`, and releases its claim.
+8. Hands verified proposals to the human or completes authorized merges, records the result and remaining actions, changes the ticket to `ready-for-human`, and releases its claim.
 
-The ticket remains open. Merging and acceptance belong to the human. Repositories used only for context or validation stay outside product write scope.
+The ticket stays open for acceptance and explicit `closeout`. All required checks and intermediate human checkpoints apply to both merge modes. Repositories used only for context or validation stay outside product write scope.
 
 ### Example across repositories
 
@@ -140,11 +142,13 @@ Use `change-walkthrough` to explore a change through end-to-end scenarios. Use `
 
 Resume an interrupted delivery by invoking `coordinate-delivery` with the same ticket reference. It inspects existing claims, checkpoints, proposals, feedback, and revision-bound evidence before deciding which work remains valid. An old assignment does not automatically count as a newly acquired claim.
 
+Resume restores recorded execution choices and reconciles progress, including partial merge results. It preserves completed work and repeats only invalidated prerequisites. Conflicting instructions or feedback requiring changes to merged code need explicit reconciliation.
+
 Missing authority, a material design contradiction, or a persistent environment failure produces a recorded human action request. Safe work remains available. Planned manual verification also has an explicit request and evidence path. Resolve the stated boundary before resuming dependent work.
 
 ## Accept and close out
 
-After review, merge and verify any required deployment. Once the result meets its completion criteria and you have accepted it:
+After review, merge any proposals still awaiting human merge and verify any required deployment. Automatic merge does not supply acceptance or deployment evidence. Once the result meets its completion criteria and you have accepted it:
 
 ```text
 Use closeout for this delivery.
