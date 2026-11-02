@@ -10,7 +10,7 @@ A Coordinator Activation is one invocation that selects or resumes at most one t
 
 Coordinate `/coordinate-delivery [<ticket reference>]` fail closed. A supplied reference selects that ticket only. Without a reference, select and claim at most one ticket from the configured Delivery frontier. An empty frontier is a successful no-op.
 
-Accept optional execution instructions naming a Target Branch per writable Repository ID and Automatic merge permission, either `allowed` or `disabled`. On a new delivery, omitted targets use the configured Base Branch and omitted permission is `disabled`. These options are independent and belong to this ticket's execution. On an existing delivery, restore them through [recovery](RECOVERY.md) before applying defaults. They change neither planning artifacts nor Repository Scope, and add no dependency checks beyond the existing tracker eligibility rules.
+Accept optional execution instructions naming a Target Branch per writable Repository ID and Automatic merge permission, either `allowed` or `disabled`. On a new delivery, omitted targets use the configured Base Branch and omitted permission is `disabled`. These options are independent and belong to this ticket's execution. Permission replaces only the final wait for human review and merge; intermediate human boundaries and host policy still apply. On an existing delivery, restore the options through [recovery](RECOVERY.md) before applying defaults. They change neither planning artifacts nor Repository Scope, and add no dependency checks beyond the existing tracker eligibility rules.
 
 Use repository-owned bindings for every provider operation. Persist no provider commands, credentials, or account identity. Preserve recoverable work. Merge only through the explicitly authorized [automatic merge branch](AUTOMATIC-MERGE.md). Never push a protected branch directly, close the ticket, invoke closeout, or remove delivery worktrees or branches.
 
@@ -52,7 +52,7 @@ Resolve every Repository Reference before fetching a Base Branch or creating an 
 
 Validate each candidate against its Repository ID, remote, Base Branch, Git and worktree identity, and repository-local Code Host binding. Record a material inferred or prepared binding by its portable repository identity and validation evidence, without its local path. After binding, read the repository's instructions, canonical context, ADRs, Context Scope targets, and repository-backed Validation Sources. Preserve each Repository Store's checkout state and use it only as a Git source for worktree creation, never as a delivery workspace.
 
-Verify every selected Target Branch exists and is readable through its binding. When automatic merge is allowed, read [automatic merge](AUTOMATIC-MERGE.md) and pass its binding gate before implementation. Missing target access or merge capability enters the human boundary without changing choices or repository settings.
+Verify every selected Target Branch exists and is readable through its binding. When automatic merge is allowed, validate each writable repository's binding against the [conditional merge capability](references/bundled/federated-workflow/PROVIDER-BINDINGS.md#conditional-merge-capability) before preparing or implementing deliveries. Missing target access or a missing, unverified, or prohibitive merge capability is an Environment Preparation Blocker; request explicit binding reconciliation through the human boundary without changing choices or repository settings.
 
 **Complete when:** every Repository Reference resolves to one validated Repository Store, selected targets are readable, requested merge capabilities pass their binding gate, and every referenced instruction, context, ADR, binding, and Validation Source is readable; otherwise the applicable Specification Contradiction or Environment Preparation Blocker has entered the [human-boundary branch](HUMAN-BOUNDARY.md) before preparation.
 
@@ -64,7 +64,7 @@ Apply the loaded execution-preparation rules. Fetch every selected Target Branch
 
 ## 5. Execute one flat attempt
 
-Start exactly one direct-child Implementation Agent for each delivery requiring changes. Give it one complete textual narrowing assignment for its Repository Scope entry and run `implement`. Include the Repository ID and Reference, Execution Worktree, branch, fixed base, the unchanged accepted Context Pack path as Authority input, repository-specific outcome, Settled Seams and test approaches, Validation Obligations, repository instructions, and validation commands. Require its one Repository Delivery result. Record validation-only and no-change deliveries directly. The Implementation Agent reuses that file and performs no Context Assembly or provider read.
+Start exactly one direct-child Implementation Agent for each delivery requiring changes. Give it one complete textual narrowing assignment for its Repository Scope entry and run `implement`. Include the Repository ID and Reference, Execution Worktree, branch, fixed base, the unchanged accepted Context Pack path as Authority input, repository-specific outcome, Settled Seams and test approaches, Validation Obligations, repository instructions, and validation commands. For corrections, include actionable feedback by permanent provider ID and require an attributable disposition for every item. Require its one Repository Delivery result. Record validation-only and no-change deliveries directly. The Implementation Agent reuses that file and performs no Context Assembly or provider read.
 
 Verify every result against its assigned worktree and base; classify an expected change with no diff as unchanged.
 
@@ -78,7 +78,7 @@ For each changed delivery, verify its fixed-base diff and exact-head validation,
 
 ## 7. Publish Review Proposals
 
-Using each changed repository's Code Host binding, publish its delivery branch and verify its remote exact head. Create exactly one Draft Review Proposal to the selected Target Branch; re-read its source, target, draft state, and head. Publish nothing for unchanged deliveries. On resumed or partially merged work, preserve confirmed merged proposals and their recorded source/result revisions; publish updates only for still-open proposals.
+Using each changed repository's Code Host binding, publish its delivery branch and verify its remote exact head. Create or update its single Draft Review Proposal to the selected Target Branch; re-read its source, target, draft state, and head. Publish nothing for unchanged deliveries. On resumed or partially merged work, preserve confirmed merged proposals and their recorded source/result revisions; publish updates only for still-open proposals.
 
 **Complete when:** each pending changed delivery has one verified Draft Review Proposal at its exact Published Delivery Head, confirmed merged deliveries remain preserved, and this publication step has changed no Target Branch.
 
