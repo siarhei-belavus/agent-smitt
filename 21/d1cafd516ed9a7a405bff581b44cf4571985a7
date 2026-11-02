@@ -1,0 +1,138 @@
+skills/engineering/federated-workflow/REPOSITORY-IDENTITY.md
+  s_eb4488c0c5009c::t_79ac16a20d2f86 3
+skills/engineering/coordinate-delivery/AUTOMATIC-MERGE.md
+  s_eb4488c0c5009c::t_34f41dc3efb6b8 1-37
+skills/engineering/federated-workflow/PROVIDER-CONCEPTS.md
+  s_eb4488c0c5009c::t_79ac16a20d2f86 7
+skills/engineering/review-feedback/RETURN-FOR-CORRECTION.md
+  s_eb4488c0c5009c::t_ca253a968b5871 15,22
+  s_eb4488c0c5009c::t_9a1514bf1c6e9a 23
+skills/engineering/coordinate-delivery/EXECUTION-PREPARATION.md
+  s_eb4488c0c5009c::t_79ac16a20d2f86 15,21
+skills/engineering/README.md
+  s_eb4488c0c5009c::t_9a3f719098dd78 35
+skills/engineering/coordinate-delivery/HUMAN-BOUNDARY.md
+  s_eb4488c0c5009c::t_ca253a968b5871 5,9
+docs/workflow.md
+  s_eb4488c0c5009c::t_9a3f719098dd78 110-121,126,131-132,134,156-157,162
+skills/engineering/federated-workflow/LIFECYCLE-ARTIFACTS.md
+  s_eb4488c0c5009c::t_34f41dc3efb6b8 28,36,42-49,76
+  s_ec236476c4254b::t_1f76aeb31318c2 77
+skills/engineering/coordinate-delivery/RUNTIME-TERMINATION.md
+  s_eb4488c0c5009c::t_ca253a968b5871 7
+skills/engineering/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_79ac16a20d2f86 25-28
+skills/engineering/federated-workflow/PROVIDER-BINDINGS.md
+  s_eb4488c0c5009c::t_34f41dc3efb6b8 27,31-41
+skills/engineering/coordinate-delivery/RECOVERY.md
+  s_eb4488c0c5009c::t_ca253a968b5871 9,11-15,29-31
+  s_eb4488c0c5009c::t_f12026408472f8 32
+skills/engineering/coordinate-delivery/SKILL.md
+  s_eb4488c0c5009c::t_7152dd59f28619 43,57,101
+  s_eb4488c0c5009c::t_9a3f719098dd78 41,55
+  s_eb4488c0c5009c::t_79ac16a20d2f86 3,13-15,61,81,83,97,99
+  s_eb4488c0c5009c::t_fb4d4109071d13 42
+  s_eb4488c0c5009c::t_3f24c6f0b36cbb 56
+docs/skills.md
+  s_eb4488c0c5009c::t_9a3f719098dd78 37
+skills/engineering/coordinate-delivery/REVIEW-FEEDBACK.md
+  s_eb4488c0c5009c::t_ca253a968b5871 5-6
+skills/engineering/coordinate-delivery/HANDOFF-ONLY.md
+  s_eb4488c0c5009c::t_ca253a968b5871 3
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_7475be6612f490 25-28
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md
+  s_eb4488c0c5009c::t_1470c01b569589 28,36,42-49,76-77
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/PROVIDER-CONCEPTS.md
+  s_eb4488c0c5009c::t_b04aa027788a34 7
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/REPOSITORY-IDENTITY.md
+  s_eb4488c0c5009c::t_1007f6ba47f65b 3
+skills/engineering/change-walkthrough/references/bundled/review-feedback/RETURN-FOR-CORRECTION.md
+  s_eb4488c0c5009c::t_95dd99b3d065a6 15,22-23
+skills/engineering/code-review/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_284bd7ddc9b71f 25-28
+skills/engineering/code-review/references/bundled/federated-workflow/PROVIDER-CONCEPTS.md
+  s_eb4488c0c5009c::t_f8b1026c4d8924 7
+skills/engineering/code-review/references/bundled/federated-workflow/REPOSITORY-IDENTITY.md
+  s_eb4488c0c5009c::t_9da06b1b23e053 3
+skills/engineering/codebase-design/references/bundled/federated-workflow/REPOSITORY-IDENTITY.md
+  s_eb4488c0c5009c::t_3e5e8fa8da4776 3
+skills/engineering/coordinate-delivery/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_71194381937278 25-28
+skills/engineering/coordinate-delivery/references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md
+  s_eb4488c0c5009c::t_80e20284eb0b7f 28,36,42-49,76-77
+skills/engineering/coordinate-delivery/references/bundled/federated-workflow/PROVIDER-BINDINGS.md
+  s_eb4488c0c5009c::t_7fe1b5f66ee06e 1-88
+skills/engineering/coordinate-delivery/references/bundled/federated-workflow/PROVIDER-CONCEPTS.md
+  s_eb4488c0c5009c::t_9c18c09deecf40 7
+skills/engineering/coordinate-delivery/references/bundled/federated-workflow/REPOSITORY-IDENTITY.md
+  s_eb4488c0c5009c::t_0167d06fd6c15e 3
+skills/engineering/domain-modeling/references/bundled/federated-workflow/REPOSITORY-IDENTITY.md
+  s_eb4488c0c5009c::t_3046eed3f58998 3
+skills/engineering/implement/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_63c69f36d5e647 25-28
+skills/engineering/implement/references/bundled/federated-workflow/PROVIDER-CONCEPTS.md
+  s_eb4488c0c5009c::t_4b7f12c808cf84 7
+skills/engineering/implement/references/bundled/federated-workflow/REPOSITORY-IDENTITY.md
+  s_eb4488c0c5009c::t_06809fda81a379 3
+skills/engineering/review-feedback/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_d901b902ab9deb 25-28
+skills/engineering/review-feedback/references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md
+  s_eb4488c0c5009c::t_6387ce6c5c5dbd 28,36,42-49,76-77
+skills/engineering/review-feedback/references/bundled/federated-workflow/PROVIDER-CONCEPTS.md
+  s_eb4488c0c5009c::t_ac8d37d8519662 7
+skills/engineering/review-feedback/references/bundled/federated-workflow/REPOSITORY-IDENTITY.md
+  s_eb4488c0c5009c::t_4547f75eab493f 3
+skills/engineering/setup-federated-workflow/references/bundled/federated-workflow/PROVIDER-BINDINGS.md
+  s_eb4488c0c5009c::t_fed41e0fa543a3 27,31-41
+skills/engineering/setup-federated-workflow/references/bundled/federated-workflow/PROVIDER-CONCEPTS.md
+  s_eb4488c0c5009c::t_c984695a9a3b0d 7
+skills/engineering/setup-federated-workflow/references/bundled/federated-workflow/REPOSITORY-IDENTITY.md
+  s_eb4488c0c5009c::t_fbf2e7e39299dd 3
+skills/engineering/to-spec/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_b66829ce321a24 25-28
+skills/engineering/to-spec/references/bundled/federated-workflow/PROVIDER-CONCEPTS.md
+  s_eb4488c0c5009c::t_29df4b70724a33 7
+skills/engineering/to-spec/references/bundled/federated-workflow/REPOSITORY-IDENTITY.md
+  s_eb4488c0c5009c::t_06888ed38b7951 3
+skills/engineering/to-tickets/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_210b5df0ddc79a 25-28
+skills/engineering/to-tickets/references/bundled/federated-workflow/PROVIDER-CONCEPTS.md
+  s_eb4488c0c5009c::t_deb5ea2f81df7f 7
+skills/engineering/to-tickets/references/bundled/federated-workflow/REPOSITORY-IDENTITY.md
+  s_eb4488c0c5009c::t_40d37f5592fd44 3
+skills/engineering/triage/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_34efb75722f3cf 25-28
+skills/engineering/triage/references/bundled/federated-workflow/PROVIDER-CONCEPTS.md
+  s_eb4488c0c5009c::t_6811d3d9aa7517 7
+skills/engineering/triage/references/bundled/federated-workflow/REPOSITORY-IDENTITY.md
+  s_eb4488c0c5009c::t_055ec2e2d98512 3
+skills/engineering/wayfinder/references/bundled/federated-workflow/PROVIDER-CONCEPTS.md
+  s_eb4488c0c5009c::t_c0c3c0ac7c3efb 7
+skills/engineering/wayfinder/references/bundled/federated-workflow/REPOSITORY-IDENTITY.md
+  s_eb4488c0c5009c::t_96735114f8d230 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "21d1cafd516ed9a7a405bff581b44cf4571985a7",
+  "prompts": {},
+  "sessions": {
+    "s_eb4488c0c5009c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19b9d-86f7-7ac3-8b35-1b6a5e43ecfb",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    },
+    "s_ec236476c4254b": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a18bc1-946d-7ee1-bf47-a27b7cf9eee0",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    }
+  }
+}
