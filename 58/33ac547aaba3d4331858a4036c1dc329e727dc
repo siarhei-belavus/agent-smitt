@@ -1,0 +1,35 @@
+skills/engineering/coordinate-delivery/AUTOMATIC-MERGE.md
+  s_9eb302e031aea3::t_faefef2b69f7f0 7
+  s_9eb302e031aea3::t_657fd64c1be7a7 19,21-27,29,33
+  s_9eb302e031aea3::t_28fa950d3f6aef 9
+  s_9eb302e031aea3::t_636b9bfb32693c 20,31
+skills/engineering/coordinate-delivery/SKILL.md
+  s_9eb302e031aea3::t_636b9bfb32693c 81
+  s_9eb302e031aea3::t_657fd64c1be7a7 13,55,67
+skills/engineering/coordinate-delivery/HANDOFF-ONLY.md
+  s_9eb302e031aea3::t_657fd64c1be7a7 3
+skills/engineering/coordinate-delivery/RECOVERY.md
+  s_9eb302e031aea3::t_28fa950d3f6aef 29-30,41
+  s_9eb302e031aea3::t_657fd64c1be7a7 13,35
+  s_9eb302e031aea3::t_a8dd6581d4ce20 42
+skills/engineering/coordinate-delivery/EXECUTION-PREPARATION.md
+  s_9eb302e031aea3::t_636b9bfb32693c 21
+skills/engineering/coordinate-delivery/REVIEW-FEEDBACK.md
+  s_9eb302e031aea3::t_657fd64c1be7a7 7,9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5833ac547aaba3d4331858a4036c1dc329e727dc",
+  "prompts": {},
+  "sessions": {
+    "s_9eb302e031aea3": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19cb6-34df-7013-a09d-cfa81d675458",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    }
+  }
+}
