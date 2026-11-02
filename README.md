@@ -68,7 +68,7 @@ flowchart TD
     Scope -->|Yes| Spec
     Spec --> Tickets["to-tickets<br/>Define vertical slices"]
     Tickets --> Delivery["coordinate-delivery<br/>Deliver one ready ticket"]
-    Delivery --> Human([Human review<br/>Merge and accept])
+    Delivery --> Human([Human acceptance<br/>Review and merge as needed])
     Implement --> Human
     Human --> Close([closeout<br/>Record and clean up])
 
@@ -87,7 +87,7 @@ flowchart TD
 
 Keep idea refinement, specification, and ticket preparation in one conversation. A ready ticket carries the decisions another conversation needs to execute it. Use `handoff` when ownership or repository context changes.
 
-For a delivery spanning several repositories, the coordinator prepares an isolated worktree per writable repository, delegates implementation, reviews each result, publishes draft PRs or MRs, and validates the combined result. It hands the ticket back as `ready-for-human`. The human owns merging and acceptance.
+For a delivery spanning several repositories, the coordinator prepares an isolated worktree per writable repository, delegates implementation, reviews each result, publishes PRs or MRs, and validates the combined result. It hands the ticket back as `ready-for-human`, recording completed merges and remaining human actions. Acceptance and closeout remain human-owned.
 
 [Read the workflow guide](docs/workflow.md) for setup, specification preparation, multi-repository planning, recovery, and closeout.
 

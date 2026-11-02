@@ -35,7 +35,7 @@ Implementation starts from complete ticket authority, whether the ticket changes
 
 ### Review, acceptance, and closeout
 
-`coordinate-delivery` owns one eligible ticket per activation. It coordinates isolated repository deliveries, repository Standards reviews, publication, cross-repository validation, and whole-bundle Spec review. It hands the ticket back open and unassigned as `ready-for-human`. The human owns merging and acceptance.
+`coordinate-delivery` owns one eligible ticket per activation. It coordinates isolated repository deliveries, repository Standards reviews, publication, cross-repository validation, and whole-bundle Spec review. It hands the ticket back open and unassigned as `ready-for-human`, recording completed merges and remaining human actions. The human accepts the result and invokes closeout.
 
 Use `change-walkthrough` to explore a result and `review-feedback` to draft or publish authorized feedback. Returning the ticket for correction is an explicit `review-feedback` operation. Use `code-review` for a separate review of fixed repository targets and `pr` to write a PR or MR description.
 

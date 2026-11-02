@@ -107,17 +107,7 @@ Use coordinate-delivery to take the next eligible ticket.
 
 One invocation owns at most one ticket. An empty frontier finishes successfully. A supplied reference selects that ticket only.
 
-You can select an existing target branch for each writable repository and independently allow automatic merge:
-
-```text
-Use coordinate-delivery for <ticket reference>.
-Target Branch: api=spec/catalog, web=spec/catalog.
-Automatic merge: allowed.
-```
-
-These are execution instructions, not ticket or Specification fields. Omitted targets use each repository's configured Base Branch. Omitted merge permission defaults to `disabled` on a new delivery. The coordinator branches from the selected target and sends that repository's PR or MR to it. It does not create target branches or change repository settings.
-
-Each ticket can use different choices. Dependency eligibility still follows tracker blocker state; selecting a branch adds no check that other tickets' changes are present there. A future caller coordinating several tickets owns their shared target and scheduling.
+For a new delivery, the configured Base Branch and human merge are the defaults. Invocation instructions can select an existing target per writable repository, such as `Target Branch: api=spec/catalog`, and independently allow `Automatic merge: allowed`. See [coordinate-delivery](../skills/engineering/coordinate-delivery/SKILL.md) for execution options and their contract.
 
 The coordinator:
 
@@ -128,10 +118,9 @@ The coordinator:
 5. Runs fresh Standards reviews against the exact changed heads and corrects in-scope blocking findings.
 6. Publishes one draft PR or MR per changed repository and verifies the remote revisions.
 7. Runs the declared cross-repository validation and a Spec review of the complete bundle. A changed input invalidates the evidence that depends on it.
-8. Marks verified proposals ready. If automatic merge is allowed, it refreshes the combined result against the current target, resolves in-scope conflicts, repeats invalidated checks and reviews, and verifies each merge through the Code Host.
-9. Records the handoff, including confirmed merge results or remaining human merge actions, changes the ticket to `ready-for-human`, and releases its claim.
+8. Hands verified proposals to the human or completes authorized merges, records the result and remaining actions, changes the ticket to `ready-for-human`, and releases its claim.
 
-The ticket remains open in both modes. Acceptance and explicit `closeout` remain separate. Automatic merge removes only the final human review/merge wait; planned manual verification and intermediate human checkpoints remain. A conflict requiring a new decision, an incompatible Code Host binding, or an unmet host approval/check blocks merge. The coordinator preserves worktrees and branches for closeout. Repositories used only for context or validation stay outside product write scope.
+The ticket stays open for acceptance and explicit `closeout`. All required checks and intermediate human checkpoints apply to both merge modes. Repositories used only for context or validation stay outside product write scope.
 
 ### Example across repositories
 
@@ -153,7 +142,7 @@ Use `change-walkthrough` to explore a change through end-to-end scenarios. Use `
 
 Resume an interrupted delivery by invoking `coordinate-delivery` with the same ticket reference. It inspects existing claims, checkpoints, proposals, feedback, and revision-bound evidence before deciding which work remains valid. An old assignment does not automatically count as a newly acquired claim.
 
-Resume restores the recorded target branches and merge permission without requiring you to repeat them. Conflicting new options require explicit reconciliation; they never silently retarget existing work. Legacy checkpoints retain human merge behavior. If a merge succeeded before its result was recorded, recovery verifies provider state and repairs the missing effects. With partial multi-repository success, it preserves merged results and resumes only the outstanding work. Feedback requiring changes to already merged code needs an explicit follow-up plan.
+Resume restores recorded execution choices and reconciles progress, including partial merge results. It preserves completed work and repeats only invalidated prerequisites. Conflicting instructions or feedback requiring changes to merged code need explicit reconciliation.
 
 Missing authority, a material design contradiction, or a persistent environment failure produces a recorded human action request. Safe work remains available. Planned manual verification also has an explicit request and evidence path. Resolve the stated boundary before resuming dependent work.
 

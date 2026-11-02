@@ -37,17 +37,18 @@ Open with where work stopped, why, what was verified and preserved, and what per
 
 The opening may focus on changes since the previous record; the complete checkpoint, including a final handoff, carries a current snapshot rather than a delta requiring reconstruction from earlier comments.
 
-An Execution Checkpoint is the current durable snapshot of a Delivery Bundle. Record the checkpoint, ticket, Execution Attempt ID, trigger, provider timestamp, ticket/routing/claim snapshot, resolved dependencies and authority, and the next permissible step with prerequisites. For every Repository Delivery record its base, branch, exact Published Delivery Head, Review Proposal, preserved worktree state, and outcome. Record exact repository-backed Validation Source commits; exact-head repository, Standards, cross-repository, and Bundle Spec evidence; affected and preserved deliveries; invalidated, preserved, and pending evidence; the active request ID or explicit absence; local-only exclusions; an execution URL or equivalent runtime reference when the runtime provides one; and limitations.
+An Execution Checkpoint is the current durable snapshot of a Delivery Bundle. Include all of these field groups:
 
-### Execution choices and merge results
+| Group | Required contents |
+| --- | --- |
+| Identity and authority | Checkpoint and ticket references, Execution Attempt ID, trigger, provider timestamp, ticket/routing/claim snapshot, resolved dependencies and authority. |
+| Execution choices | Target Branch per writable Repository ID, configured Base Branch, Automatic merge permission as `allowed` or `disabled`, and the instruction or response authorizing those choices. |
+| Repository state | Each delivery's immutable launch commit, current Fixed Review Base, source branch, exact Published Delivery Head, Review Proposal, preserved worktree state, and outcome. |
+| Merge state | Per repository: unattempted, pending/unconfirmed, failed, or confirmed merged; exact proposal/source/observed-target pair; operation reference when available. A confirmed merge also records its selected target, provider merge reference, original source, exact result revision, and applicable evidence. |
+| Evidence | Exact repository-backed Validation Source commits; repository, Standards, cross-repository, and Bundle Spec results with their required revision bindings; preserved, invalidated, and pending evidence. |
+| Continuation | Affected and preserved deliveries, active request ID or explicit absence, local-only exclusions, runtime execution reference when available, limitations, and next permissible step with prerequisites. |
 
-Every new checkpoint, including a final handoff, records the resolved Target Branch per writable Repository ID and Automatic merge permission as `allowed` or `disabled`, with the explicit instruction or response authorizing those choices. Preserve the configured Base Branch separately. Record each immutable launch commit and current Fixed Review Base when prepared; before preparation, mark those revisions and other unavailable delivery fields as pending.
-
-If a boundary precedes complete ticket authority or option resolution, record the supplied option instructions and mark resolution pending. This is an incomplete execution choice, not a legacy omission or permission to act. Preserve the request through recovery and resolve it against accepted scope before preparation; never invent a target or infer merge permission from missing fields.
-
-Record choices before repository preparation and retain them in every successor snapshot. Before each authorized merge, publish and re-read the exact proposal, source revision, observed target revision, evidence, and pending operation. Once submitted, include its provider reference when available. Record whether it is unattempted, pending/unconfirmed, failed, or confirmed merged. A confirmed result names the original source, selected target, provider merge reference, exact result revision, and applicable evidence. Preserve every repository's state during partial success.
-
-These fields extend the existing checkpoint rather than create a new artifact type. Absence in a legacy record means the historical configured target and disabled automatic merge; it grants no new permission. Existing proposal targets and recorded provenance must agree before those historical defaults are accepted.
+Before a field can be established, mark it pending rather than inventing a value. If ticket authority or option resolution is incomplete, preserve the supplied option instructions and mark resolution pending. The workflow must resolve them against accepted scope before preparation. Pending or absent fields grant no merge permission. Partial success retains the full snapshot for every repository.
 
 ## Human Action Request
 

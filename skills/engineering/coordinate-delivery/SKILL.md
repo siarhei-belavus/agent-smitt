@@ -1,6 +1,6 @@
 ---
 name: coordinate-delivery
-description: "Coordinate one ready ticket through verified delivery, with optional target branches and automatic merge."
+description: "Coordinate one ready ticket through its complete federated delivery and human handoff."
 disable-model-invocation: true
 ---
 
@@ -96,7 +96,7 @@ After every mandatory obligation has current passing evidence, use the `code-rev
 
 Re-read the ticket, claim, Published Delivery Heads, proposals, feedback, and current evidence. Return any drift to its earliest invalidated prerequisite. When Automatic merge is allowed, execute [automatic merge](AUTOMATIC-MERGE.md) before final handoff; otherwise mark every verified open proposal ready and re-read it. Preserve already merged proposals. Build `coordinate-delivery:<canonical ticket reference>:<SHA-256 of sorted Repository ID=exact head lines>`. A matching key also requires matching execution choices and proposal states; the key alone is not completion proof.
 
-Read [lifecycle artifact contracts](references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md) completely before writing the final handoff. Reuse a matching handoff; otherwise append one note recording every launch commit, Fixed Review Base, target, head, branch, proposal, merge permission and confirmed result, validation and review result, Advisory finding, human action, merge/rollout order, unchanged delivery, preserved state, and limitation. Distinguish proposals awaiting human merge from confirmed merged results awaiting acceptance or explicit closeout. Include no local path, credential, or secret. The complete handoff is the final Execution Checkpoint, so create no duplicate checkpoint note. Apply only missing final effects in order: replace `ready-for-agent` with exactly `ready-for-human`, release the Workflow Identity claim, re-read both effects, and leave the ticket open.
+Read [lifecycle artifact contracts](references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md) completely before writing the final handoff. Reuse a matching handoff; otherwise append one complete Execution Checkpoint under that contract. Include Advisory findings and the remaining human actions in merge, rollout, and acceptance order. The handoff is the final checkpoint, so create no duplicate note. Apply only missing final effects in order: replace `ready-for-agent` with exactly `ready-for-human`, release the Workflow Identity claim, re-read both effects, and leave the ticket open.
 
 **Complete when:** exactly one matching handoff exists and the ticket is open, unassigned, and carries exactly `ready-for-human` among Routing Labels. With automatic merge disabled, every proposal is ready at its recorded head or independently confirmed merged. With automatic merge allowed, every changed delivery has a confirmed merge result. No-change deliveries require no proposal or merge.
 
