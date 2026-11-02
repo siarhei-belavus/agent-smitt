@@ -1,0 +1,63 @@
+skills/engineering/federated-workflow/LIFECYCLE-ARTIFACTS.md
+  s_eb4488c0c5009c::t_cb27a7023c6d9c 40-51
+skills/engineering/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_85d9c80c81b060 9-12
+skills/engineering/coordinate-delivery/AUTOMATIC-MERGE.md
+  s_eb4488c0c5009c::t_cb27a7023c6d9c 29
+skills/engineering/federated-workflow/PROVIDER-BINDINGS.md
+  s_eb4488c0c5009c::t_cb27a7023c6d9c 39
+README.md
+  s_eb4488c0c5009c::t_70420012cc40ef 71,90
+skills/engineering/README.md
+  s_eb4488c0c5009c::t_70420012cc40ef 35
+skills/engineering/ask-smitt/SKILL.md
+  s_eb4488c0c5009c::t_70420012cc40ef 38
+docs/skills.md
+  s_eb4488c0c5009c::t_70420012cc40ef 37
+skills/engineering/coordinate-delivery/SKILL.md
+  s_eb4488c0c5009c::t_70420012cc40ef 3,99
+docs/workflow.md
+  s_eb4488c0c5009c::t_70420012cc40ef 110,121,123,145
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_a383e003bc1064 9-12
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md
+  s_eb4488c0c5009c::t_dc1d89fb5d7026 40-51
+skills/engineering/code-review/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_6969557b739b3d 9-12
+skills/engineering/coordinate-delivery/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_f21732f03b9eb5 9-12
+skills/engineering/coordinate-delivery/references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md
+  s_eb4488c0c5009c::t_5183d62874df43 40-51
+skills/engineering/coordinate-delivery/references/bundled/federated-workflow/PROVIDER-BINDINGS.md
+  s_eb4488c0c5009c::t_b1033da0ee2bf4 39
+skills/engineering/implement/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_27b970dbb678b0 9-12
+skills/engineering/review-feedback/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_ca80001a6cc8af 9-12
+skills/engineering/review-feedback/references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md
+  s_eb4488c0c5009c::t_15db530863590a 40-51
+skills/engineering/setup-federated-workflow/references/bundled/federated-workflow/PROVIDER-BINDINGS.md
+  s_eb4488c0c5009c::t_0b48a27649326d 39
+skills/engineering/to-spec/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_4b78e0d0579154 9-12
+skills/engineering/to-tickets/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_ab357c1bbe6491 9-12
+skills/engineering/triage/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_ea3829b17d23c6 9-12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b126297773ca9f88d92701ce776f8977e180a44c",
+  "prompts": {},
+  "sessions": {
+    "s_eb4488c0c5009c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19b9d-86f7-7ac3-8b35-1b6a5e43ecfb",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    }
+  }
+}
