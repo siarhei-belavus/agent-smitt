@@ -34,7 +34,7 @@ Skills marked Explicit declare `disable-model-invocation: true`. Invoke them by 
 
 | Skill | Invocation | Use it to |
 | --- | --- | --- |
-| [coordinate-delivery](../skills/engineering/coordinate-delivery/SKILL.md) | Explicit | Coordinate one ready ticket through implementation, publication, validation, and human handoff. |
+| [coordinate-delivery](../skills/engineering/coordinate-delivery/SKILL.md) | Explicit | Deliver one ready ticket with optional target branches and authorized automatic merge; leave closure to closeout. |
 | [code-review](../skills/engineering/code-review/SKILL.md) | Agent or explicit | Review fixed repository targets in Standards, Spec, or combined modes. |
 | [review-feedback](../skills/engineering/review-feedback/SKILL.md) | Agent or explicit | Draft or publish human feedback and explicitly return a ticket for correction. |
 | [change-walkthrough](../skills/engineering/change-walkthrough/SKILL.md) | Explicit | Explore changes one scenario and logical step at a time. |

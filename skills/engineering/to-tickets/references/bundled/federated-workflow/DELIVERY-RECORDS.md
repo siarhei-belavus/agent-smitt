@@ -22,6 +22,10 @@ A Repository Reference makes one repository resolvable without granting write au
 - remote;
 - Base Branch.
 
+The Base Branch remains the repository's configured default. A **Target Branch** is the existing remote branch selected for one Repository Delivery's execution, defaulting to that Base Branch. It supplies the initial launch commit and receives the Review Proposal. Selecting it neither rewrites the Repository Reference nor expands Repository Scope.
+
+The exact launch commit records where execution began and remains immutable. The **Fixed Review Base** is the exact commit bounding the current delivery diff, initially the launch commit. A target synchronization may advance the review base while preserving launch provenance and refreshing evidence for the new review bounds.
+
 ## Authority input
 
 For Work Tracker-backed delivery, Authority input is the unchanged path to one accepted runtime-local `Complete` Context Pack. Coordinator-narrowed implementation and review agents reuse that file and perform no provider read. The path is host-local execution state, not a portable delivery record.

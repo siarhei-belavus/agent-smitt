@@ -25,7 +25,7 @@ Before publishing, verify that the opening agrees with the recorded evidence and
 
 - Every record ID is unique and every relationship resolves bidirectionally to the named record.
 - One current Execution Checkpoint has at most one active Human Action Request and one linked free-form Human Response.
-- Repository evidence names its repository and exact head. Cross-repository evidence names its complete influencing delivery-head set and every repository-backed Validation Source with its recorded exact source commit. Bundle Spec evidence names the complete bundle head set and the cross-repository evidence with those source commits. A mismatch is stale evidence.
+- Repository evidence names its repository and exact head. Review evidence also names its Fixed Review Base. Cross-repository evidence names its complete influencing delivery-head set and every repository-backed Validation Source with its recorded exact source commit. Bundle Spec evidence names the complete bundle head set, review bases, and the cross-repository evidence with those source commits. A mismatch is stale evidence.
 - Runtime termination evidence names the provider record, its execution URL or equivalent runtime reference when available, the checkpoint, and the observed termination outcome. The runtime reference supports observability and liveness diagnosis; it establishes neither the claim nor recovery authority. Elapsed time is not evidence.
 - Durable records identify preserved Execution Worktrees by Repository Delivery, branch, base, exact Git state, and provenance disposition. Local paths remain execution-host inputs and never enter a checkpoint, request, response, Resumption Record, or handoff.
 - A runtime-local Context Pack path remains activation state and never enters a checkpoint, request, response, Resumption Record, or handoff. Durable records identify authority by selected profile, permanent root, result, and provider references, never by retaining the pack or its local path.
@@ -33,11 +33,19 @@ Before publishing, verify that the opening agrees with the recorded evidence and
 
 ## Execution Checkpoint
 
-Open with where work stopped, why, what was verified and preserved, and what permits the next step. For a final handoff, explain what is ready for review, link the proposals, summarize verification results, and state the human review, merge, or rollout actions in their required order.
+Open with where work stopped, why, what was verified and preserved, and what permits the next step. For a final handoff, distinguish proposals ready for human review/merge from confirmed merged results, link the proposals, summarize verification results, and state remaining acceptance, explicit closeout, or rollout actions in their required order.
 
 The opening may focus on changes since the previous record; the complete checkpoint, including a final handoff, carries a current snapshot rather than a delta requiring reconstruction from earlier comments.
 
 An Execution Checkpoint is the current durable snapshot of a Delivery Bundle. Record the checkpoint, ticket, Execution Attempt ID, trigger, provider timestamp, ticket/routing/claim snapshot, resolved dependencies and authority, and the next permissible step with prerequisites. For every Repository Delivery record its base, branch, exact Published Delivery Head, Review Proposal, preserved worktree state, and outcome. Record exact repository-backed Validation Source commits; exact-head repository, Standards, cross-repository, and Bundle Spec evidence; affected and preserved deliveries; invalidated, preserved, and pending evidence; the active request ID or explicit absence; local-only exclusions; an execution URL or equivalent runtime reference when the runtime provides one; and limitations.
+
+### Execution choices and merge results
+
+Every new checkpoint, including a final handoff, records the resolved Target Branch per writable Repository ID and Automatic merge permission as `allowed` or `disabled`, with the explicit instruction or response authorizing those choices. Preserve the configured Base Branch separately. Record each immutable launch commit and current Fixed Review Base when prepared; before preparation, mark those revisions and other unavailable delivery fields as pending.
+
+Record choices before repository preparation and retain them in every successor snapshot. Before each authorized merge, publish and re-read the exact proposal, source revision, observed target revision, evidence, and pending operation. Once submitted, include its provider reference when available. Record whether it is unattempted, pending/unconfirmed, failed, or confirmed merged. A confirmed result names the original source, selected target, provider merge reference, exact result revision, and applicable evidence. Preserve every repository's state during partial success.
+
+These fields extend the existing checkpoint rather than create a new artifact type. Absence in a legacy record means the historical configured target and disabled automatic merge; it grants no new permission. Existing proposal targets and recorded provenance must agree before those historical defaults are accepted.
 
 ## Human Action Request
 
@@ -64,5 +72,7 @@ A Resumption Plan is a human-produced or explicitly delegated execution-ready pl
 Open with the source authorizing resumption, where work will restart, what is reused, and which checks must run again and why.
 
 A Resumption Record is the durable gate result written before a resumed Execution Attempt. Record its ID, ticket, next Execution Attempt ID, exactly one response/feedback/runtime source, `continue` or `replan`, checkpoint, plan when applicable, affected and preserved deliveries, previous and launch exact delivery heads and repository-backed Validation Source commits, reused proposals, invalidated evidence, preserved unchanged-dependency evidence, required refresh, re-read routing/claim state, next step, and limitations.
+
+Carry the restored execution choices, current review bases, and per-repository merge states from the checkpoint, including any explicit reconciliation of changed options. A merge result does not replace the required response, feedback, or runtime source.
 
 Publish and re-read this record after a successful Resume Gate and before the named Execution Attempt. Verify its launch heads against provider truth.
