@@ -1,0 +1,37 @@
+skills/engineering/coordinate-delivery/AUTOMATIC-MERGE.md
+  s_eb4488c0c5009c::t_261cb899908374 29-30
+skills/engineering/federated-workflow/PROVIDER-BINDINGS.md
+  s_eb4488c0c5009c::t_261cb899908374 39
+skills/engineering/coordinate-delivery/RECOVERY.md
+  s_eb4488c0c5009c::t_261cb899908374 11-12
+skills/engineering/coordinate-delivery/HUMAN-BOUNDARY.md
+  s_eb4488c0c5009c::t_261cb899908374 5
+skills/engineering/federated-workflow/LIFECYCLE-ARTIFACTS.md
+  s_eb4488c0c5009c::t_261cb899908374 46-47
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md
+  s_eb4488c0c5009c::t_3311c41a913e25 46-47
+skills/engineering/coordinate-delivery/references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md
+  s_eb4488c0c5009c::t_6b6e49697abe2a 46-47
+skills/engineering/coordinate-delivery/references/bundled/federated-workflow/PROVIDER-BINDINGS.md
+  s_eb4488c0c5009c::t_a4b4649ff1250f 39
+skills/engineering/review-feedback/references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md
+  s_eb4488c0c5009c::t_5977053903e0f6 46-47
+skills/engineering/setup-federated-workflow/references/bundled/federated-workflow/PROVIDER-BINDINGS.md
+  s_eb4488c0c5009c::t_111623a2c0f74f 39
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9c7b1b85f028efb0e72ad19cfa2b0ebf5d90adfe",
+  "prompts": {},
+  "sessions": {
+    "s_eb4488c0c5009c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19b9d-86f7-7ac3-8b35-1b6a5e43ecfb",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    }
+  }
+}
