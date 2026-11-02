@@ -4,6 +4,8 @@ Return for correction is the human-authorized end of one review round. It change
 
 Read [lifecycle artifact contracts](references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md), then read the Ticket Origin Repository's instructions, Work Tracker binding, Routing Label binding, and affected repositories' Code Host bindings.
 
+Affected Review Proposals are those requiring implementation changes to address the feedback in this return operation. Determine that set from the required changes, not merely from where comments are attached. Other proposals in the same Delivery Bundle, including confirmed merged proposals, remain preserved results; their merge state alone does not block returning the affected proposals for correction.
+
 Resolve the delivery ticket through its matching Delivery Bundle handoff and affected Review Proposals. A supplied ticket reference narrows the lookup but does not replace the handoff relationship. Re-read the handoff, ticket, dependencies, routing, assignee, active lifecycle records, proposal heads, and complete affected feedback.
 
 Resolve the Workflow Identity through the Work Tracker binding. Verify that the current provider identity has permission to replace the Routing Label before mutation.
