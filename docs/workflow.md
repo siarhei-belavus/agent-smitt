@@ -91,23 +91,41 @@ Configured trackers store the tickets using their established artifact mapping. 
 
 `triage` is the other entry point for incoming bugs and requests. It clarifies raw reports and prepares executable Agent Briefs before marking them ready.
 
-## Coordinate a delivery
+## Deliver a specification
+
+For a published specification with prepared tickets, invoke:
+
+```text
+Use deliver-spec for <specification reference>.
+```
+
+The coordinator records the agreed ticket set and creates or reuses one integration branch per writable repository. It runs eligible tickets through `deliver-ticket` with those branches as targets and automatic merge allowed. Each ticket keeps its own context, worktrees, source branches, review proposals, and human checkpoints. Independent tickets can run in parallel even when they change the same repository.
+
+The runtime must support ticket coordinators that can delegate their own implementation and review. Follow the user's context preference, such as separate chats in the same project, and reuse existing execution references on resume. A missing runtime capability is an explicit blocker, not a reason to silently flatten the workflow.
+
+After each ticket meets its own completion criteria, the coordinator invokes `closeout` for that ticket. Confirmed closure releases its dependents before final specification merge. Required acceptance or deployment evidence still applies. Shared specification branches and worktrees survive ticket cleanup.
+
+When the agreed tickets are complete, `deliver-spec` validates and independently reviews the assembled result, then publishes one final proposal per changed repository to its recorded final target. You review and merge those proposals. The Specification stays open for explicit closeout.
+
+Resume with the same specification reference for interruptions or final-review feedback. Overall checkpoints live on the Specification; ticket recovery stays in ticket checkpoints. In-scope corrections use Standalone `implement` and update the existing open proposals without requiring another ticket. Changes to requirements, writable repositories, or active execution choices require reconciliation. If an affected final proposal already merged, agree on a follow-up proposal while preserving its historical result.
+
+## Deliver a ticket
 
 Invoke the coordinator from the Ticket Origin Repository with an exact ticket reference:
 
 ```text
-Use coordinate-delivery for <ticket reference>.
+Use deliver-ticket for <ticket reference>.
 ```
 
 Or omit the reference to select one eligible ticket from the configured Delivery frontier:
 
 ```text
-Use coordinate-delivery to take the next eligible ticket.
+Use deliver-ticket to take the next eligible ticket.
 ```
 
 One invocation owns at most one ticket. An empty frontier finishes successfully. A supplied reference selects that ticket only.
 
-For a new delivery, the configured Base Branch and human merge are the defaults. Invocation instructions can select an existing target per writable repository, such as `Target Branch: api=spec/catalog`, and independently allow `Automatic merge: allowed`. See [coordinate-delivery](../skills/engineering/coordinate-delivery/SKILL.md) for execution options and their contract.
+For a new delivery, the configured Base Branch and human merge are the defaults. Invocation instructions can select an existing target per writable repository, such as `Target Branch: api=spec/catalog`, and independently allow `Automatic merge: allowed`. See [deliver-ticket](../skills/engineering/deliver-ticket/SKILL.md) for execution options and their contract.
 
 The coordinator:
 
@@ -140,7 +158,7 @@ Federation describes durable domain ownership. A Delivery Bundle describes the r
 
 Use `change-walkthrough` to explore a change through end-to-end scenarios. Use `review-feedback` to draft actionable feedback and publish it when authorized. Returning a ticket for correction is an explicit review-feedback operation.
 
-Resume an interrupted delivery by invoking `coordinate-delivery` with the same ticket reference. It inspects existing claims, checkpoints, proposals, feedback, and revision-bound evidence before deciding which work remains valid. An old assignment does not automatically count as a newly acquired claim.
+Resume an interrupted delivery by invoking `deliver-ticket` with the same ticket reference. It inspects existing claims, checkpoints, proposals, feedback, and revision-bound evidence before deciding which work remains valid. An old assignment does not automatically count as a newly acquired claim.
 
 Resume restores recorded execution choices and reconciles progress, including partial merge results. It preserves completed work and repeats only invalidated prerequisites. Conflicting instructions or feedback requiring changes to merged code need explicit reconciliation.
 

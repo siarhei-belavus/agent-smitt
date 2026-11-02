@@ -1,6 +1,6 @@
 ---
 name: implement
-description: "Implement repository deliveries from authoritative specs or tickets. Use for standalone implementation and for one repository delivery narrowed by coordinate-delivery."
+description: "Implement repository deliveries from authoritative specs or tickets. Use for standalone implementation and for one repository delivery narrowed by deliver-ticket."
 ---
 
 Implement the work described by the user in the authoritative spec or tickets.
@@ -12,7 +12,7 @@ Read [delivery records](references/bundled/federated-workflow/DELIVERY-RECORDS.m
 Classify the assignment before Context Assembly or checkout changes.
 
 - When the user authorizes one or more writable Repository Deliveries directly, read [Standalone assignments](STANDALONE.md).
-- When `coordinate-delivery` supplies one complete narrowing assignment for exactly one Repository Scope entry, read [Coordinator narrowing](COORDINATOR-NARROWED.md).
+- When `deliver-ticket` supplies one complete narrowing assignment for exactly one Repository Scope entry, read [Coordinator narrowing](COORDINATOR-NARROWED.md).
 
 Every writable Repository Delivery must supply or resolve:
 

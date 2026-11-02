@@ -24,7 +24,7 @@ The route most work travels. You have an idea and want it built. If the effort i
    - run **`prototype`**,
    - **`handoff`** back what you learned, and reference it from the original planning task.
 3. **Branch — is this a multi-task build?**
-   - **Yes** → **`to-spec`** (turn the conversation into a spec), then **`to-tickets`** to split it into tracer-bullet tickets, each declaring its **blocking edges**. On a local tracker that's one file per ticket under `.scratch/<feature>/issues/`; on a real tracker the edges become native blocking links. Run each eligible agent-ready ticket through **`coordinate-delivery`** for its complete federated delivery and human handoff.
+   - **Yes** → **`to-spec`** (turn the conversation into a spec), then **`to-tickets`** to split it into tracer-bullet tickets, each declaring its **blocking edges**. On a local tracker that's one file per ticket under `.scratch/<feature>/issues/`; on a real tracker the edges become native blocking links. Use **`deliver-spec`** for the prepared specification's shared branches and final review, or **`deliver-ticket`** for one eligible ticket.
    - **No** → **`implement`** right here, in the same task.
 
 ### Context hygiene
@@ -35,17 +35,19 @@ Implementation starts from complete ticket authority, whether the ticket changes
 
 ### Review, acceptance, and closeout
 
-`coordinate-delivery` owns one eligible ticket per activation. It coordinates isolated repository deliveries, repository Standards reviews, publication, cross-repository validation, and whole-bundle Spec review. It hands the ticket back open and unassigned as `ready-for-human`, recording completed merges and remaining human actions. The human accepts the result and invokes closeout.
+`deliver-ticket` owns one eligible ticket per activation. It coordinates isolated repository deliveries, repository Standards reviews, publication, cross-repository validation, and whole-bundle Spec review. It hands the ticket back open and unassigned as `ready-for-human`, recording completed merges and remaining human actions.
+
+`deliver-spec` schedules prepared tickets in separate contexts, runs independent tickets in parallel, and closes each ticket only when its completion criteria pass. It retains shared branches and validates the assembled specification for final human review and merge. Resume it with the same Specification for interruptions or final-review corrections without a mandatory new ticket. Specification closeout remains explicit.
 
 Use `change-walkthrough` to explore a result and `review-feedback` to draft or publish authorized feedback. Returning the ticket for correction is an explicit `review-feedback` operation. Use `code-review` for a separate review of fixed repository targets and `pr` to write a PR or MR description.
 
-After acceptance and any required deployment verification, invoke `closeout` to record completion, transition the ticket, and remove verified disposable worktrees and branches. For an interrupted coordinated delivery, invoke `coordinate-delivery` with the same ticket reference so it can reconcile existing state before resuming.
+After acceptance and any required deployment verification, invoke `closeout` to record completion, transition the ticket, and remove verified disposable worktrees and branches. For an interrupted coordinated delivery, invoke `deliver-ticket` with the same ticket reference so it can reconcile existing state before resuming.
 
 ## On-ramps
 
 A starting situation that generates work, then merges onto the main flow.
 
-- **Bugs and requests piling up** → **`triage`**. It moves issues through triage roles and produces agent-ready issues for a separately invoked `coordinate-delivery` run.
+- **Bugs and requests piling up** → **`triage`**. It moves issues through triage roles and produces agent-ready issues for a separately invoked `deliver-ticket` run.
 
   Triage is only for issues **you didn't create** — bug reports, incoming feature requests, anything that arrives raw. Tickets that `to-tickets` produced are already agent-ready, so **don't triage them**.
 

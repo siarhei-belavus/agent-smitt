@@ -1,14 +1,13 @@
 ---
-name: coordinate-delivery
-description: "Coordinate one ready ticket through its complete federated delivery and human handoff."
-disable-model-invocation: true
+name: deliver-ticket
+description: "Deliver or resume one prepared ticket through implementation, review, optional automatic merge, and human handoff. Use directly or for a ticket assigned by deliver-spec."
 ---
 
 Read [Work Tracker context assembly](references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md) before accepting ticket authority or preparing a repository delivery.
 
 A Coordinator Activation is one invocation that selects or resumes at most one ticket and owns only a claim it acquires and verifies.
 
-Coordinate `/coordinate-delivery [<ticket reference>]` fail closed. A supplied reference selects that ticket only. Without a reference, select and claim at most one ticket from the configured Delivery frontier. An empty frontier is a successful no-op.
+Coordinate `/deliver-ticket [<ticket reference>]` fail closed. A supplied reference selects that ticket only. Without a reference, select and claim at most one ticket from the configured Delivery frontier. An empty frontier is a successful no-op.
 
 Accept optional execution instructions naming a Target Branch per writable Repository ID and Automatic merge permission, either `allowed` or `disabled`. On a new delivery, omitted targets use the configured Base Branch and omitted permission is `disabled`. These options are independent and belong to this ticket's execution. Permission replaces only the final wait for human review and merge; intermediate human boundaries and host policy still apply. On an existing delivery, restore the options through [recovery](RECOVERY.md) before applying defaults. They change neither planning artifacts nor Repository Scope, and add no dependency checks beyond the existing tracker eligibility rules.
 
@@ -94,7 +93,7 @@ After every mandatory obligation has current passing evidence, use the `code-rev
 
 ## 9. Hand off idempotently
 
-Re-read the ticket, claim, Published Delivery Heads, proposals, feedback, and current evidence. Return any drift to its earliest invalidated prerequisite. When Automatic merge is allowed, execute [automatic merge](AUTOMATIC-MERGE.md) before final handoff; otherwise mark every verified open proposal ready and re-read it. Preserve already merged proposals. Build `coordinate-delivery:<canonical ticket reference>:<SHA-256 of sorted Repository ID=exact head lines>`. A matching key also requires matching execution choices and proposal states; the key alone is not completion proof.
+Re-read the ticket, claim, Published Delivery Heads, proposals, feedback, and current evidence. Return any drift to its earliest invalidated prerequisite. When Automatic merge is allowed, execute [automatic merge](AUTOMATIC-MERGE.md) before final handoff; otherwise mark every verified open proposal ready and re-read it. Preserve already merged proposals. Build `deliver-ticket:<canonical ticket reference>:<SHA-256 of sorted Repository ID=exact head lines>`. A matching key also requires matching execution choices and proposal states; the key alone is not completion proof.
 
 Read [lifecycle artifact contracts](references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md) completely before writing the final handoff. Reuse a matching handoff; otherwise append one complete Execution Checkpoint under that contract. Include Advisory findings and the remaining human actions in merge, rollout, and acceptance order. The handoff is the final checkpoint, so create no duplicate note. Apply only missing final effects in order: replace `ready-for-agent` with exactly `ready-for-human`, release the Workflow Identity claim, re-read both effects, and leave the ticket open.
 

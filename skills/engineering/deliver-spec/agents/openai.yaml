@@ -1,0 +1,5 @@
+interface:
+  display_name: "Deliver Spec"
+  short_description: "Deliver a prepared specification and its tickets"
+policy:
+  allow_implicit_invocation: false

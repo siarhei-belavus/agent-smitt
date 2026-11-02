@@ -41,7 +41,8 @@ You can install an individual skill with `--skill diagnosing-bugs`. Its linked r
 | Resolve a large effort with unanswered decisions | `wayfinder` |
 | Turn accepted decisions into a specification | `to-spec` |
 | Split a specification into executable slices | `to-tickets` |
-| Deliver one ready ticket across its repositories | `coordinate-delivery` |
+| Deliver a prepared specification through its tickets | `deliver-spec` |
+| Deliver one ready ticket across its repositories | `deliver-ticket` |
 | Implement a small, settled task directly | `implement` |
 | Investigate a failure | `diagnosing-bugs` |
 | Choose a route through the skills | `ask-smitt` |
@@ -67,7 +68,9 @@ flowchart TD
     Scope -->|No| Implement["implement<br/>Build the settled change"]
     Scope -->|Yes| Spec
     Spec --> Tickets["to-tickets<br/>Define vertical slices"]
-    Tickets --> Delivery["coordinate-delivery<br/>Deliver one ready ticket"]
+    Tickets --> Whole["deliver-spec<br/>Coordinate the specification"]
+    Tickets --> Delivery["deliver-ticket<br/>Deliver one ready ticket"]
+    Whole --> Human
     Delivery --> Human([Human acceptance<br/>Review and merge as needed])
     Implement --> Human
     Human --> Close([closeout<br/>Record and clean up])
@@ -80,14 +83,16 @@ flowchart TD
 
     class Idea,Spec,Tickets planning
     class Wayfinder,Prototype discovery
-    class Implement,Delivery execution
+    class Implement,Delivery,Whole execution
     class Human human
     class Setup,Effort,Evidence,Scope,Close neutral
 ```
 
 Keep idea refinement, specification, and ticket preparation in one conversation. A ready ticket carries the decisions another conversation needs to execute it. Use `handoff` when ownership or repository context changes.
 
-For a delivery spanning several repositories, the coordinator prepares an isolated worktree per writable repository, delegates implementation, reviews each result, publishes PRs or MRs, and validates the combined result. It hands the ticket back as `ready-for-human`, recording completed merges and remaining human actions. Acceptance and closeout remain human-owned.
+`deliver-ticket` prepares isolated repository worktrees, delegates implementation and review, publishes proposals, and validates one ticket's combined result. It leaves the ticket open for explicit closeout.
+
+`deliver-spec` schedules prepared tickets, merges their verified deliveries into one specification branch per writable repository, and closes tickets whose completion criteria pass. It validates the assembled specification and publishes final proposals for human review and merge. Final-review corrections stay with the same specification; specification closeout remains explicit.
 
 [Read the workflow guide](docs/workflow.md) for setup, specification preparation, multi-repository planning, recovery, and closeout.
 
