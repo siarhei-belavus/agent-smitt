@@ -2,6 +2,10 @@
 
 This repository is the source of truth for the skills under `skills/`.
 
+When creating or editing agent instructions, apply
+[writing-for-agents](skills/productivity/writing-for-agents/SKILL.md), including
+its rules for conditional context pointers.
+
 - Keep each skill and all of its relative references in one complete directory
   tree.
 - Give every skill a unique `name` in its `SKILL.md` front matter.

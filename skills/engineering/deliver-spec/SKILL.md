@@ -42,7 +42,7 @@ Budget capacity across the delegation tree. Independent tickets may run in paral
 
 Use current tracker dependency rules to select only eligible tickets in the agreed set. Recheck state before dispatch. Record launch intent and its ticket before starting a coordinator; record and re-read the returned execution reference afterward. Use the runtime's available lookup to reconcile an uncertain launch before any retry.
 
-Give each coordinator an explicit ticket reference, Ticket Origin Repository, each writable repository's specification branch as `Target Branch`, and `Automatic merge: allowed`. Include relevant orchestration decisions and resource ownership. Invoke `deliver-ticket` in that separate context. It owns claim verification, its Delivery Context, target synchronization, conflicts, validation, review, merges, handoff, and ticket recovery. Its isolated ticket source branches and per-ticket proposals remain part of delivery.
+Give each coordinator an explicit ticket reference, Ticket Origin Repository, and `Automatic merge: allowed`. Supply `Target Branch` entries only for repositories in that ticket's accepted Repository Scope, using each repository's recorded specification branch. Include relevant orchestration decisions and resource ownership. Invoke `deliver-ticket` in that separate context. It owns claim verification, its Delivery Context, target synchronization, conflicts, validation, review, merges, handoff, and ticket recovery. Its isolated ticket source branches and per-ticket proposals remain part of delivery.
 
 Observe or continue existing executions through their recorded references. For a ticket human-action checkpoint, retain the ticket's request as the response location and link it from the Specification. Surface the required action and pause affected and dependent work. Continue independent work only when its authority and prerequisites remain valid. A response resumes through `deliver-ticket`'s gate. A specification-level question belongs on the Specification with the affected work, required decision, owner, response location, and completion condition.
 
@@ -62,7 +62,7 @@ Run repository validation and all specification acceptance criteria and declared
 
 Use `code-review` in **Both** mode on fixed Repository Targets for changed repositories. Supply the accepted Specification Decision Context unchanged, exact review bases and heads, settled seams, repository evidence, and whole-specification validation. Include unchanged and confirmed merged repositories as exact read-only authority or Validation Sources where they influence acceptance. An empty diff requires no empty review target or proposal, but still requires the applicable acceptance evidence.
 
-Record Advisory findings. Route attributable in-scope failures and Blocking findings through [corrections](CORRECTIONS.md), then refresh affected validation and independent reviews. Requirement or scope changes require the human boundary.
+Record Advisory findings. When an attributable combined-result failure or Blocking review finding requires an in-scope correction, read and follow [corrections](CORRECTIONS.md), then refresh affected validation and independent reviews. Requirement or scope changes require the human boundary.
 
 **Complete when:** all specification criteria and obligations have current passing evidence for one fixed combined result, and independent review has no Blocking finding. Otherwise preserve the result with its exact failed or pending conditions.
 
@@ -72,6 +72,6 @@ For each unmerged changed repository, publish the specification branch through i
 
 Preserve confirmed merged proposals with their exact source/result revisions. Repositories with no resulting changes need no proposal. Record a current handoff checkpoint containing final proposals, validation and independent-review results, limitations, and remaining human review, merge, rollout, acceptance, and explicit closeout actions. Reuse an equivalent verified handoff on repeat invocation.
 
-Keep the Specification open and retain its branches and worktrees for feedback and recovery. Do not invoke specification closeout. For final-review feedback or a later request to correct the result, resume this same Specification through [recovery](RECOVERY.md) and [corrections](CORRECTIONS.md).
+Keep the Specification open and retain its branches and worktrees for feedback and recovery. Do not invoke specification closeout. When actionable final-review feedback or a later correction request arrives, read and follow [recovery](RECOVERY.md), then [corrections](CORRECTIONS.md), for this same Specification.
 
 **Complete when:** every changed repository has a verified final proposal or preserved confirmed merge, the durable handoff matches current evidence, and the human has the remaining actions with recoverable working state.

@@ -40,7 +40,7 @@ Skills marked Explicit declare `disable-model-invocation: true`. Invoke them by 
 | [review-feedback](../skills/engineering/review-feedback/SKILL.md) | Agent or explicit | Draft or publish human feedback and explicitly return a ticket for correction. |
 | [change-walkthrough](../skills/engineering/change-walkthrough/SKILL.md) | Explicit | Explore changes one scenario and logical step at a time. |
 | [pr](../skills/engineering/pr/SKILL.md) | Agent or explicit | Write a PR or MR description using repository templates and evidence. |
-| [closeout](../skills/engineering/closeout/SKILL.md) | Agent or explicit | Close an accepted delivery under explicit user or specification-coordinator authority and clean up disposable resources. |
+| [closeout](../skills/engineering/closeout/SKILL.md) | Agent or explicit | Close an accepted delivery under explicit user or delegated authority and clean up disposable resources. |
 | [wizard](../skills/engineering/wizard/SKILL.md) | Agent or explicit | Guide a human through provisioning, credentials, or other manual steps. |
 
 ## Thinking and communication

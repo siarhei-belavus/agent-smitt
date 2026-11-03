@@ -1,11 +1,11 @@
 ---
 name: closeout
-description: Close an accepted delivery and remove its disposable resources when the user requests closeout or deliver-spec assigns a completed ticket.
+description: Close an accepted delivery and remove its disposable resources when the user requests closeout or an authorized workflow delegates it.
 ---
 
 # Closeout
 
-Finish the current delivery after acceptance. A user closeout request or a `deliver-spec` ticket-closeout assignment authorizes the scoped completion comment, tracker transition, and removal of disposable worktrees and local and remote branches. Honor the assignment's scope and retained resources. Automatic skill selection alone grants no closure or deletion authority.
+Finish the current delivery after acceptance. An explicit user request or a delegated closeout assignment carrying the user's authorization permits the scoped completion comment, tracker transition, and removal of disposable worktrees and local and remote branches. Honor the assignment's scope and retained resources. Automatic skill selection alone grants no closure or deletion authority.
 
 Use the conversation and existing delivery records to resolve the task. Reuse the user's acceptance and earlier permissions. Ask only for missing information that prevents a specific action. Continue independent work while that action remains blocked.
 
@@ -15,7 +15,7 @@ Read the applicable project instructions and Work Tracker, Code Host, and routin
 
 Identify the delivery ticket, repositories, final MR or PR revisions, deployment evidence where required, and acceptance. Include follow-up fixes and throwaway prototypes from this task. Interpret "all worktrees and branches" within this task's scope unless the user explicitly names a broader scope.
 
-Check the current ticket and merge states. Match the accepted delivery to its final revision and, when deployment is part of completion, the successful build and deployed artifact. Reuse recorded checks that still apply to that revision. Distinguish user acceptance from checks performed by the agent. Invocation authorizes closure but does not establish that a missing build, deployment, or acceptance check passed.
+Check the current ticket and merge states. Match the accepted delivery to its final revision and, when deployment is part of completion, the successful build and deployed artifact. Reuse recorded checks that still apply to that revision. Distinguish user acceptance from checks performed by the agent. Closeout authorization does not establish that a missing build, deployment, or acceptance check passed.
 
 If delivery remains incomplete, preserve the resources needed to finish it and report the concrete missing condition. Close only tickets whose own completion criteria are satisfied. Leave parent specifications and unrelated tickets under their existing lifecycle.
 

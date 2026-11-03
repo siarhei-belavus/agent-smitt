@@ -99,7 +99,7 @@ For a published specification with prepared tickets, invoke:
 Use deliver-spec for <specification reference>.
 ```
 
-The coordinator records the agreed ticket set and creates or reuses one integration branch per writable repository. It runs eligible tickets through `deliver-ticket` with those branches as targets and automatic merge allowed. Each ticket keeps its own context, worktrees, source branches, review proposals, and human checkpoints. Independent tickets can run in parallel even when they change the same repository.
+The coordinator records the agreed ticket set and creates or reuses one integration branch per writable repository. It runs eligible tickets through `deliver-ticket` with automatic merge allowed, supplying target branches only for repositories in that ticket's writable scope. Each target is the corresponding specification integration branch. Each ticket keeps its own context, worktrees, source branches, review proposals, and human checkpoints. Independent tickets can run in parallel even when they change the same repository.
 
 The runtime must support ticket coordinators that can delegate their own implementation and review. Follow the user's context preference, such as separate chats in the same project, and reuse existing execution references on resume. A missing runtime capability is an explicit blocker, not a reason to silently flatten the workflow.
 

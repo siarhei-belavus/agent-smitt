@@ -1,6 +1,6 @@
 # Specification corrections
 
-Use this branch for in-scope combined-result failures or actionable final-review feedback. Resume the same Specification through [recovery](RECOVERY.md) first. Record the feedback's permanent references, affected requirements and repositories, accepted disposition, and remaining actions on the Specification. Closed delivery tickets remain historical results; an additional ticket is not required.
+Resume the same Specification through [recovery](RECOVERY.md) first. Record the feedback's permanent references, affected requirements and repositories, accepted disposition, and remaining actions on the Specification. Closed delivery tickets remain historical results; an additional ticket is not required.
 
 ## Establish correction authority
 

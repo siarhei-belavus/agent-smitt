@@ -17,6 +17,8 @@ A pointer does two jobs: state what the material is, and list the **branches** t
 - **One trigger per branch.** Synonyms that rename a single branch are one branch written twice; collapse them and keep only genuinely distinct branches.
 - **Cut identity the body already carries.**
 
+For conditionally loaded material, put the condition at every incoming pointer in the document the agent already has. The target starts with the steps or reference needed after that condition is met; it does not own the decision to load itself. Check each pointer without opening its target: the agent must be able to decide whether to read the file from the caller alone.
+
 ## The two loads
 
 Every document and pointer you add spends one of two budgets:
