@@ -1,0 +1,168 @@
+skills/engineering/code-review/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 1-23
+skills/engineering/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_eb4488c0c5009c::t_c068bf15007451 5,7,19,21,27,29-31,37,100,102
+  s_eb4488c0c5009c::t_50499ee4e116bd 158
+docs/workflow.md
+  s_eb4488c0c5009c::t_50499ee4e116bd 77,102,132-135,143-144,165
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 1-23
+skills/engineering/deliver-spec/references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 31
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 5,7,19,21,27,29-31,37,100,102,158
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 1-207
+skills/engineering/implement/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 1-23
+skills/engineering/setup-federated-workflow/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 5,7,19,21,27,29-31,37,100,102,158
+skills/engineering/to-spec/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 5,7,19,21,27,29-31,37,100,102,158
+skills/engineering/to-tickets/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 31-37
+skills/engineering/setup-federated-workflow/SKILL.md
+  s_eb4488c0c5009c::t_c4766c8e0679aa 64
+skills/engineering/triage/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 1-23
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 1-23
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/PLANNING-ARTIFACTS.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 49-50
+skills/engineering/deliver-spec/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 31-37
+skills/engineering/implement/SKILL.md
+  s_eb4488c0c5009c::t_d51badd8cf042d 25,35,41
+skills/engineering/implement/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 5,7,19,21,27,29-31,37,100,102,158
+skills/engineering/setup-federated-workflow/references/bundled/federated-workflow/PROVIDER-BINDINGS.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 72
+skills/engineering/review-feedback/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 1-23
+skills/engineering/deliver-spec/references/bundled/federated-workflow/PLANNING-ARTIFACTS.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 49-50
+skills/engineering/review-feedback/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 31-37
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 31-37
+skills/engineering/to-spec/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 31-37
+skills/engineering/deliver-spec/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 5,7,19,21,27,29-31,37,100,102,158
+skills/engineering/deliver-ticket/SKILL.md
+  s_eb4488c0c5009c::t_c4766c8e0679aa 90,94
+  s_eb4488c0c5009c::t_a55956a93cd8ec 6
+  s_eb4488c0c5009c::t_12a12c65429397 18,32,34,36,42-44,48,52,54,56,58,62,64,68
+skills/engineering/to-spec/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 1-23
+skills/engineering/review-feedback/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 1-207
+skills/engineering/to-tickets/SKILL.md
+  s_eb4488c0c5009c::t_50499ee4e116bd 125
+skills/engineering/federated-workflow/CONTEXT-PACK.md
+  s_eb4488c0c5009c::t_c068bf15007451 1-23
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/PROVIDER-BINDINGS.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 72
+skills/engineering/to-tickets/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 5,7,19,21,27,29-31,37,100,102,158
+skills/engineering/deliver-spec/SKILL.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 15
+  s_eb4488c0c5009c::t_a4a3377b036c36 19,27,29,39,45
+skills/engineering/setup-federated-workflow/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 1-23
+skills/engineering/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_c068bf15007451 31-37
+skills/engineering/deliver-ticket/RECOVERY.md
+  s_eb4488c0c5009c::t_d51badd8cf042d 3,7,43,45
+  s_eb4488c0c5009c::t_a55956a93cd8ec 37,39
+skills/engineering/triage/references/bundled/federated-workflow/PLANNING-ARTIFACTS.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 49-50
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 31
+skills/engineering/wayfinder/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 1-23
+skills/engineering/wayfinder/references/bundled/codebase-design/MODULE-VOCABULARY.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 1-9
+skills/engineering/wayfinder/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 1-73
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 31
+skills/engineering/to-tickets/references/bundled/federated-workflow/PLANNING-ARTIFACTS.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 49-50
+skills/engineering/triage/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 31-37
+skills/engineering/deliver-spec/RECOVERY.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 47
+  s_eb4488c0c5009c::t_a4a3377b036c36 21
+  s_eb4488c0c5009c::t_85431f6ab0fe91 17
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/PLANNING-ARTIFACTS.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 49-50
+skills/engineering/deliver-spec/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 1-23
+skills/engineering/deliver-ticket/EXECUTION-PREPARATION.md
+  s_eb4488c0c5009c::t_d51badd8cf042d 13,15,19
+  s_8e84254695ae9a::t_007a76c304b713 20
+skills/engineering/wayfinder/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 5,7,19,21,27,29-31,37,100,102,158
+skills/engineering/implement/STANDALONE.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 5
+skills/engineering/implement/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 31-37
+skills/engineering/triage/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 5,7,19,21,27,29-31,37,100,102,158
+skills/engineering/setup-federated-workflow/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 1-73
+skills/engineering/implement/COORDINATOR-NARROWED.md
+  s_eb4488c0c5009c::t_d51badd8cf042d 5
+skills/engineering/federated-workflow/LIFECYCLE-ARTIFACTS.md
+  s_eb4488c0c5009c::t_d51badd8cf042d 31
+skills/engineering/to-spec/references/bundled/federated-workflow/PLANNING-ARTIFACTS.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 49-50
+skills/engineering/review-feedback/references/bundled/federated-workflow/PLANNING-ARTIFACTS.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 49-50
+skills/engineering/setup-federated-workflow/references/bundled/codebase-design/MODULE-VOCABULARY.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 1-9
+skills/engineering/review-feedback/references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 31
+skills/engineering/federated-workflow/PLANNING-ARTIFACTS.md
+  s_eb4488c0c5009c::t_c068bf15007451 49-50
+skills/engineering/to-tickets/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 1-23
+skills/engineering/code-review/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 5,7,19,21,27,29-31,37,100,102,158
+skills/engineering/code-review/SKILL.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 8,125
+  s_eb4488c0c5009c::t_a4a3377b036c36 26
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 31-37
+skills/engineering/code-review/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_eb4488c0c5009c::t_a55956a93cd8ec 31-37
+skills/engineering/federated-workflow/PROVIDER-BINDINGS.md
+  s_eb4488c0c5009c::t_50499ee4e116bd 72
+skills/engineering/setup-federated-workflow/references/preflight-and-validation.md
+  s_eb4488c0c5009c::t_c4766c8e0679aa 31
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "50864268b6843bfbbd082b3bea848875575b057e",
+  "prompts": {},
+  "sessions": {
+    "s_8e84254695ae9a": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19d0c-d0a9-7de1-87ea-0ad85e91ed33",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    },
+    "s_eb4488c0c5009c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19b9d-86f7-7ac3-8b35-1b6a5e43ecfb",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    }
+  }
+}
