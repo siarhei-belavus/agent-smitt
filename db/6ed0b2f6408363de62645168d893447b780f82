@@ -1,0 +1,21 @@
+skills/engineering/deliver-ticket/RUNTIME-TERMINATION.md
+  s_eb4488c0c5009c::t_e07448e69967c8 7
+skills/engineering/deliver-ticket/HUMAN-BOUNDARY.md
+  s_eb4488c0c5009c::t_e07448e69967c8 5-6,15,17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "db6ed0b2f6408363de62645168d893447b780f82",
+  "prompts": {},
+  "sessions": {
+    "s_eb4488c0c5009c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19b9d-86f7-7ac3-8b35-1b6a5e43ecfb",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    }
+  }
+}
