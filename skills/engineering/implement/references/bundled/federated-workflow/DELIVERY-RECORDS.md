@@ -28,7 +28,13 @@ A Repository Reference makes one repository resolvable without granting write au
 
 ## Authority input
 
-For Work Tracker-backed delivery, Authority input is the unchanged path to one accepted runtime-local `Complete` Context Pack. Coordinator-narrowed implementation and review agents reuse that file and perform no provider read. The path is host-local execution state, not a portable delivery record.
+For Work Tracker-backed delivery, Authority input is the entry path to one accepted runtime-local `Complete` Context Pack. Apply [Context Pack consumption](CONTEXT-PACK.md) when acquiring, sharing, or reading it. Coordinator-narrowed implementation and review agents use that pack without provider reads. The path locates the snapshot; it is not the identity of its requirements.
+
+### Authority evidence
+
+Bind review evidence to the profile, permanent root, governing source and effective Resolution set, and the content of those sources. Record immutable source revisions when available; otherwise record SHA-256 fingerprints of the exact UTF-8 authoritative bodies and recognized decision text, identified by permanent references. Include applicable accepted human directions and repository instruction, canonical-context, and ADR revisions used by the result. Keep this binding with the existing evidence record, not in a separate registry.
+
+Compare these dependencies when reusing evidence. A different local path or acquisition timestamp does not change authority. Routing, claim state, and operational checkpoint comments are not requirements. Inspect new or edited comments for accepted authority or actionable feedback before excluding them; a matching old source set alone cannot prove that no governing decision was added. Changed governing content or membership invalidates dependent reviews and any validation obligation whose meaning changed. Unchanged dependencies preserve their results. If an earlier record lacks enough content identity to establish equivalence, refresh the affected review instead of assuming it still passes.
 
 ## Settled Seam
 

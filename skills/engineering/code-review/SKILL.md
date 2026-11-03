@@ -5,7 +5,7 @@ description: Review fixed Repository Targets. Use when the user asks to review a
 
 Review committed or worktree changes since fixed points without modifying the reviewed repositories or external collaboration state.
 
-Read [delivery records](references/bundled/federated-workflow/DELIVERY-RECORDS.md) before resolving targets or review authority. When review authority is Work Tracker-backed, read [Work Tracker context assembly](references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md) before accepting a target.
+Read [delivery records](references/bundled/federated-workflow/DELIVERY-RECORDS.md) before resolving targets or review authority. For Work Tracker-backed authority, follow [Context Pack consumption](references/bundled/federated-workflow/CONTEXT-PACK.md).
 
 ## Public input
 
@@ -23,7 +23,7 @@ Accept one or more fixed Repository Targets. A single repository is the one-elem
 - repository validation evidence bound to the Review head for a committed target or bound to both the Review head and Worktree snapshot ID for WIP, when supplied.
 - for explicit WIP review, a **Worktree snapshot ID** that identifies the captured uncommitted content.
 
-For Work Tracker-backed authority, Authority input is the accepted Context Pack file path for the authority under review. The file identifies its selected profile, permanent root, and `Complete` result. Accept a caller-supplied path unchanged. When the user directly supplies an explicit Work Tracker reference without one, invoke the shared Context Assembly contract with the Ticket Origin Repository, contract-selected profile, and exact permanent root. Accept only `Complete` and retain its new file path for every selected review axis and reviewer. Reviewers reuse that file and do not invoke Context Assembly or query the provider.
+For Work Tracker-backed authority, Authority input is the accepted Context Pack entry path for the authority under review. The entry identifies its profile, permanent root, `Complete` result, and full source payloads. Acquire or reuse it through the consumption contract and pass the entry and linked files to every selected reviewer. Reviewers read the sources required by their axis without invoking Context Assembly or querying the provider. Record the portable Authority evidence binding with the review result.
 
 For authority that is not Work Tracker-backed, Authority input contains the supplied local specification, current user direction, or other non-provider authority. It has no invented Context Pack, profile, or result.
 
@@ -122,4 +122,4 @@ Publish no branch, create or update no Review Proposal, and change no Work Track
 
 ## Evidence freshness
 
-Every finding and pass result is bound to the captured exact Review heads, each target's Authority input, and, for WIP, the Worktree snapshot ID. Report the Work Tracker Authority input binding with every affected result. Changed heads, snapshot IDs, or caller-supplied Authority input invalidate affected repository validation and Standards results; any Spec result influenced by a changed target or Authority input is stale. Require refreshed evidence and a new fixed target rather than carrying an earlier pass forward.
+Every finding and pass result is bound to the captured exact Review heads, review bounds, [Authority evidence](references/bundled/federated-workflow/DELIVERY-RECORDS.md#authority-evidence), and, for WIP, the Worktree snapshot ID. Changed heads or snapshots invalidate affected repository validation and reviews. Changed review bounds or governing authority invalidate dependent reviews; changed obligation meaning also invalidates its validation. A relocated or reacquired pack with proven equivalent authority preserves results. Missing proof requires refreshed affected evidence and a new fixed target rather than an assumed pass.

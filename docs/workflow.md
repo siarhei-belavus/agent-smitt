@@ -74,7 +74,7 @@ Agree on how the behavior will be tested before publishing. Testing Decisions ow
 
 A specification names relevant repositories without granting permission to edit them. The later delivery tickets establish writable Repository Scope. Unresolved design decisions return to planning rather than being invented during ticket generation.
 
-With configured providers, `to-spec` publishes through the Work Tracker mapping and reads the result back through Context Assembly. That operation reconstructs accepted authority into a Context Pack and classifies it as `Complete`, `Incomplete`, or `Ambiguous`. Execution requires `Complete`.
+With configured providers, `to-spec` publishes through the Work Tracker mapping and reads the result back through Context Assembly. That operation acquires the required sources into a Context Pack and classifies it as `Complete`, `Incomplete`, or `Ambiguous`. Its entry points to complete local source files, so consumers can read the active artifact first and open supporting material when needed. Publication validates planning completeness and source preservation; execution consumes the prepared contract and reports discovered gaps rather than repeating that audit.
 
 ## Split the specification into tickets
 
@@ -99,7 +99,7 @@ For a published specification with prepared tickets, invoke:
 Use deliver-spec for <specification reference>.
 ```
 
-The coordinator records the agreed ticket set and creates or reuses one integration branch per writable repository. It runs eligible tickets through `deliver-ticket` with automatic merge allowed, supplying target branches only for repositories in that ticket's writable scope. Each target is the corresponding specification integration branch. Each ticket keeps its own context, worktrees, source branches, review proposals, and human checkpoints. Independent tickets can run in parallel even when they change the same repository.
+The coordinator reads the complete related-ticket set, published writable scopes, and current scheduling state. It records one integration branch per writable repository and prepares the branches needed for the next eligible tickets. It runs them through `deliver-ticket` with automatic merge allowed, supplying targets only for repositories in that ticket's writable scope. Each ticket acquires its own context when launched and keeps its worktrees, source branches, review proposals, and human checkpoints. Independent tickets can run in parallel even when they change the same repository. Future ticket context and repository preparation do not delay a ready launch.
 
 The runtime must support ticket coordinators that can delegate their own implementation and review. Follow the user's context preference, such as separate chats in the same project, and reuse existing execution references on resume. A missing runtime capability is an explicit blocker, not a reason to silently flatten the workflow.
 
@@ -129,16 +129,18 @@ For a new delivery, the configured Base Branch and human merge are the defaults.
 
 The coordinator:
 
-1. Rechecks eligibility and dependencies, acquires and verifies its claim, and assembles complete ticket authority.
-2. Resolves every referenced repository against its declared identity, remote, base branch, instructions, and provider binding.
-3. Records execution choices, pins fresh selected-target commits, and prepares one isolated execution worktree and branch per writable repository.
-4. Delegates one repository delivery to each implementation agent using `implement`. Each receives the same accepted Context Pack and its own scope.
+1. Rechecks eligibility and dependencies, acquires and verifies its claim, and acquires or reuses the selected ticket's complete authority.
+2. Consumes the published executable contract and records the chosen targets and merge permission.
+3. Resolves the repositories needed for the next implementation, pins selected-target commits, and prepares their isolated worktrees. Read-only sources needed only for later validation are resolved at that stage.
+4. Starts `implement` for each ready repository delivery while independent preparation continues. Each receives the accepted Context Pack entry and linked sources, its own scope, and instruction pointers. The implementer reads applicable domain context and ADRs before decisions that depend on them.
 5. Runs fresh Standards reviews against the exact changed heads and corrects in-scope blocking findings.
 6. Publishes one draft PR or MR per changed repository and verifies the remote revisions.
 7. Runs the declared cross-repository validation and a Spec review of the complete bundle. A changed input invalidates the evidence that depends on it.
 8. Hands verified proposals to the human or completes authorized merges, records the result and remaining actions, changes the ticket to `ready-for-human`, and releases its claim.
 
 The ticket stays open for acceptance and explicit `closeout`. All required checks and intermediate human checkpoints apply to both merge modes. Repositories used only for context or validation stay outside product write scope.
+
+The same startup applies to direct calls and specification assignments. Keep context snapshots outside worktrees and immutable while consumers use them. Reuse explicitly passed matching packs; independent runs need no shared cache. Acquisition can preserve the full related source set without placing every body in every agent's context. Read current tracker and Code Host state before claims, publication, and merge; a local snapshot does not replace those checks.
 
 ### Example across repositories
 
@@ -160,7 +162,7 @@ Use `change-walkthrough` to explore a change through end-to-end scenarios. Use `
 
 Resume an interrupted delivery by invoking `deliver-ticket` with the same ticket reference. It inspects existing claims, checkpoints, proposals, feedback, and revision-bound evidence before deciding which work remains valid. An old assignment does not automatically count as a newly acquired claim.
 
-Resume restores recorded execution choices and reconciles progress, including partial merge results. It preserves completed work and repeats only invalidated prerequisites. Conflicting instructions or feedback requiring changes to merged code need explicit reconciliation.
+Resume first identifies the next action from durable execution state, restores recorded choices, and reconciles progress, including partial merges. It reacquires context only when that action needs unavailable authority. Review evidence records governing source content identity, so a new context-file path does not force another review. Changed or unverifiable dependencies require affected checks again. Matching terminal handoffs and missing final effects do not restart implementation. Conflicting instructions or feedback requiring changes to merged code need explicit reconciliation.
 
 Missing authority, a material design contradiction, or a persistent environment failure produces a recorded human action request. Safe work remains available. Planned manual verification also has an explicit request and evidence path. Resolve the stated boundary before resuming dependent work.
 
