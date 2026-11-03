@@ -1,5 +1,5 @@
 interface:
-  display_name: "Coordinate Delivery"
+  display_name: "Deliver Ticket"
   short_description: "Deliver one agent-ready federated ticket"
 policy:
-  allow_implicit_invocation: false
+  allow_implicit_invocation: true

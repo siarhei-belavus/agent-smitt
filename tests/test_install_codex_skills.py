@@ -18,7 +18,7 @@ class InstallCodexSkillsTest(unittest.TestCase):
         self.addCleanup(temporary_directory.cleanup)
         repository = Path(temporary_directory.name) / "agent-smitt"
         shutil.copytree(ROOT, repository, ignore=shutil.ignore_patterns(".git", "__pycache__"))
-        skill_file = repository / "skills" / "engineering" / "coordinate-delivery" / "SKILL.md"
+        skill_file = repository / "skills" / "engineering" / "deliver-ticket" / "SKILL.md"
         skill_file.write_text(skill_text, encoding="utf-8")
         return subprocess.run(
             [str(repository / "bin" / "install-codex-skills"), "--target", str(repository / "target")],
@@ -40,9 +40,10 @@ class InstallCodexSkillsTest(unittest.TestCase):
             )
 
             self.assertEqual(result.returncode, 0, result.stderr)
-            self.assertTrue((target / "coordinate-delivery").is_symlink())
-            self.assertTrue((target / "coordinate-delivery" / "SKILL.md").is_file())
-            self.assertTrue((target / "coordinate-delivery" / "RECOVERY.md").is_file())
+            for name in ("deliver-ticket", "deliver-spec"):
+                self.assertTrue((target / name).is_symlink())
+                self.assertTrue((target / name / "SKILL.md").is_file())
+                self.assertTrue((target / name / "RECOVERY.md").is_file())
             self.assertTrue((target / "federated-workflow").is_symlink())
             self.assertTrue(
                 (
@@ -86,7 +87,7 @@ class InstallCodexSkillsTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temporary_directory:
             target = Path(temporary_directory) / "skills"
             target.mkdir()
-            conflict = target / "coordinate-delivery"
+            conflict = target / "deliver-ticket"
             conflict.write_text("keep me", encoding="utf-8")
 
             result = subprocess.run(
@@ -102,21 +103,21 @@ class InstallCodexSkillsTest(unittest.TestCase):
             self.assertEqual(conflict.read_text(encoding="utf-8"), "keep me")
 
     def test_rejects_name_outside_front_matter(self) -> None:
-        result = self.run_from_copy("# Broken skill\n\nname: coordinate-delivery\n")
+        result = self.run_from_copy("# Broken skill\n\nname: deliver-ticket\n")
 
         self.assertEqual(result.returncode, 1)
         self.assertIn("front matter", result.stderr)
 
     def test_rejects_multiple_names_in_front_matter(self) -> None:
         result = self.run_from_copy(
-            "---\nname: coordinate-delivery\nname: another-name\n---\n# Broken skill\n"
+            "---\nname: deliver-ticket\nname: another-name\n---\n# Broken skill\n"
         )
 
         self.assertEqual(result.returncode, 1)
         self.assertIn("exactly one name", result.stderr)
 
     def test_rejects_mismatched_name_quotes(self) -> None:
-        for invalid_name in ("'coordinate-delivery\"", "\"coordinate-delivery'"):
+        for invalid_name in ("'deliver-ticket\"", "\"deliver-ticket'"):
             with self.subTest(invalid_name=invalid_name):
                 result = self.run_from_copy(
                     f"---\nname: {invalid_name}\n---\n# Broken skill\n"

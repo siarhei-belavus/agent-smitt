@@ -32,7 +32,8 @@ Skills for planning, implementing, reviewing, and delivering software. See the [
 
 | Skill | Purpose |
 | --- | --- |
-| [coordinate-delivery](coordinate-delivery/SKILL.md) | Deliver one ready ticket across its authorized repositories. |
+| [deliver-spec](deliver-spec/SKILL.md) | Deliver prepared tickets into shared branches and final specification review. |
+| [deliver-ticket](deliver-ticket/SKILL.md) | Deliver one ready ticket across its authorized repositories. |
 | [code-review](code-review/SKILL.md) | Review fixed revisions against standards and specification. |
 | [review-feedback](review-feedback/SKILL.md) | Draft and publish actionable human review feedback. |
 | [change-walkthrough](change-walkthrough/SKILL.md) | Explore a change through end-to-end scenarios. |

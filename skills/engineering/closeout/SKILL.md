@@ -1,12 +1,11 @@
 ---
 name: closeout
-description: Close a completed delivery, record acceptance, and remove its worktrees and branches.
-disable-model-invocation: true
+description: Close an accepted delivery and remove its disposable resources when the user requests closeout or an authorized workflow delegates it.
 ---
 
 # Closeout
 
-Finish the current delivery after acceptance. Invoking this skill authorizes the task's completion comment, tracker transition, and removal of its disposable worktrees and local and remote branches. Honor any narrower scope in the user's request.
+Finish the current delivery after acceptance. An explicit user request or a delegated closeout assignment carrying the user's authorization permits the scoped completion comment, tracker transition, and removal of disposable worktrees and local and remote branches. Honor the assignment's scope and retained resources. Automatic skill selection alone grants no closure or deletion authority.
 
 Use the conversation and existing delivery records to resolve the task. Reuse the user's acceptance and earlier permissions. Ask only for missing information that prevents a specific action. Continue independent work while that action remains blocked.
 
@@ -16,7 +15,7 @@ Read the applicable project instructions and Work Tracker, Code Host, and routin
 
 Identify the delivery ticket, repositories, final MR or PR revisions, deployment evidence where required, and acceptance. Include follow-up fixes and throwaway prototypes from this task. Interpret "all worktrees and branches" within this task's scope unless the user explicitly names a broader scope.
 
-Check the current ticket and merge states. Match the accepted delivery to its final revision and, when deployment is part of completion, the successful build and deployed artifact. Reuse recorded checks that still apply to that revision. Distinguish user acceptance from checks performed by the agent. Invocation authorizes closure but does not establish that a missing build, deployment, or acceptance check passed.
+Check the current ticket and merge states. Match the accepted delivery to its final revision and, when deployment is part of completion, the successful build and deployed artifact. Reuse recorded checks that still apply to that revision. Distinguish user acceptance from checks performed by the agent. Closeout authorization does not establish that a missing build, deployment, or acceptance check passed.
 
 If delivery remains incomplete, preserve the resources needed to finish it and report the concrete missing condition. Close only tickets whose own completion criteria are satisfied. Leave parent specifications and unrelated tickets under their existing lifecycle.
 
@@ -26,7 +25,7 @@ Done when every scoped delivery has a supported completion decision and every re
 
 For each repository, inspect worktrees, local branches, exact remote branch heads, and task-owned running processes. Record each candidate's path, branch, head SHA, and ownership evidence from the task or delivery record. A name prefix alone is insufficient ownership evidence.
 
-Inspect each candidate worktree's tracked and untracked changes. Account for ignored files that removal would also delete. Known generated dependencies are disposable; retain unknown files and human edits. Preserve the user's main checkout, its current branch, and unrelated worktrees.
+Inspect each candidate worktree's tracked and untracked changes. Account for ignored files that removal would also delete. Known generated dependencies are disposable; retain unknown files and human edits. Preserve the user's main checkout, its current branch, unrelated worktrees, and specification-owned integration branches and worktrees during ticket closeout. A ticket's Target Branch is not its disposable source branch.
 
 For delivered branches, confirm the provider reports the corresponding MR or PR merged and the candidate head matches the delivered source revision. Squash and rebase merges can make Git ancestry checks insufficient. A throwaway prototype may be unmerged if its ownership and disposable purpose are established. Preserve branches with later commits until those commits are accounted for.
 
