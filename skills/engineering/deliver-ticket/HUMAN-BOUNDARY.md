@@ -2,6 +2,8 @@
 
 Read [lifecycle artifact contracts](references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md) completely before writing a checkpoint or request.
 
+Settle every dispatched child before the final boundary snapshot and claim release. Pause affected and dependent work; independent children may finish their authorized work while the coordinator retains its claim. Collect completed results or request a stop and verify terminal runtime state, then record each child's last attributable result. If a child is still running or its termination is unknown, record the runtime reference and required reconciliation in the checkpoint and request, retain the claim, and report unresolved ownership. Claim release waits for verified completion or termination of every child.
+
 Preserve safe work and publish each recoverable changed head when authorized and safe. For a confirmed unmerged delivery with no pending merge operation, create or update its single draft Review Proposal to the recorded Target Branch before an asynchronous or recoverable boundary; when publication is blocked, record that exact limitation. Preserve confirmed merged proposals and their source/result revisions without changing draft state, republishing, or reusing them for corrections. For a queued or uncertain merge, only re-read and record its operation until the outcome is established; do not change draft state, publish a new head, or resubmit while it remains pending or unknown. Record local-only work without treating it as a Published Delivery Head. Pause affected and dependent deliveries while preserving unrelated valid work.
 
 An Environment Preparation Blocker is a preparation failure that still needs human action after bounded recovery without destructive repair. A Specification Contradiction is conflicting or missing authority that execution cannot resolve. A Material Design Opportunity is an evidence-backed alternative that would reopen a settled decision; record the settled decision and required human choice.
@@ -10,6 +12,6 @@ Create or refresh one [Execution Checkpoint](references/bundled/federated-workfl
 
 For planned human verification, use the complete request contract. When its response cannot determine the declared result after bounded diagnosis, read [Validation Indeterminacy](VALIDATION-INDETERMINACY.md).
 
-Re-read the checkpoint and request, transition the open ticket to exactly `ready-for-human`, release the Workflow Identity claim, verify that it is unassigned, and stop the Execution Attempt. Preserve every worktree and provider artifact; human reconciliation, not destructive repair, resolves contradictory state.
+Once all children are settled, re-read the final checkpoint and request, transition the open ticket to exactly `ready-for-human`, release the Workflow Identity claim, verify that it is unassigned, and stop the Execution Attempt. Preserve every worktree and provider artifact; human reconciliation, not destructive repair, resolves contradictory state.
 
-**Complete when:** one current checkpoint and exactly one active request resolve durably, safe work is preserved, affected work is paused, and the ticket is open, unassigned, and exactly `ready-for-human`.
+**Complete when:** all dispatched children are terminal, one current checkpoint and exactly one active request resolve durably, safe work is preserved, and the ticket is open, unassigned, and exactly `ready-for-human`. Unknown child termination leaves an explicit ownership blocker, not a completed boundary.

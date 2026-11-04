@@ -22,7 +22,7 @@ Every writable Repository Delivery must supply or resolve:
 - repository-specific required outcome;
 - authoritative sources and repository instructions;
 - complete Settled Seam records and their test approaches;
-- repository-owned Validation Obligations and validation commands.
+- repository-owned Validation Obligations and the repository sources that define validation commands.
 
 A Fixed Review Base is the exact starting commit against which a Repository Delivery is implemented and reviewed.
 
@@ -32,13 +32,13 @@ Read-only context and validation repositories remain outside writable scope. Mis
 
 ## Prepare each delivery
 
-Validate that the writable path belongs to the Repository Reference and that its starting revision agrees with the supplied launch commit or Fixed Review Base. After the assignment's Context Assembly gate, perform configured Domain Orientation and read that repository's instructions, routed canonical context, ADRs, validation commands, and nearest relevant prior art. Do not use one repository's instructions or validation as authority for another.
+Validate that the writable path belongs to the Repository Reference and that its starting revision agrees with the supplied launch commit or Fixed Review Base. Read that repository's instructions and resolve its validation commands from the supplied sources. Before each implementation decision, perform configured Domain Orientation for the affected behavior and read the applicable canonical context, ADRs, and nearest relevant prior art. Use the prepared ticket's self-contained contract; follow indexed sources when that decision needs them. Do not repeat publication's planning audit or use one repository's instructions as authority for another.
 
 Record the Repository ID, writable path, Fixed Review Base, authoritative sources, complete Settled Seams, test approaches, Validation Obligations, and validation commands before editing.
 
 Use the authorized isolated writable checkout. Classify existing changes against the assignment. Preserve unrelated content and return a blocker when it cannot be isolated without changing user work.
 
-**Complete when:** every writable path, starting revision, instruction source, seam, test approach, Validation Obligation, and validation command is verified for its own repository, and unrelated content is either isolated or reported as a blocker.
+**Complete when:** the writable path, starting revision, repository instructions, authorized outcomes, seams, and validation approach permit the first implementation slice, and unrelated content is either isolated or reported as a blocker. Required domain reading precedes the slice that depends on it.
 
 ## Implement through TDD
 

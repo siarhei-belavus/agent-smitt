@@ -28,7 +28,7 @@ For every operation:
 
 - every provider binding satisfies the loaded provider contract and its locators and required metadata are readable non-destructively;
 - every Work Tracker binding passes the common check above with its human-confirmed mapping;
-- representative Context Assembly runs dispatch one dedicated subagent, use only the binding-directed provider procedure, return exactly one new Markdown file and result, and create no manifest, evidence, cache, checksum, or other artifact;
+- representative Context Assembly runs dispatch one dedicated subagent, use only the binding-directed provider procedure, return one entry path and final result, preserve all required payloads inline or in readable linked source files, and keep the pack private and immutable without a shared cache;
 - no credential, account binding, machine-local path, or registry entered repository configuration or durable workflow state, and no probe artifact, commit, branch, or Review Proposal was created;
 - a second preview produces an empty diff.
 

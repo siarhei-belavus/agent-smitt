@@ -2,9 +2,9 @@
 
 Read [provider concepts](PROVIDER-CONCEPTS.md) and [domain orientation](DOMAIN-ORIENTATION.md) before applying this contract.
 
-Work Tracker Context Assembly is the provider-neutral read contract for planning and delivery artifacts. Each invocation starts one dedicated Context Assembly subagent and creates one ephemeral, read-only Markdown Context Pack for one workflow session.
+Work Tracker Context Assembly is the provider-neutral acquisition contract for planning and delivery artifacts. Each invocation starts one dedicated Context Assembly subagent and creates one ephemeral, immutable Context Pack. Consumers follow [Context Pack consumption](CONTEXT-PACK.md); acquisition and consumer reading are separate operations.
 
-The requesting workflow supplies exactly the Ticket Origin Repository, one selected public profile, and one permanent root reference. The subagent follows only that repository's Work Tracker binding. It returns exactly one result, `Complete`, `Incomplete`, or `Ambiguous`, and the path to exactly one newly created runtime-local Markdown file. Only `Complete` lets the requesting workflow continue.
+The requesting workflow supplies the Ticket Origin Repository, one selected public profile, and one permanent root reference. The subagent follows only that repository's Work Tracker binding. It returns exactly one result, `Complete`, `Incomplete`, or `Ambiguous`, and the pack's runtime-local Markdown entry path. Only `Complete` lets the requesting workflow continue.
 
 Provider bindings own representation and operations. This contract owns artifact meaning, Authority Sources, profile contents, Resolution succession, reconciliation semantics, final result classification, the Context Pack shape, and the handoff to Domain Orientation. Real Work Trackers and Local Markdown preserve the same meaning.
 
@@ -16,23 +16,25 @@ The binding is the sole owner of provider-specific commands, operations, credent
 
 The Context Assembly subagent applies this provider-independent contract to the translated records. It owns semantic interpretation and the final result, including whether a claimed `Supplements` Resolution conflicts with effective authority.
 
-Each invocation writes exactly one new runtime-local Markdown file. Never overwrite a Context Pack already supplied to a consumer. Re-read provider state only where the requesting workflow's freshness contract requires a new assembly. Context Assembly does not poll continuously.
+Each invocation writes one new runtime-local pack. Never overwrite a pack already supplied to a consumer. Re-read provider state only where the requesting workflow's freshness contract requires a new assembly. Context Assembly does not poll continuously.
 
-The file contains, in order:
+The entry file contains, in order:
 
 - selected public profile;
 - permanent root reference;
 - final result;
 - a concise assessment linked to the permanent evidence and diagnostics that determine the result; and
-- the complete lossless Context Pack, preserving every acquired authoritative body, comment, relationship, permanent reference, effective Resolution, and required profile field without summarization.
+- an index of permanent sources, their roles and relationships, and where to read their complete bodies and comments.
 
-For `Incomplete` or `Ambiguous`, preserve all acquired input losslessly and name every known missing, unreadable, competing, or conflicting permanent reference in the assessment. Create no manifest, evidence file, cache, checksum, or other assembly artifact.
+Keep each artifact's full payload together in a linked Markdown file, or inline when the pack contains only one small artifact. Preserve every acquired authoritative body, comment, relationship, permanent reference, effective Resolution, and required profile field without summarization. Acquisition time and source content revisions or fingerprints, when supplied by the provider procedure, accompany the index or source records. Index links resolve within the private directory; an index is not a substitute for the payload. A provider acquisition index is input, not the subagent's final semantic result.
+
+For `Incomplete` or `Ambiguous`, preserve all acquired input losslessly and name every known missing, unreadable, competing, or conflicting permanent reference in the assessment. Keep assessment, index, and source files in this one pack; create no separate cache or registry.
 
 ## Private runtime lifecycle
 
 The requesting workflow owns the Context Pack lifecycle. Before dispatch, it creates one fresh private directory through the execution host's standard temporary-file facility and passes that directory to the Context Assembly subagent.
 
-The subagent writes exactly one Markdown Context Pack in that directory and returns its path. Keep the directory until every consumer of that invocation has finished, then remove it.
+The subagent writes the Context Pack in that directory and returns its entry path. Follow the consumption contract for retention, sharing, and cleanup.
 
 The directory and Context Pack remain runtime-local and accessible only to the workflow and its subagents. They never enter durable workflow state.
 
@@ -95,9 +97,9 @@ For the requested profile:
 3. Follow explicit Authority Sources and configured role relationships. Treat a Decision Ticket's configured owning Map relationship as an Authority Source. Retain each permanent reference and the full Work Tracker or Local Markdown payload it proves. For a canonical repository document, retain and validate its Repository-qualified Context Pointer under the Domain Orientation boundary below; loading that document is not part of Context Assembly.
 4. Resolve accepted Resolution succession, then include every effective decision required by the selected profile in full. Context limits never permit omission, filtering, or lossy summary.
 5. Remove credentials and irrelevant provider transport metadata. Keep artifact identity, role, status, routing, claim and blocker state when the profile requires them, permanent references, authoritative bodies, comments, and Resolution text.
-6. Apply provider-independent semantic rules, classify the result, and write the one Context Pack file. Return only the result and its file path.
+6. Apply provider-independent semantic rules, classify the result, and write the Context Pack entry and linked sources. Verify that every required payload is locally readable. Return only the result and entry path. For prepared delivery, source collection and Resolution interpretation do not repeat the publication owner's source-preservation and composition audit; report discovered missing or conflicting authority.
 
-The Context Pack is read-only runtime state, not durable authority or a cache. Mutate no Work Tracker state while assembling it. If the complete payload cannot fit safely, record that diagnostic in the one file, return `Incomplete`, and stop for a planning split or lossless handoff.
+The Context Pack is read-only runtime state, not durable authority or a cache. Mutate no Work Tracker state while assembling it. Large payloads belong in linked source files. If complete acquisition or the required semantic classification cannot finish safely, preserve the acquired files, return `Incomplete`, and stop for a planning split or lossless handoff.
 
 ## Public profiles
 
@@ -153,7 +155,7 @@ The result is `Incomplete` when any blocker edge, page, permanent reference, bod
 
 ## Results
 
-The Context Assembly subagent returns exactly one result with the one file path. Classify recognized Resolution succession before general missing-material checks, so the variants remain disjoint:
+The Context Assembly subagent returns exactly one result with the entry path. Classify recognized Resolution succession before general missing-material checks, so the variants remain disjoint:
 
 - `Complete` means the requested root is unique; every required Work Tracker or Local Markdown body, comment page, relationship, permanent reference, effective Resolution, and profile field is present; every canonical repository Authority Source has one valid Repository-qualified Context Pointer; and the assembled records are internally consistent.
 - `Incomplete` means required material is missing, unreadable, unresolved, only partly paginated, or too large to carry without loss. It also covers an absent compatible root. A recognized succession reference is excluded from this variant.

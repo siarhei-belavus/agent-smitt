@@ -10,11 +10,13 @@ For each new Execution Worktree, use an absolute destination explicitly supplied
 
 Create new destinations as `<root>/<ticket-origin-key>/<ticket-key>/<repository-key>`. Derive each key from its portable identity or canonical reference as `<slug>-<digest>`: lowercase the source, replace each run outside `a-z0-9` with `-`, trim leading and trailing `-`, cap the slug at 48 characters, use `item` when empty, and append the first 12 hexadecimal characters of the source's SHA-256 digest. Reuse this path across Execution Attempts; an Execution Attempt ID never enters it.
 
-Before mutation, inspect the complete scope together:
+Before mutating a delivery's repository, inspect its preparation prerequisites:
 
-- validate Repository Stores, remotes, configured Base Branch identity, selected Target Branch existence and access, destination availability, known branch conflicts, worktree provenance, and immediate bootstrap requirements;
+- validate its Repository Store, remote, selected Target Branch existence and access, destination availability, known branch conflicts, worktree provenance, and immediate bootstrap requirements;
 - preserve a destination containing unrelated content, an accidental branch collision, or unknown dirty or untracked state and enter the human boundary instead of choosing a random replacement;
 - allow concurrent preparation to rely on Git locking, retry lock contention within the bounded recovery rule below, and leave every foreign lock, worktree registration, and checkout intact.
+
+Prepare independent deliveries as their prerequisites become available. Resolve a read-only context source before an implementation decision that needs it; resolve and bootstrap a validation-only source before its validation. Known prohibitions that prevent the requested delivery must be surfaced immediately. Future environment readiness is not a prerequisite for unrelated implementation.
 
 Fetch and worktree registration may update a Repository Store's shared Git metadata, but preparation preserves its checked-out branch, index, tracked and untracked content, remotes, hooks, Git identity, and local or global Git configuration. It never switches, resets, cleans, prunes, repairs, or uses the Store as a delivery workspace.
 

@@ -122,4 +122,4 @@ Do NOT close or modify any parent issue.
 
 Avoid additional implementation file paths or code snippets. If a prototype produced a snippet that encodes a decision more precisely than prose can (state machine, reducer, schema, type shape), inline it and note briefly that it came from a prototype. Trim to the decision-rich parts — not a working demo, just the important bits.
 
-Publishing the validated tickets completes this planning skill. Each eligible ticket may proceed in a fresh `implement` context across its complete authorized Repository Scope without reconstructing planning history.
+Publishing the validated tickets completes this planning skill and establishes their prepared contracts. Each eligible ticket may proceed through `deliver-ticket` or a directly authorized `implement` assignment without reconstructing planning history. Execution still verifies current eligibility and the prerequisites of its next action. Revisions preserve this publication gate and reconcile affected readiness.

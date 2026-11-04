@@ -61,4 +61,4 @@ Application writes validated checkouts in place and leaves changes uncommitted. 
 
 ### 7. Validate current truth
 
-After application, spawn a fresh validation subagent to execute the selected branch under [result validation](references/preflight-and-validation.md#result-validation). Validate representative structured content and Context Assembly invocations without a mutating probe. Confirm that one dedicated assembly subagent returns one new Markdown file and final result, and that downstream consumers receive the accepted path instead of repeating provider reads.
+After application, spawn a fresh validation subagent to execute the selected branch under [result validation](references/preflight-and-validation.md#result-validation). Validate representative structured content and Context Assembly invocations without a mutating probe. Confirm that one dedicated assembly subagent returns a final result and an entry path whose complete linked payload is readable, and that downstream consumers receive this immutable pack instead of repeating provider reads.

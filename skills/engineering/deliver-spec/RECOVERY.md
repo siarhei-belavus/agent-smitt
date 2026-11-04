@@ -14,11 +14,11 @@ A specification checkpoint is an orchestration snapshot, not a ticket Execution 
 | Overall result | Final proposals, correction assignments and their feedback references, validation and review evidence with exact revision and authority dependencies, invalidated or pending evidence. |
 | Continuation | Pending operations and their lookup references, next permissible actions and prerequisites, affected and independent work, open specification decisions and responses, retained resources and limitations. |
 
-Keep credentials, local worktree paths, and runtime-local Context Pack paths out of durable records. Record authority by public profile and permanent source references. Append successors without erasing history. Re-read before appending; reuse an equivalent existing snapshot when nothing material changed. An uncertain write must be reconciled before retry.
+Keep credentials, local worktree paths, and runtime-local Context Pack paths out of durable records. Record authority and reusable results through [Authority evidence](references/bundled/federated-workflow/DELIVERY-RECORDS.md#authority-evidence). Append successors without erasing history. Re-read before appending; reuse an equivalent existing snapshot when nothing material changed. An uncertain write must be reconciled before retry.
 
 ## Reconcile observed state
 
-On every resumed invocation, read the complete current specification coordination state and reconcile it with tracker, Code Host, and authoritative runtime observations before mutation. Reestablish accepted authority through step 1 of `deliver-spec`. A saved checkpoint identifies what to inspect; it does not override current external evidence.
+On resume, read the current specification checkpoint and linked active operations, requests, and ticket executions. Reconcile the observations required for the next action through the tracker, Code Host, and runtime before mutation. Read predecessors when a missing or contradictory link requires them. Acquire accepted authority through step 1 only when the continuation needs it; reporting an unchanged boundary or repairing a missing orchestration record does not require all ticket contexts. A checkpoint identifies what to inspect; it does not override current external evidence.
 
 Establish whether an existing specification coordinator is still active before starting another writer. Observe or continue a live coordinator. Silence, an old timestamp, or a missing local process is not proof that a remote execution terminated. If liveness or ownership is indeterminate, preserve state and request reconciliation. Use confirmed termination and current external state to recover only missing orchestration actions. Ticket claim and recovery authority remain with `deliver-ticket`.
 
@@ -44,7 +44,7 @@ Confirm partial success per repository. No multi-repository operation is atomic;
 
 Evidence records its exact influencing repository heads, review bounds, Validation Sources, and accepted authority. A changed head invalidates its validation and Standards result and every combined result it influences. Changed target or review bounds require renewed integration/readiness assessment and affected reviews. Changed influencing Validation Sources invalidate dependent validation and Spec review. Preserve unrelated evidence whose complete dependencies remain unchanged.
 
-A new Context Pack invalidates reviews bound to the previous Authority input. Reassemble when accepted requirements change or the live pack is unavailable; refresh affected criteria and validation as required by the actual authority change. Reassembly alone does not invalidate execution checks whose authority and revision dependencies remain valid.
+Apply [Authority evidence](references/bundled/federated-workflow/DELIVERY-RECORDS.md#authority-evidence) to content and governing-source membership. Reacquire a pack when the next action needs authority and no usable pack remains. A new entry path alone invalidates nothing. Refresh only results affected by changed or unverifiable dependencies; preserve execution checks whose authority and revision dependencies remain valid.
 
 For confirmed merges, retain the historical validated source and provider-confirmed result relationship. Squash or rebase commit IDs alone do not prove changed content; prove the accepted combination is represented. Unrelated later target advancement does not reopen a completed ticket. A missing relationship or a semantic conflict enters the human boundary.
 
