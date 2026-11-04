@@ -1,0 +1,47 @@
+skills/engineering/wayfinder/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_eb4488c0c5009c::t_658283b5e088f7 15,23
+skills/engineering/implement/COORDINATOR-NARROWED.md
+  s_eb4488c0c5009c::t_319e8fdb06b828 5
+skills/engineering/deliver-spec/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_eb4488c0c5009c::t_658283b5e088f7 15,23
+skills/engineering/review-feedback/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_eb4488c0c5009c::t_658283b5e088f7 15,23
+skills/engineering/implement/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_eb4488c0c5009c::t_658283b5e088f7 15,23
+skills/engineering/triage/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_eb4488c0c5009c::t_658283b5e088f7 15,23
+skills/engineering/to-spec/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_eb4488c0c5009c::t_658283b5e088f7 15,23
+skills/engineering/code-review/SKILL.md
+  s_eb4488c0c5009c::t_319e8fdb06b828 26
+skills/engineering/setup-federated-workflow/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_eb4488c0c5009c::t_658283b5e088f7 15,23
+skills/engineering/federated-workflow/CONTEXT-PACK.md
+  s_eb4488c0c5009c::t_319e8fdb06b828 15,23
+skills/engineering/deliver-ticket/RECOVERY.md
+  s_eb4488c0c5009c::t_319e8fdb06b828 37
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_eb4488c0c5009c::t_658283b5e088f7 15,23
+skills/engineering/to-tickets/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_eb4488c0c5009c::t_658283b5e088f7 15,23
+skills/engineering/code-review/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_eb4488c0c5009c::t_658283b5e088f7 15,23
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_eb4488c0c5009c::t_658283b5e088f7 15,23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f5548c06016f2f80c0917b1a227533617e2ecf90",
+  "prompts": {},
+  "sessions": {
+    "s_eb4488c0c5009c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19b9d-86f7-7ac3-8b35-1b6a5e43ecfb",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    }
+  }
+}
