@@ -23,7 +23,7 @@ Accept one or more fixed Repository Targets. A single repository is the one-elem
 - repository validation evidence bound to the Review head for a committed target or bound to both the Review head and Worktree snapshot ID for WIP, when supplied.
 - for explicit WIP review, a **Worktree snapshot ID** that identifies the captured uncommitted content.
 
-For Work Tracker-backed authority, Authority input is the accepted Context Pack entry path for the authority under review. The entry identifies its profile, permanent root, `Complete` result, and full source payloads. Acquire or reuse it through the consumption contract and pass the entry and linked files to every selected reviewer. Reviewers read the sources required by their axis without invoking Context Assembly or querying the provider. Record the portable Authority evidence binding with the review result.
+For Work Tracker-backed authority, Authority input is the accepted Context Pack entry path for the authority under review. The entry identifies its profile, permanent root, `Complete` result, and full source payloads. Acquire or reuse it through the consumption contract and pass the entry and linked files to every selected reviewer. Reviewers apply its mandatory reading rules and read the sources required by their axis without invoking Context Assembly or querying the provider. Spec coverage includes every applicable requirement and accepted decision across the linked sources. Record the portable Authority evidence binding with the review result.
 
 For authority that is not Work Tracker-backed, Authority input contains the supplied local specification, current user direction, or other non-provider authority. It has no invented Context Pack, profile, or result.
 
