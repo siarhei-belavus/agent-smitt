@@ -35,6 +35,7 @@ Skills for planning, implementing, reviewing, and delivering software. See the [
 | [deliver-spec](deliver-spec/SKILL.md) | Deliver prepared tickets into shared branches and final specification review. |
 | [deliver-ticket](deliver-ticket/SKILL.md) | Deliver one ready ticket across its authorized repositories. |
 | [code-review](code-review/SKILL.md) | Review fixed revisions against standards and specification. |
+| [retro](retro/SKILL.md) | Propose improvements from selected sessions and user corrections using project conventions. |
 | [review-feedback](review-feedback/SKILL.md) | Draft and publish actionable human review feedback. |
 | [change-walkthrough](change-walkthrough/SKILL.md) | Explore a change through end-to-end scenarios. |
 | [pr](pr/SKILL.md) | Write a PR or MR description grounded in the final change. |
