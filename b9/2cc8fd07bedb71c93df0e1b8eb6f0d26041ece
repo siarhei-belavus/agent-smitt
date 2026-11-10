@@ -1,0 +1,21 @@
+skills/engineering/retro/SKILL.md
+  s_4ed6694500cedd::t_2266624aa4ac46 3,7,9,11,13,15,17,19,21,23,25-31,33,35,37,39,41,43,45,47,49,51,53,55-58
+skills/engineering/retro/CREDITS.md
+  s_4ed6694500cedd::t_ec73896fe6ce38 5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b92cc8fd07bedb71c93df0e1b8eb6f0d26041ece",
+  "prompts": {},
+  "sessions": {
+    "s_4ed6694500cedd": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1c4c7-2f93-7172-966a-e54eeda0b2cc",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    }
+  }
+}
