@@ -1,0 +1,19 @@
+skills/engineering/retro/SKILL.md
+  s_4ed6694500cedd::t_4a550741702136 35-36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "74f4e66f8507efe10a983363e31325caf0c9f11d",
+  "prompts": {},
+  "sessions": {
+    "s_4ed6694500cedd": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1c4c7-2f93-7172-966a-e54eeda0b2cc",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    }
+  }
+}
