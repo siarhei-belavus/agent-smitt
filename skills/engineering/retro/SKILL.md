@@ -12,6 +12,8 @@ Accept the current chat, named chats, or a delivery reference and coordinator ch
 
 1. Call the Skill tool with `writing-for-agents` for the writing style guide.
 
+   Apply this guide to all documentation proposed or edited during the retrospective, following the project's existing conventions.
+
 2. Read the primary sources for the session the user specifies. This may mean searching through session logs on this machine. If the user doesn't specify a session, default to the current one.
 
    For work spanning sessions, follow coordinator checkpoints, ticket relationships, and execution references to implementation, validation, review, correction, and recovery sessions. Include attributable archived sessions and previous attempts. Use the host's available session tools and the project's configured records, following pagination. Establish membership from recorded relationships. Account for each discovered session and report inaccessible histories or evidence lost during cleanup. Ask for a missing reference only when the intended work cannot be identified, and continue with independently available evidence.
@@ -32,7 +34,7 @@ Accept the current chat, named chats, or a delivery reference and coordinator ch
 
 - **Project documentation**: what knowledge from user corrections, discoveries, or successful approaches should future work retain? Consider all project documentation, including README files, `docs/`, runbooks, setup and troubleshooting guides, domain records, and ADRs alongside the files above. Verify project facts against authoritative sources and keep temporary workarounds provisional. Inspect the existing documentation structure and nearby examples before choosing an owning file. Propose additions, corrections, consolidation, or removal. When no suitable home exists, propose a new file using the project's naming, location, language, terminology, and structure, and explain why it is needed. If conventions are absent, state the smallest structure proposed. Keep one authoritative home with conditional navigation pointers. For domain language or architecture decisions, use `domain-modeling` to prepare a documentation delta within this proposal scope.
 
-  This includes proposing new runbooks, how-to guides, and project-local skills. Choose a runbook for an operational procedure, a how-to guide for a specific task, or a local skill for a repeatable agent workflow. Follow the project's existing placement and format, and use `writing-for-agents` when proposing a local skill.
+  This includes proposing new runbooks, how-to guides, and project-local skills. Choose a runbook for an operational procedure, a how-to guide for a specific task, or a local skill for a repeatable agent workflow. Follow the project's existing placement and format.
 
 4. Present these candidates to the user, in order of severity.
 
