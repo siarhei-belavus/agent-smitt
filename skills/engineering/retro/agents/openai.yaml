@@ -1,0 +1,5 @@
+interface:
+  display_name: "Retro"
+  short_description: "Learn from sessions and improve project documentation"
+policy:
+  allow_implicit_invocation: false

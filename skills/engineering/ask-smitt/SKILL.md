@@ -76,6 +76,7 @@ Do not create a handoff merely because automatic compaction occurred. Do not del
 
 Off the main flow entirely.
 
+- **`retro`** — invoke manually to learn from the current chat, selected chats, or a delivery across its related sessions. It uses user corrections and observed outcomes to propose changes throughout project documentation, checks, and tooling, following the project's conventions.
 - **`grill-me`** — the same relentless interview as `grill-with-docs`, but for when you have **no codebase**. Stateless: it saves nothing locally, builds no `CONTEXT.md`. Reach for it to sharpen any plan or design that doesn't live in a repo.
 - **`wait-what`** — re-pitch the last answer when it did not land: add the missing context, use Simplified Technical English, and preserve the applicable canonical domain vocabulary.
 - **`teach`** — learn a concept over multiple sessions, using the current directory as a stateful workspace.

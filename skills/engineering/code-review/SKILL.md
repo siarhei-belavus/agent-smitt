@@ -67,7 +67,11 @@ Start with supplied seam records, then validate every seam against current autho
 
 ### 3. Build repository-local Standards baselines
 
-For each target, read that repository's instructions and documented standards. Add the following Fowler smell baseline from *Refactoring*, ch. 3, unless an authoritative source or documented repository standard explicitly overrides it. Every smell is a judgement call, never automatically a violation:
+For each selected Standards target, discover and read its applicable repository instructions and documented standards. Include `CODING_STANDARDS.md` and relevant sections of `CONTRIBUTING.md` when present, together with directory-specific standards and linked rules governing the changed paths. Existing standards may live elsewhere; use the repository's navigation to find their authoritative home.
+
+Record each source's path, applicability, and immutable revision or content fingerprint with the Authority evidence. Use accepted source versions from the supplied authority, falling back to the captured Comparison base for repository files. Changes to standards in the reviewed diff are proposals until authoritative input accepts them as governing this review. Pass the source list and exact contents or readable immutable references to the Standards Reviewer. A missing optional standards file leaves the other applicable sources and baseline in force; an unavailable required source leaves coverage incomplete.
+
+Add the following Fowler smell baseline from *Refactoring*, ch. 3, unless an authoritative source or documented repository standard explicitly overrides it. Every smell is a judgement call, never automatically a violation:
 
 - **Mysterious Name** — a name does not reveal what it does or holds.
 - **Duplicated Code** — the same logic shape appears in more than one changed place.
@@ -85,6 +89,8 @@ For each target, read that repository's instructions and documented standards. A
 Determine per target whether the change introduces or reshapes a module, interface, seam, adapter, logical ownership, physical decomposition, or contract, or changes current-truth documentation. When it does, require the Standards Reviewer to read the `codebase-design` skill in full and apply its relevant deletion-test, proportional-design, and final-state rules.
 
 Route requirement or settled-decision violations to Spec. Route structural and change-pressure findings to Standards.
+
+Done when each selected Standards target has an attributable source set, applicable rules, and design trigger result ready for its reviewer.
 
 ### 4. Run the selected fresh reviews
 

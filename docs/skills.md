@@ -1,6 +1,6 @@
 # Skill catalog
 
-The pack contains 31 stable skills. Install the complete pack for the composed workflow. Individual skills include their linked reference files, but the Skills CLI does not automatically install other skills they invoke by name.
+The pack contains 32 stable skills. Install the complete pack for the composed workflow. Individual skills include their linked reference files, but the Skills CLI does not automatically install other skills they invoke by name.
 
 Skills marked Explicit declare `disable-model-invocation: true`. Invoke them by name. Skills marked Agent or explicit allow agent selection as well as direct invocation. Agents differ in how they honor this metadata.
 
@@ -37,6 +37,7 @@ Skills marked Explicit declare `disable-model-invocation: true`. Invoke them by 
 | [deliver-spec](../skills/engineering/deliver-spec/SKILL.md) | Explicit | Coordinate prepared tickets into shared specification branches and final human review. |
 | [deliver-ticket](../skills/engineering/deliver-ticket/SKILL.md) | Agent or explicit | Deliver one prepared ticket through implementation, review, validation, and handoff. |
 | [code-review](../skills/engineering/code-review/SKILL.md) | Agent or explicit | Review fixed repository targets in Standards, Spec, or combined modes. |
+| [retro](../skills/engineering/retro/SKILL.md) | Explicit | Learn from selected sessions and user corrections to improve project documentation, checks, and tooling. |
 | [review-feedback](../skills/engineering/review-feedback/SKILL.md) | Agent or explicit | Draft or publish human feedback and explicitly return a ticket for correction. |
 | [change-walkthrough](../skills/engineering/change-walkthrough/SKILL.md) | Explicit | Explore changes one scenario and logical step at a time. |
 | [pr](../skills/engineering/pr/SKILL.md) | Agent or explicit | Write a PR or MR description using repository templates and evidence. |

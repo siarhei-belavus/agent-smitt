@@ -160,6 +160,8 @@ Federation describes durable domain ownership. A Delivery Bundle describes the r
 
 Use `change-walkthrough` to explore a change through end-to-end scenarios. Use `review-feedback` to draft actionable feedback and publish it when authorized. Returning a ticket for correction is an explicit review-feedback operation.
 
+For Standards review, `code-review` explicitly discovers applicable `CODING_STANDARDS.md`, `CONTRIBUTING.md`, and linked or directory-specific rules. The reviewer receives their identified source versions. Proposed changes to standards govern the review only when the supplied authority accepts them.
+
 Resume an interrupted delivery by invoking `deliver-ticket` with the same ticket reference. It inspects existing claims, checkpoints, proposals, feedback, and revision-bound evidence before deciding which work remains valid. An old assignment does not automatically count as a newly acquired claim.
 
 Resume first identifies the next action from durable execution state, restores recorded choices, and reconciles progress, including partial merges. It reacquires context only when that action needs unavailable authority. Review evidence records governing source content identity, so a new context-file path does not force another review. Changed or unverifiable dependencies require affected checks again. Matching terminal handoffs and missing final effects do not restart implementation. Conflicting instructions or feedback requiring changes to merged code need explicit reconciliation.
@@ -175,6 +177,18 @@ Use closeout for this delivery.
 ```
 
 That invocation authorizes the scoped completion record, tracker transition, and cleanup of disposable worktrees and local and remote branches. `closeout` verifies ownership and final revisions, preserves unexplained edits and unrelated resources, and reports anything it retained. It does not supply missing acceptance or deployment evidence.
+
+## Learn from selected work
+
+Invoke `retro` manually whenever you want to learn from work so far. You can select the current chat, several chats, or a delivery and its coordinator chat.
+
+```text
+Use retro for this specification, starting from its coordinator chat and related sessions.
+```
+
+For a delivery, `retro` follows checkpoints and execution references to its implementation, validation, review, and recovery sessions. It examines your corrections and the surrounding actions, counts a shared incident once, and reports gaps in available history.
+
+Proposals can affect any project documentation, including agent instructions, README files, runbooks, domain and architecture records, and coding standards. The skill fits changes into the existing structure and style. It can propose a new file where knowledge has no suitable home, or consolidate and remove stale material. Mechanical failures can lead to check or tooling proposals. You choose which changes to apply, or authorize a scope when invoking the skill.
 
 ## Use a shorter route when appropriate
 
