@@ -34,7 +34,7 @@ Accept the current chat, named chats, or a delivery reference and coordinator ch
 
 - **Project documentation**: what knowledge from user corrections, discoveries, or successful approaches should future work retain? Consider all project documentation, including README files, `docs/`, runbooks, setup and troubleshooting guides, domain records, and ADRs alongside the files above. Verify project facts against authoritative sources and keep temporary workarounds provisional. Inspect the existing documentation structure and nearby examples before choosing an owning file. Propose additions, corrections, consolidation, or removal. When no suitable home exists, propose a new file using the project's naming, location, language, terminology, and structure, and explain why it is needed. If conventions are absent, state the smallest structure proposed. Keep one authoritative home with conditional navigation pointers. For domain language or architecture decisions, use `domain-modeling` to prepare a documentation delta within this proposal scope.
 
-  This includes proposing new runbooks, how-to guides, and project-local skills. Choose a runbook for an operational procedure, a how-to guide for a specific task, or a local skill for a repeatable agent workflow. Follow the project's existing placement and format.
+  This includes proposing new runbooks, how-to guides, and project-local skills. Follow the project's existing placement and format.
 
 4. Present these candidates to the user, in order of severity.
 
