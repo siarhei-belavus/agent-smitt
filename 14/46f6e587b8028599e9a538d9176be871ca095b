@@ -1,0 +1,37 @@
+skills/engineering/retro/LICENSE
+  s_4ed6694500cedd::t_f07adf38c09528 1-22
+skills/engineering/retro/CREDITS.md
+  s_4ed6694500cedd::t_15620ac2d89631 1-5
+skills/engineering/retro/SKILL.md
+  s_4ed6694500cedd::t_15620ac2d89631 1-51
+skills/engineering/retro/agents/openai.yaml
+  s_4ed6694500cedd::t_15620ac2d89631 1-5
+skills/engineering/code-review/SKILL.md
+  s_4ed6694500cedd::t_15620ac2d89631 70-74,93
+  s_4ed6694500cedd::t_b70dd98c005153 94
+docs/skills.md
+  s_4ed6694500cedd::t_f058030eb56d06 3,40
+skills/engineering/README.md
+  s_4ed6694500cedd::t_f058030eb56d06 38
+skills/engineering/ask-smitt/SKILL.md
+  s_4ed6694500cedd::t_f058030eb56d06 79
+docs/workflow.md
+  s_4ed6694500cedd::t_f058030eb56d06 163-164,181-191
+  s_4ed6694500cedd::t_0b61fa856fbc76 192
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "1446f6e587b8028599e9a538d9176be871ca095b",
+  "prompts": {},
+  "sessions": {
+    "s_4ed6694500cedd": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1c4c7-2f93-7172-966a-e54eeda0b2cc",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    }
+  }
+}
