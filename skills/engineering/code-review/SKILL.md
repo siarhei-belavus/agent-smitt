@@ -94,6 +94,8 @@ Done when each selected Standards target has an attributable source set, applica
 
 ### 4. Run the selected fresh reviews
 
+Start each reviewer, including every repeat review, with a fresh context without the parent conversation. Supply only the review assignment, required instructions, and the inputs defined below.
+
 A full pass continues after every finding and finishes the complete selected axis before the reviewer returns. Give every reviewer this shared completion brief:
 
 > Audit every member of the finite input sets applicable to the selected axis: changed files; repository rules and heuristics for Standards or authoritative requirements and decisions for Spec; Settled Seams and their named providers and consumers; and supplied validation claims. Return all material findings from the full pass together. Include a **Coverage receipt** with audited/total counts for each applicable set. State why a set is not applicable. Coverage is incomplete while any item remains unaccounted for.
