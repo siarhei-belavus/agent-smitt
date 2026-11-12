@@ -1,0 +1,41 @@
+docs/workflow.md
+  s_4ed6694500cedd::t_b4a19ef58f2d33 183,191
+  s_c30b62146180d7::t_33cd7bf5f5b9fa 192
+skills/engineering/retro/REVIEW-FEEDBACK.md
+  s_4ed6694500cedd::t_b4a19ef58f2d33 1-2,4-21
+  s_4ed6694500cedd::t_30fb3f23576cfe 3
+docs/skills.md
+  s_4ed6694500cedd::t_b4a19ef58f2d33 40
+skills/engineering/retro/SKILL.md
+  s_4ed6694500cedd::t_b4a19ef58f2d33 9,21,23-25
+skills/engineering/retro/CREDITS.md
+  s_4ed6694500cedd::t_b4a19ef58f2d33 5
+skills/engineering/retro/references/bundled/federated-workflow/PROVIDER-CONCEPTS.md
+  s_4ed6694500cedd::t_8e06c2d170938b 1-17
+skills/engineering/retro/references/bundled/federated-workflow/REPOSITORY-IDENTITY.md
+  s_4ed6694500cedd::t_051a0623b700fe 1-3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "632da2d99270d794d407f21f13628ab86af4a74c",
+  "prompts": {},
+  "sessions": {
+    "s_4ed6694500cedd": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1c4c7-2f93-7172-966a-e54eeda0b2cc",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    },
+    "s_c30b62146180d7": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1cef5-c650-7342-8cfa-d4cf16399a7d",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    }
+  }
+}
