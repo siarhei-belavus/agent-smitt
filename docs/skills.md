@@ -37,7 +37,7 @@ Skills marked Explicit declare `disable-model-invocation: true`. Invoke them by 
 | [deliver-spec](../skills/engineering/deliver-spec/SKILL.md) | Explicit | Coordinate prepared tickets into shared specification branches and final human review. |
 | [deliver-ticket](../skills/engineering/deliver-ticket/SKILL.md) | Agent or explicit | Deliver one prepared ticket through implementation, review, validation, and handoff. |
 | [code-review](../skills/engineering/code-review/SKILL.md) | Agent or explicit | Review fixed repository targets in Standards, Spec, or combined modes. |
-| [retro](../skills/engineering/retro/SKILL.md) | Explicit | Learn from selected sessions and user corrections to improve project documentation, checks, and tooling. |
+| [retro](../skills/engineering/retro/SKILL.md) | Explicit | Learn from selected sessions, user corrections, and Review Feedback to improve project documentation, checks, and tooling. |
 | [review-feedback](../skills/engineering/review-feedback/SKILL.md) | Agent or explicit | Draft or publish human feedback and explicitly return a ticket for correction. |
 | [change-walkthrough](../skills/engineering/change-walkthrough/SKILL.md) | Explicit | Explore changes one scenario and logical step at a time. |
 | [pr](../skills/engineering/pr/SKILL.md) | Agent or explicit | Write a PR or MR description using repository templates and evidence. |

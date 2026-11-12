@@ -180,13 +180,15 @@ That invocation authorizes the scoped completion record, tracker transition, and
 
 ## Learn from selected work
 
-Invoke `retro` manually whenever you want to learn from work so far. You can select the current chat, several chats, or a delivery and its coordinator chat.
+Invoke `retro` manually whenever you want to learn from work so far. You can select the current chat, several chats, Review Proposals such as PRs or MRs, or a delivery and its coordinator chat.
 
 ```text
 Use retro for this specification, starting from its coordinator chat and related sessions.
 ```
 
 For a delivery, `retro` follows checkpoints and execution references to its implementation, validation, review, and recovery sessions. It examines your corrections and the surrounding actions, counts a shared incident once, and reports gaps in available history.
+
+For supplied or linked Review Proposals, it also reads your general and inline comments, review summaries, and resolved or closed discussions, including comments on outdated diffs. It traces remarks to the reviewed code and subsequent changes, and counts feedback repeated in chat as one incident. Missing access or uncertain authorship appears in the coverage gaps.
 
 Proposals can affect any project documentation, including agent instructions, README files, runbooks, domain and architecture records, and coding standards. The skill fits changes into the existing structure and style. It can propose a new file where knowledge has no suitable home, or consolidate and remove stale material. Mechanical failures can lead to check or tooling proposals. You choose which changes to apply, or authorize a scope when invoking the skill.
 
