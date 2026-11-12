@@ -1,0 +1,64 @@
+skills/engineering/deliver-spec/SKILL.md
+  s_1e0ef3548cd60f::t_a0ba5d300c9ac8 43-44
+skills/productivity/grilling/SKILL.md
+  s_1e0ef3548cd60f::t_a0ba5d300c9ac8 26
+skills/engineering/code-review/SKILL.md
+  s_1e0ef3548cd60f::t_a0ba5d300c9ac8 97-98
+skills/engineering/research/SKILL.md
+  s_1e0ef3548cd60f::t_a0ba5d300c9ac8 6
+skills/engineering/wayfinder/SKILL.md
+  s_1e0ef3548cd60f::t_a0ba5d300c9ac8 133
+skills/engineering/setup-federated-workflow/SKILL.md
+  s_1e0ef3548cd60f::t_a0ba5d300c9ac8 12-13
+skills/engineering/deliver-ticket/SKILL.md
+  s_1e0ef3548cd60f::t_a0ba5d300c9ac8 68-69,90
+  s_1e0ef3548cd60f::t_69f9b4e19118e1 91
+skills/engineering/improve-codebase-architecture/SKILL.md
+  s_1e0ef3548cd60f::t_a0ba5d300c9ac8 22
+AGENTS.md
+  s_1e0ef3548cd60f::t_a0ba5d300c9ac8 12
+skills/engineering/ask-smitt/SKILL.md
+  s_1e0ef3548cd60f::t_a0ba5d300c9ac8 71
+skills/engineering/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_1e0ef3548cd60f::t_a0ba5d300c9ac8 13
+skills/engineering/codebase-design/DESIGN-IT-TWICE.md
+  s_1e0ef3548cd60f::t_a0ba5d300c9ac8 19
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_1e0ef3548cd60f::t_0472af2a9c188d 13
+skills/engineering/code-review/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_1e0ef3548cd60f::t_62cab0b971ddb7 13
+skills/engineering/deliver-spec/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_1e0ef3548cd60f::t_910f460269c26d 13
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_1e0ef3548cd60f::t_9826f43b48cbbf 13
+skills/engineering/implement/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_1e0ef3548cd60f::t_52d1d8cf6e227f 13
+skills/engineering/review-feedback/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_1e0ef3548cd60f::t_a9aaceaf123cdf 13
+skills/engineering/setup-federated-workflow/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_1e0ef3548cd60f::t_de5bd356dd3e55 13
+skills/engineering/to-spec/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_1e0ef3548cd60f::t_1d8c786f8ea705 13
+skills/engineering/to-tickets/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_1e0ef3548cd60f::t_54d2733c4fc0e7 13
+skills/engineering/triage/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_1e0ef3548cd60f::t_59fb684d8d74b1 13
+skills/engineering/wayfinder/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_1e0ef3548cd60f::t_71492bbeb7f74e 13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "024be0491178742931cfe315dcdf624894c17a3c",
+  "prompts": {},
+  "sessions": {
+    "s_1e0ef3548cd60f": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1d07a-8467-7323-96ad-686dab46c963",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    }
+  }
+}
