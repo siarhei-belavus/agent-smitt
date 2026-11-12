@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 The user has asked for a **retrospective**. You are suggesting improvements to the coding agent's **environment** to improve future runs.
 
-Accept the current chat, named chats, or a delivery reference and coordinator chat. The user chooses when to invoke `retro`, including during ongoing work. Review and delivery skills do not invoke it. Record the selected scope and observation cutoff. Reading a delivery grants no authority to resume it or change its external state.
+Accept the current chat, named chats, Review Proposal references, or a delivery reference and coordinator chat. The user chooses when to invoke `retro`, including during ongoing work. Review and delivery skills do not invoke it. Record the selected scope and observation cutoff. Reading a delivery grants no authority to resume it or change its external state.
 
 ## Steps
 
@@ -18,9 +18,11 @@ Accept the current chat, named chats, or a delivery reference and coordinator ch
 
    For work spanning sessions, follow coordinator checkpoints, ticket relationships, and execution references to implementation, validation, review, correction, and recovery sessions. Include attributable archived sessions and previous attempts. Use the host's available session tools and the project's configured records, following pagination. Establish membership from recorded relationships. Account for each discovered session and report inaccessible histories or evidence lost during cleanup. Ask for a missing reference only when the intended work cannot be identified, and continue with independently available evidence.
 
-   Read the user's messages across the available selected histories. For each correction, recover the preceding assumption or action, the user's expectation, and the resulting decision from the original surrounding messages and actions. Distinguish errors and scope corrections from clarified preferences or changed requirements. Check later messages for revisions or withdrawals. One direct correction can justify a proposal. Preserve its task, project, or broader scope before generalizing it.
+   When the user supplies Review Proposals, such as PRs or MRs, or selected histories and delivery records link to them, read [Review Feedback](REVIEW-FEEDBACK.md) to collect the user's comments, including resolved and closed discussions, as primary evidence.
 
-   Group reports of the same event across sessions into one incident. Compare actions with the instructions and evidence available at that time. Treat summaries as pointers to evidence and identify uncertainty when original records are unavailable.
+   Read the user's messages across the available selected histories and collected Review Feedback. For each correction, recover the preceding assumption or action, the user's expectation, and the resulting decision from the original surrounding messages and actions. Distinguish errors and scope corrections from clarified preferences or changed requirements. Check later messages for revisions or withdrawals. One direct correction can justify a proposal. Preserve its task, project, or broader scope before generalizing it.
+
+   Group reports of the same event across sessions and Review Proposals into one incident. Compare actions with the instructions and evidence available at that time. Treat summaries as pointers to evidence and identify uncertainty when original records are unavailable.
 
 3. Look for candidates for improvement in these categories.
 
