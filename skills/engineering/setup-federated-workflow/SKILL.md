@@ -9,6 +9,8 @@ Prepare final-state repository-owned workflow configuration. Research and human 
 
 ## Process
 
+Start each new research, application, and validation subagent with a fresh context, without inheriting the parent conversation. Give it a self-contained assignment, its authorized scope, and readable references to the required sources and accepted decisions.
+
 ### 1. Classify the operation
 
 Read the current repository instructions and `docs/agents/`, then read [provider concepts](references/bundled/federated-workflow/PROVIDER-CONCEPTS.md) and [domain orientation](references/bundled/federated-workflow/DOMAIN-ORIENTATION.md). When the request or current configuration establishes, joins, or changes a federation, read [domain federation configuration](references/bundled/federated-workflow/DOMAIN-FEDERATION.md) before classifying the request as:
