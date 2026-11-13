@@ -1,0 +1,170 @@
+skills/engineering/code-review/STANDARDS-REVIEWER.md
+  s_b60e2b90c51e61::t_74289aaa15a508 1-22
+.github/workflows/validate.yml
+  s_b60e2b90c51e61::t_74289aaa15a508 11-21
+skills/engineering/implement/COORDINATOR-NARROWED.md
+  s_b60e2b90c51e61::t_74289aaa15a508 5
+skills/engineering/federated-workflow/CONTEXT-READING.md
+  s_b60e2b90c51e61::t_74289aaa15a508 1-15
+skills/engineering/federated-workflow/CONTEXT-PACK.md
+  s_b60e2b90c51e61::t_74289aaa15a508 3,15,21
+skills/engineering/federated-workflow/DELIVERY-RECORDS.md
+  s_b60e2b90c51e61::t_74289aaa15a508 3,9,11
+bin/sync-skill-references
+  s_b60e2b90c51e61::t_74289aaa15a508 79-85
+skills/engineering/federated-workflow/IMPLEMENTATION-CONTRACT.md
+  s_b60e2b90c51e61::t_74289aaa15a508 1-63
+skills/engineering/deliver-ticket/SKILL.md
+  s_b60e2b90c51e61::t_86143db3a314a9 68-69,72,90-92
+  s_b60e2b90c51e61::t_a6b909fab05b93 93
+skills/engineering/code-review/SPEC-REVIEWER.md
+  s_b60e2b90c51e61::t_74289aaa15a508 1-7
+skills/engineering/deliver-ticket/RECOVERY.md
+  s_b60e2b90c51e61::t_74289aaa15a508 31-32
+skills/engineering/code-review/WIP-REVIEW.md
+  s_b60e2b90c51e61::t_74289aaa15a508 1-3
+skills/engineering/code-review/SKILL.md
+  s_b60e2b90c51e61::t_86143db3a314a9 8,48,74,83,85,87,89,111-113
+tests/test_delivery_validator.py
+  s_b60e2b90c51e61::t_74289aaa15a508 1-290
+tests/test_distribution.py
+  s_b60e2b90c51e61::t_74289aaa15a508 91-111
+docs/workflow.md
+  s_b60e2b90c51e61::t_74289aaa15a508 145-150
+skills/engineering/code-review/REVIEWER-CONTRACT.md
+  s_b60e2b90c51e61::t_74289aaa15a508 1-15
+CONTRIBUTING.md
+  s_b60e2b90c51e61::t_74289aaa15a508 34-35
+skills/engineering/federated-workflow/scripts/validate_delivery.py
+  s_b60e2b90c51e61::t_74289aaa15a508 1-212
+skills/engineering/implement/SKILL.md
+  s_b60e2b90c51e61::t_74289aaa15a508 8,37
+skills/engineering/federated-workflow/MECHANICAL-VALIDATION.md
+  s_b60e2b90c51e61::t_74289aaa15a508 1-68
+docs/skills.md
+  s_b60e2b90c51e61::t_74289aaa15a508 63-64
+skills/engineering/federated-workflow/AUTHORITY-EVIDENCE.md
+  s_b60e2b90c51e61::t_74289aaa15a508 1-5
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/AUTHORITY-EVIDENCE.md
+  s_b60e2b90c51e61::t_64d4bece253950 1-5
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_b60e2b90c51e61::t_90aedd466ab732 3,15,21
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/CONTEXT-READING.md
+  s_b60e2b90c51e61::t_d939d10011c7a5 1-15
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_b60e2b90c51e61::t_c64bd8ee58b36d 3,9,11
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/IMPLEMENTATION-CONTRACT.md
+  s_b60e2b90c51e61::t_db3c1d0281a8f5 1,3,27
+skills/engineering/code-review/references/bundled/federated-workflow/AUTHORITY-EVIDENCE.md
+  s_b60e2b90c51e61::t_518305879e3626 1-5
+skills/engineering/code-review/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_b60e2b90c51e61::t_1501f8bcf060a6 3,15,21
+skills/engineering/code-review/references/bundled/federated-workflow/CONTEXT-READING.md
+  s_b60e2b90c51e61::t_97e6ec93a0f119 1-15
+skills/engineering/code-review/references/bundled/federated-workflow/IMPLEMENTATION-CONTRACT.md
+  s_b60e2b90c51e61::t_2b96bae398e158 1,3,27
+skills/engineering/code-review/references/bundled/federated-workflow/MECHANICAL-VALIDATION.md
+  s_b60e2b90c51e61::t_c1cb8e92a10518 1-68
+skills/engineering/code-review/references/bundled/federated-workflow/scripts/validate_delivery.py
+  s_b60e2b90c51e61::t_c5ad6566c64c61 1-212
+skills/engineering/deliver-spec/references/bundled/federated-workflow/AUTHORITY-EVIDENCE.md
+  s_b60e2b90c51e61::t_5467e1a6d90389 1-5
+skills/engineering/deliver-spec/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_b60e2b90c51e61::t_65cc3946507e53 3,15,21
+skills/engineering/deliver-spec/references/bundled/federated-workflow/CONTEXT-READING.md
+  s_b60e2b90c51e61::t_2130346dbf418b 1-15
+skills/engineering/deliver-spec/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_b60e2b90c51e61::t_bca51d38725362 3,9,11
+skills/engineering/deliver-spec/references/bundled/federated-workflow/IMPLEMENTATION-CONTRACT.md
+  s_b60e2b90c51e61::t_0fdef1d3934278 1,3,27
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/AUTHORITY-EVIDENCE.md
+  s_b60e2b90c51e61::t_72d163ea58558c 1-5
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_b60e2b90c51e61::t_bf2804bfc3b5e1 3,15,21
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/CONTEXT-READING.md
+  s_b60e2b90c51e61::t_777b1d543296f7 1-15
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_b60e2b90c51e61::t_bfb68657f4152f 3,9,11
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/IMPLEMENTATION-CONTRACT.md
+  s_b60e2b90c51e61::t_606a05b888a52a 1,3,27
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/MECHANICAL-VALIDATION.md
+  s_b60e2b90c51e61::t_48084b54478698 1-68
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/scripts/validate_delivery.py
+  s_b60e2b90c51e61::t_9760b940350720 1-212
+skills/engineering/implement/references/bundled/federated-workflow/AUTHORITY-EVIDENCE.md
+  s_b60e2b90c51e61::t_6dedca1e3d4a92 1-5
+skills/engineering/implement/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_b60e2b90c51e61::t_9e8eef89cebe11 3,15,21
+skills/engineering/implement/references/bundled/federated-workflow/CONTEXT-READING.md
+  s_b60e2b90c51e61::t_4390b1d4eeae72 1-15
+skills/engineering/implement/references/bundled/federated-workflow/IMPLEMENTATION-CONTRACT.md
+  s_b60e2b90c51e61::t_485d67bc5fd454 1-63
+skills/engineering/review-feedback/references/bundled/federated-workflow/AUTHORITY-EVIDENCE.md
+  s_b60e2b90c51e61::t_19e48adaec743d 1-5
+skills/engineering/review-feedback/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_b60e2b90c51e61::t_f9e75c9a5a9130 3,15,21
+skills/engineering/review-feedback/references/bundled/federated-workflow/CONTEXT-READING.md
+  s_b60e2b90c51e61::t_2ea99a72015bc3 1-15
+skills/engineering/review-feedback/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_b60e2b90c51e61::t_e7404066f0beb5 3,9,11
+skills/engineering/review-feedback/references/bundled/federated-workflow/IMPLEMENTATION-CONTRACT.md
+  s_b60e2b90c51e61::t_7e376b69863b1a 1-63
+skills/engineering/setup-federated-workflow/references/bundled/federated-workflow/AUTHORITY-EVIDENCE.md
+  s_b60e2b90c51e61::t_65cf5a39f687a7 1-5
+skills/engineering/setup-federated-workflow/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_b60e2b90c51e61::t_88a7cd2bef2d67 3,15,21
+skills/engineering/setup-federated-workflow/references/bundled/federated-workflow/CONTEXT-READING.md
+  s_b60e2b90c51e61::t_3574f1b1110810 1-15
+skills/engineering/to-spec/references/bundled/federated-workflow/AUTHORITY-EVIDENCE.md
+  s_b60e2b90c51e61::t_9400d8a66ed456 1-5
+skills/engineering/to-spec/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_b60e2b90c51e61::t_61f901e4d95a8e 3,15,21
+skills/engineering/to-spec/references/bundled/federated-workflow/CONTEXT-READING.md
+  s_b60e2b90c51e61::t_3b28a8e4c1a033 1-15
+skills/engineering/to-spec/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_b60e2b90c51e61::t_d19e5c303ca544 3,9,11
+skills/engineering/to-spec/references/bundled/federated-workflow/IMPLEMENTATION-CONTRACT.md
+  s_b60e2b90c51e61::t_52c6e5589bcc49 1-63
+skills/engineering/to-tickets/references/bundled/federated-workflow/AUTHORITY-EVIDENCE.md
+  s_b60e2b90c51e61::t_bf9287ffdf10a3 1-5
+skills/engineering/to-tickets/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_b60e2b90c51e61::t_8f7aa33f6b5294 3,15,21
+skills/engineering/to-tickets/references/bundled/federated-workflow/CONTEXT-READING.md
+  s_b60e2b90c51e61::t_ead20809d88395 1-15
+skills/engineering/to-tickets/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_b60e2b90c51e61::t_cdbf40bfa2e48e 3,9,11
+skills/engineering/to-tickets/references/bundled/federated-workflow/IMPLEMENTATION-CONTRACT.md
+  s_b60e2b90c51e61::t_1422f476149f95 1-63
+skills/engineering/triage/references/bundled/federated-workflow/AUTHORITY-EVIDENCE.md
+  s_b60e2b90c51e61::t_9e1f91d6798328 1-5
+skills/engineering/triage/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_b60e2b90c51e61::t_e6d810b8a0f682 3,15,21
+skills/engineering/triage/references/bundled/federated-workflow/CONTEXT-READING.md
+  s_b60e2b90c51e61::t_22b5184b48c67e 1-15
+skills/engineering/triage/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_b60e2b90c51e61::t_24993911053c56 3,9,11
+skills/engineering/triage/references/bundled/federated-workflow/IMPLEMENTATION-CONTRACT.md
+  s_b60e2b90c51e61::t_084db0cb420303 1-63
+skills/engineering/wayfinder/references/bundled/federated-workflow/AUTHORITY-EVIDENCE.md
+  s_b60e2b90c51e61::t_c4b079815f469d 1-5
+skills/engineering/wayfinder/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_b60e2b90c51e61::t_48202188acd4f5 3,15,21
+skills/engineering/wayfinder/references/bundled/federated-workflow/CONTEXT-READING.md
+  s_b60e2b90c51e61::t_75669ade9154a7 1-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "4a6b7ab1d026b1f890b093a0e28992ca799d07dd",
+  "prompts": {},
+  "sessions": {
+    "s_b60e2b90c51e61": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1d4bc-cdcd-7473-ad41-6f8d85f8b28f",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    }
+  }
+}
