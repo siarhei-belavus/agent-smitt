@@ -5,7 +5,7 @@ description: "Implement repository deliveries from authoritative specs or ticket
 
 Implement the work described by the user in the authoritative spec or tickets.
 
-Read [delivery records](references/bundled/federated-workflow/DELIVERY-RECORDS.md) before resolving the assignment.
+Read [implementation contract](references/bundled/federated-workflow/IMPLEMENTATION-CONTRACT.md) before resolving the assignment.
 
 ## Resolve the assignment
 
@@ -34,7 +34,7 @@ Read-only context and validation repositories remain outside writable scope. Mis
 
 Validate that the writable path belongs to the Repository Reference and that its starting revision agrees with the supplied launch commit or Fixed Review Base. Read that repository's instructions and resolve its validation commands from the supplied sources. Before each implementation decision, perform configured Domain Orientation for the affected behavior and read the applicable canonical context, ADRs, and nearest relevant prior art. Use the prepared ticket's self-contained contract; follow indexed sources when that decision needs them. Do not repeat publication's planning audit or use one repository's instructions as authority for another.
 
-Record the Repository ID, writable path, Fixed Review Base, authoritative sources, complete Settled Seams, test approaches, Validation Obligations, and validation commands before editing.
+Use the supplied assignment as the record of Repository ID, writable path, Fixed Review Base, authoritative sources, complete Settled Seams, test approaches, and Validation Obligations. Add resolved validation commands and any missing required facts before editing. Preserve the assignment rather than transcribing a second copy.
 
 Use the authorized isolated writable checkout. Classify existing changes against the assignment. Preserve unrelated content and return a blocker when it cannot be isolated without changing user work.
 

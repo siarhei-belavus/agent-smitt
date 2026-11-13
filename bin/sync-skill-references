@@ -76,6 +76,13 @@ def package_skill(skill: Path) -> tuple[dict[Path, bytes], dict[Path, bytes]]:
             continue
         visited.add(source)
         destination = bundled_path(source, skill)
+        if source.suffix.lower() != ".md":
+            payload = source.read_bytes()
+            if source.is_relative_to(skill):
+                canonical[destination] = payload
+            else:
+                bundled[destination] = payload
+            continue
         text = source.read_text(encoding="utf-8")
         changes = []
         for start, end, url in markdown_links(text):

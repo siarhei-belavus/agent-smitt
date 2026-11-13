@@ -1,6 +1,6 @@
 # Context Pack consumption
 
-A Context Pack is an immutable, runtime-local snapshot for one profile and permanent root. Its entry file identifies the result, sources, relationships, and any diagnostics. Full bodies and comments may be inline or in linked Markdown files within the same private directory. The entry path is the Authority input passed to consumers; every linked file travels with it.
+When consuming authority, read [Context reading](CONTEXT-READING.md) for the pack structure, required sources, and handling of changed or unavailable authority.
 
 ## Acquire and reuse
 
@@ -12,12 +12,10 @@ Retain the directory until its last consumer finishes, including a paused coordi
 
 ## Read for the current action
 
-For implementation, validation, or review, read the entry and active artifact in full, including its requirements, constraints, acceptance criteria, and validation obligations. Read applicable accepted decisions and execution feedback in full even when they are in linked files. Material required by a repository instruction remains mandatory. Defer supporting history and rationale until needed to interpret a decision, resolve a gap or contradiction, or inspect the source itself. Indexed reading changes when supporting material is opened; every applicable requirement and accepted decision remains part of the work and its Spec review coverage.
-
-For a prepared ticket, publication owns source preservation and planning-contract validation. Execution consumes its self-contained scope, outcomes, criteria, settled decisions, and validation obligations. Check that these identify the next authorized action; return discovered gaps or conflicts to their owner. Execution does not repeat a source-to-ticket planning audit. Planning and Spec review still read the authority required by their selected coverage.
+Before implementation, validation, or review, apply [Context reading](CONTEXT-READING.md) in full. Supply that contract to delegated consumers; acquisition, retention, and cleanup remain with the owning workflow.
 
 ## Freshness
 
 A pack supplies authority, not a live claim, dependency, routing, proposal, or merge state. Read current operational state at the action that depends on it. Known changed authority requires reconciliation and a new pack for affected work; never overwrite files already given to a consumer. Temporary tracker unavailability may leave independent local implementation usable, but does not waive an action's required live check.
 
-On resume, first use durable execution state to identify the next action. Continuing implementation, validation, or review requires the full active contract and applicable decisions and feedback under the reading rules above. Reacquire authority only when that action needs it and no usable pack remains. Terminal reporting and completion of missing handoff effects can use recorded authority and evidence when current observations prove their prerequisites unchanged. For reuse of review results across acquisitions, apply [Authority evidence](DELIVERY-RECORDS.md#authority-evidence).
+On resume, first use durable execution state to identify the next action. Continuing implementation, validation, or review requires the full active contract and applicable decisions and feedback under the reading rules above. Reacquire authority only when that action needs it and no usable pack remains. Terminal reporting and completion of missing handoff effects can use recorded authority and evidence when current observations prove their prerequisites unchanged. For reuse of review results across acquisitions, apply [Authority evidence](AUTHORITY-EVIDENCE.md).
