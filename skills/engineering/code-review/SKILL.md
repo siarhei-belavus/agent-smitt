@@ -5,7 +5,7 @@ description: Review fixed Repository Targets. Use when the user asks to review a
 
 Review committed or worktree changes since fixed points without modifying the reviewed repositories or external collaboration state.
 
-Read [delivery records](references/bundled/federated-workflow/DELIVERY-RECORDS.md) before resolving targets or review authority. For Work Tracker-backed authority, follow [Context Pack consumption](references/bundled/federated-workflow/CONTEXT-PACK.md).
+Read [implementation contract](references/bundled/federated-workflow/IMPLEMENTATION-CONTRACT.md) before resolving targets or review authority. For Work Tracker-backed authority, follow [Context Pack consumption](references/bundled/federated-workflow/CONTEXT-PACK.md).
 
 ## Public input
 
@@ -45,7 +45,7 @@ Do not silently add an unselected axis.
 
 Resolve every Fixed point and Review head once in its target repository. Compute `git merge-base <fixed-point> <review-head>` once and record the returned commit SHA as the exact **Comparison base** for that target. For committed review, use `<fixed-point>...<review-head>` and record `git log <comparison-base>..<review-head> --oneline`. Do not recompute the Comparison base from moving refs during freshness checks.
 
-For explicit worktree review, capture one canonical Git tree without changing the reviewed repository's index, worktree, or object database. Create a temporary object store and a new temporary Git index outside the repository. Set `GIT_OBJECT_DIRECTORY` to the temporary object store, set `GIT_ALTERNATE_OBJECT_DIRECTORIES` to the reviewed repository's object directory plus its configured alternates, and set `GIT_INDEX_FILE` to the temporary Git index for every snapshot and diff command. Resolve and use the target repository root as the working directory for every capture command. With those variables set, run `git read-tree <review-head>`, `git add -A -- :/` using the top-anchored pathspec `:/`, and `git write-tree`, then record the returned tree object ID as the **Worktree snapshot ID**. Git's canonical tree serialization includes tracked, staged, deleted, renamed, symlink, submodule, and non-ignored untracked state as it would be committed, regardless of the original working directory. Materialize `git diff --binary <comparison-base> <worktree-snapshot-id>` into a read-only temporary file outside the repository and record its SHA-256 digest; this is the **immutable materialized diff** supplied to every selected reviewer so they do not need access to the temporary object store. Include the Comparison base, tree object ID, and diff digest in validation and reviewer inputs. Repeat the same temporary-store capture and materialization against the same exact Comparison base before reporting; when the snapshot ID changes or the diff digest changes, the review is stale and must restart. Keep the materialized diff available through aggregation, then remove all temporary evidence. If the target cannot be represented by that Git tree, require a committed target instead of claiming WIP freshness.
+For explicit worktree review, follow [WIP review capture](WIP-REVIEW.md) before dispatch and again before reporting. Supply its immutable diff and snapshot identity to reviewers.
 
 Confirm each target resolves and has a non-empty selected change set before starting reviewers. A bad ref or empty target fails here. Do not substitute a branch tip or later `HEAD` for the captured Review head.
 
@@ -71,21 +71,7 @@ For each selected Standards target, discover and read its applicable repository 
 
 Record each source's path, applicability, and immutable revision or content fingerprint with the Authority evidence. Use accepted source versions from the supplied authority, falling back to the captured Comparison base for repository files. Changes to standards in the reviewed diff are proposals until authoritative input accepts them as governing this review. Pass the source list and exact contents or readable immutable references to the Standards Reviewer. A missing optional standards file leaves the other applicable sources and baseline in force; an unavailable required source leaves coverage incomplete.
 
-Add the following Fowler smell baseline from *Refactoring*, ch. 3, unless an authoritative source or documented repository standard explicitly overrides it. Every smell is a judgement call, never automatically a violation:
-
-- **Mysterious Name** — a name does not reveal what it does or holds.
-- **Duplicated Code** — the same logic shape appears in more than one changed place.
-- **Feature Envy** — behavior reaches into another object's data more than its own.
-- **Data Clumps** — the same fields or parameters repeatedly travel together.
-- **Primitive Obsession** — a primitive stands in for a domain concept.
-- **Repeated Switches** — repeated conditional dispatch uses the same discriminator.
-- **Shotgun Surgery** — one logical change requires scattered edits.
-- **Divergent Change** — one module changes for unrelated reasons.
-- **Speculative Generality** — unused abstraction or compatibility machinery has no required behavior.
-- **Message Chains** — callers navigate through a long object chain.
-- **Middle Man** — a module mostly delegates without adding depth.
-- **Refused Bequest** — an inheritor ignores most of its inherited contract.
-
+When preparing Standards inputs, use the smell baseline in [Standards reviewer](STANDARDS-REVIEWER.md).
 Determine per target whether the change introduces or reshapes a module, interface, seam, adapter, logical ownership, physical decomposition, or contract, or changes current-truth documentation. When it does, require the Standards Reviewer to read the `codebase-design` skill in full and apply its relevant deletion-test, proportional-design, and final-state rules.
 
 Route requirement or settled-decision violations to Spec. Route structural and change-pressure findings to Standards.
@@ -94,19 +80,13 @@ Done when each selected Standards target has an attributable source set, applica
 
 ### 4. Run the selected fresh reviews
 
-A full pass continues after every finding and finishes the complete selected axis before the reviewer returns. Give every reviewer this shared completion brief:
+Start each reviewer, including every repeat review, with a fresh context without the parent conversation. Supply its role file and readable source references, rather than the preparation and aggregation instructions in this skill.
 
-> Audit every member of the finite input sets applicable to the selected axis: changed files; repository rules and heuristics for Standards or authoritative requirements and decisions for Spec; Settled Seams and their named providers and consumers; and supplied validation claims. Return all material findings from the full pass together. Include a **Coverage receipt** with audited/total counts for each applicable set. State why a set is not applicable. Coverage is incomplete while any item remains unaccounted for.
+For the Standards axis, start one fresh Standards Reviewer per selected Repository Target using [Standards reviewer](STANDARDS-REVIEWER.md). Supply only its captured target, commit list, repository-local standards, design trigger result, authoritative seam context, accepted Authority input, and validation claims.
 
-For the Standards axis, start one fresh Standards Reviewer per selected Repository Target. Give each reviewer only its captured target, commit list, repository-local standards, smell baseline, design trigger result, authoritative seam context, accepted Authority input, and this brief. Pass Work Tracker Authority input unchanged and allow no provider lookup. For a WIP target, the captured target includes the Worktree snapshot ID and immutable materialized diff with its recorded digest; require the reviewer to inspect that diff rather than the mutable worktree.
+For the Spec axis, start one fresh Bundle Spec Reviewer over the complete selected target set using [Spec reviewer](SPEC-REVIEWER.md). Supply all captured targets and diffs, accepted Authority inputs, authoritative sources, settled seams, and repository and cross-repository validation evidence.
 
-> Report all material Standards findings per file and hunk. Cite the violated rule or name the relevant heuristic. Label a finding **Blocking** only for a mandatory-standard violation or a structural flaw with a credible future bug or material change-pressure path; label other material findings **Advisory**. Omit mechanical issues reliably enforced by configured tooling.
-
-For the Spec axis, start one fresh Bundle Spec Reviewer over the complete selected target set. Give it all captured targets and diffs, accepted Authority inputs, authoritative sources, settled seams, repository validation evidence, and this brief. Pass each Work Tracker Context Pack path unchanged and allow no provider lookup:
-
-> Report missing or partial requirements, scope creep, incorrect behavior, unauthorized seam changes, acceptance behavior outside a settled seam, and required behavior not verified through that seam. Route each finding to the affected Repository IDs. Label a finding **Blocking** when it demonstrates a requirement or settled-decision violation or a reachable correctness regression; label other material findings **Advisory**.
-
-> For removed or weakened behavior, verify which existing invariant it protected and why the change is justified. An accepted task decision or demonstrated implementation error is sufficient. Unresolved purpose or conflicts are **Blocking**.
+Pass Work Tracker Authority inputs unchanged and allow no provider lookup. For WIP targets, include the snapshot ID and immutable materialized diff with its digest. The role files own the full-pass, coverage, finding, and severity requirements.
 
 Run fresh reviewers concurrently where harness capacity permits; freshness and complete inputs matter, not a particular internal agent topology. If the selected Spec axis has no source after the user confirms none exists, skip that reviewer and report `no spec available`.
 
@@ -128,4 +108,6 @@ Publish no branch, create or update no Review Proposal, and change no Work Track
 
 ## Evidence freshness
 
-Every finding and pass result is bound to the captured exact Review heads, review bounds, [Authority evidence](references/bundled/federated-workflow/DELIVERY-RECORDS.md#authority-evidence), and, for WIP, the Worktree snapshot ID. Changed heads or snapshots invalidate affected repository validation and reviews. Changed review bounds or governing authority invalidate dependent reviews; changed obligation meaning also invalidates its validation. A relocated or reacquired pack with proven equivalent authority preserves results. Missing proof requires refreshed affected evidence and a new fixed target rather than an assumed pass.
+The calling workflow owns freshness checks before dispatch and before reporting. For mechanical dependency comparisons, use the optional [delivery validator](references/bundled/federated-workflow/MECHANICAL-VALIDATION.md) or the existing manual checks. Reviewers retain the full semantic coverage of their selected axis.
+
+Every finding and pass result is bound to the captured exact Review heads, review bounds, [Authority evidence](references/bundled/federated-workflow/AUTHORITY-EVIDENCE.md), and, for WIP, the Worktree snapshot ID. Changed heads or snapshots invalidate affected repository validation and reviews. Changed review bounds or governing authority invalidate dependent reviews; changed obligation meaning also invalidates its validation. A relocated or reacquired pack with proven equivalent authority preserves results. Missing proof requires refreshed affected evidence and a new fixed target rather than an assumed pass.

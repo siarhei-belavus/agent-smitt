@@ -142,6 +142,12 @@ The ticket stays open for acceptance and explicit `closeout`. All required check
 
 The same startup applies to direct calls and specification assignments. Keep context snapshots outside worktrees and immutable while consumers use them. Reuse explicitly passed matching packs; independent runs need no shared cache. Acquisition can preserve the full related source set without placing every body in every agent's context. Read current tracker and Code Host state before claims, publication, and merge; a local snapshot does not replace those checks.
 
+### Role-specific instructions and mechanical checks
+
+The coordinator owns pack acquisition and retention, provider operations, lifecycle state, and freshness decisions. Implementers read the implementation contract and consumer reading rules. Standards and Spec reviewers receive their own role instructions and captured inputs; the review caller owns preparation, freshness checks, and aggregation. Validation agents receive their assigned obligations and the consumer reading rules. Every consumer still reads the active artifact and applicable accepted decisions in full, together with required repository instructions, domain sources, and ADRs.
+
+The optional [delivery validator](../skills/engineering/federated-workflow/MECHANICAL-VALIDATION.md) checks local Git results and declared evidence dependencies using Python 3.10 or later. It ships inside the skills that use it and requires no Python packages or provider connection. It returns mechanical consistency, discrepancies, or unknown facts. The coordinator still establishes scope, complete dependency coverage, accepted authority, provider state, and the next authorized action. Missing Python or an unavailable helper retains the existing manual check path. A reported mismatch must be resolved on either path.
+
 ### Example across repositories
 
 Suppose an invitation feature changes an API and a web application, and uses a third repository for contract tests.
