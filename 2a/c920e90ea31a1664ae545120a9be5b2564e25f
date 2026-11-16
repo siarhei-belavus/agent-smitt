@@ -1,0 +1,23 @@
+docs/workflow.md
+  s_6f9f3f3fbc7c2a::t_164268111d911f 183,189,191
+AGENTS.md
+  s_6f9f3f3fbc7c2a::t_164268111d911f 20-21
+CONTRIBUTING.md
+  s_6f9f3f3fbc7c2a::t_164268111d911f 65-66
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2ac920e90ea31a1664ae545120a9be5b2564e25f",
+  "prompts": {},
+  "sessions": {
+    "s_6f9f3f3fbc7c2a": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1e40d-82a4-7de3-b4ef-022ff245e231",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    }
+  }
+}
