@@ -1,64 +1,67 @@
 ---
 name: retro
-description: "Conduct a retrospective on a coding session."
+description: Review selected work, evaluate prior changes, and propose scoped improvements.
 disable-model-invocation: true
 ---
 
-The user has asked for a **retrospective**. You are suggesting improvements to the coding agent's **environment** to improve future runs.
+# Retrospective
 
-Accept the current chat, named chats, Review Proposal references, or a delivery reference and coordinator chat. The user chooses when to invoke `retro`, including during ongoing work. Review and delivery skills do not invoke it. Record the selected scope and observation cutoff. Reading a delivery grants no authority to resume it or change its external state.
+Review the work selected by the user. Find new improvements and check how earlier accepted changes affected this work. You may update any project documentation, including project-local skills. Improvements may also target checks and tools.
 
-## Steps
+One coordinator owns scope, incident identity, reconciliation, and journal writes. Evidence readers and analysis workers use fresh contexts and report bounded results. Review and delivery skills do not invoke this skill. Reading a delivery grants no authority to resume it or change its external state.
 
-1. Call the Skill tool with `writing-for-agents` for the writing style guide.
+## 1. Fix the work scope and prior-change set
 
-   Apply this guide to all documentation proposed or edited during the retrospective, following the project's existing conventions.
+Accept the current chat, named chats, Review Proposals, or a delivery reference with its coordinator chat. The user chooses when to invoke this skill, including during ongoing work. Default to the current chat and record the observation cutoff.
 
-2. Read the primary sources for the session the user specifies. This may mean searching through session logs on this machine. If the user doesn't specify a session, default to the current one.
+Before starting any subagent, read [analysis worker coordination](ANALYSIS-WORKERS.md). Also read it before full-trace collection when work spans multiple histories, several applicable changes, or a history too large for bounded reading. Use it to choose a proportional execution plan. A small bounded case can perform the roles directly.
 
-   For work spanning sessions, follow coordinator checkpoints, ticket relationships, and execution references to implementation, validation, review, correction, and recovery sessions. Include attributable archived sessions and previous attempts. Use the host's available session tools and the project's configured records, following pagination. Establish membership from recorded relationships. Account for each discovered session and report inaccessible histories or evidence lost during cleanup. Ask for a missing reference only when the intended work cannot be identified, and continue with independently available evidence.
+When selected work spans chats or contains delegation, delivery, ticket, review, or recovery references, follow [work scope discovery](WORK-SCOPE.md). Establish membership through recorded relationships and account for inaccessible or archived histories. For supplied or linked Review Proposals, use [Review Feedback](REVIEW-FEEDBACK.md) to collect the user's comments as primary evidence.
 
-   When the user supplies Review Proposals, such as PRs or MRs, or selected histories and delivery records link to them, read [Review Feedback](REVIEW-FEEDBACK.md) to collect the user's comments, including resolved and closed discussions, as primary evidence.
+Read the [private change journal contract](references/JOURNAL.md) to locate existing records and select earlier implemented changes that may apply to this work. An absent journal leaves the prior-change branch empty; continue diagnosis. Freeze the selected change IDs, their expectations, and relevant source versions before analysis or edits. New proposals from this incident are outside that set.
 
-   Read the user's messages across the available selected histories and collected Review Feedback. For each correction, recover the preceding assumption or action, the user's expectation, and the resulting decision from the original surrounding messages and actions. Distinguish errors and scope corrections from clarified preferences or changed requirements. Check later messages for revisions or withdrawals. One direct correction can justify a proposal. Preserve its task, project, or broader scope before generalizing it.
+If the private journal contains `retro-policy.md`, read its context-management and reporting settings. When that file is absent or omits a setting, use compatible settings from legacy `audit-policy.md` when available. Invocation instructions take precedence, then the new policy, then legacy settings, then host defaults. Record the effective policy sources. History scope comes from the selected work; policy observation windows do not authorize unrelated-history searches.
 
-   Group reports of the same event across sessions and Review Proposals into one incident. Compare actions with the instructions and evidence available at that time. Treat summaries as pointers to evidence and identify uncertainty when original records are unavailable.
+Completion criterion: scope, cutoff, member sources, prior-change IDs, policy sources, and coverage gaps are explicit.
 
-3. Look for candidates for improvement in these categories.
+## 2. Collect evidence once
 
-- **Navigation**: how easy was it for the agent to find the right files? Are there hidden dependencies between files? Would a **navigation pointer** make it easier? _Use when_ the session took a long time to find a piece of information.
-- **Automated checks**: are there automated checks that could catch errors the agent made? Linting, typing, tests, filesystem linters? Read the repo's own check command first (its `package.json`/build-tool `lint`/`check` scripts, its CI workflow), so a check that already exists but sits unwired or silently broken is the finding, not a reinvention. A repo with no **guardrail** (no pre-commit hook and no CI job running its lint/typecheck/test command) is itself a finding: an un-linted repo is a standing missed opportunity, not a neutral default. _Use when_ the agent made a mistake an automated check could have caught, or the repo has no guardrail at all.
-- **Coding standards**: should the **reviewer agent** be given a new rule to enforce? Should an existing rule be removed or clarified? Classify the violation first: a **mechanical** one (a fixed syntactic pattern, a banned API, an import shape, a file-location rule) gets a deterministic check, full stop: a custom rule in the repo's own linter, a new pre-commit hook, or a new CI job, whichever the repo's language and existing guardrail make cheapest. Default to building the check over writing the rule. Reserve `CODING_STANDARDS.md` for genuine **judgement calls** (cross-file consistency, "matches the surrounding style," anything no guardrail could ever substitute for). _Use when_ the reviewer agent failed to catch a mistake.
-- **Global AGENTS.md**: are there any steering instructions that should be moved to coding standards (or automated checks) instead? _Use when_ the AGENTS.md file is particularly large - in the repo OR the user's global scope.
-- **Tool economy**: did the agent make expensive tool calls that could be streamlined? Is there any custom tooling (CLI's, MCP's) that is particularly token-inefficient? _Use when_ the agent made an expensive tool call.
-- **No-ops**: look for instructions in steering files that don't modify the agent's behavior. _Use when_ the steering files are large and unwieldy.
-- **Information access**: look for opportunities to increase the agent's access to information. Teeing dev server logs, readonly access to third-party services. _Use when_ a crucial piece of information was not available to the agent.
+Keep a compact source and incident index. Read the user's messages across the available selected histories and collected Review Feedback. For each correction, recover the preceding assumption or action, the user's expectation, and the resulting decision from the original surrounding messages and actions. Collect decisions effective at the time, observed consequences, and evidence needed for the selected prior changes. Distinguish factual errors and scope corrections from clarified preferences and changed requirements. Check later messages for revisions or withdrawals. One direct correction can justify a proposal. Preserve its task, project, or broader scope before generalizing it.
 
-- **Project documentation**: what knowledge from user corrections, discoveries, or successful approaches should future work retain? Consider all project documentation, including README files, `docs/`, runbooks, setup and troubleshooting guides, domain records, and ADRs alongside the files above. Verify project facts against authoritative sources and keep temporary workarounds provisional. Inspect the existing documentation structure and nearby examples before choosing an owning file. Propose additions, corrections, consolidation, or removal. When no suitable home exists, propose a new file using the project's naming, location, language, terminology, and structure, and explain why it is needed. If conventions are absent, state the smallest structure proposed. Keep one authoritative home with conditional navigation pointers. For domain language or architecture decisions, use `domain-modeling` to prepare a documentation delta within this proposal scope.
+Use the selected execution plan. Assign each source segment to one collector for both analysis branches. With delegated collection, keep raw histories out of coordinator context.
 
-  This includes proposing new runbooks, how-to guides, and project-local skills. Follow the project's existing placement and format.
+Group reports of the same event into one incident. Count applicable opportunities with no observed failure as well as failures. Preserve source locators, event times, version evidence, unread segments, and uncertainty. Summaries point to evidence; missing evidence is not a successful outcome.
 
-4. Present these candidates to the user, in order of severity.
+Completion criterion: every assigned source has evidence or a named coverage gap, and both branches can trace their inputs to the same incident index.
 
-   For each candidate, give the source correction, episode, or inspected repository condition, its consequence, the knowledge to retain, and a concrete change to the owning repository's file or check. Include the examined scope, coverage gaps, and uncertainty. Report when no change is justified.
+## 3. Run the analysis branches
 
-5. If the user has authorized changes, apply them within that scope using the project's editing and validation procedures. Reuse authorization supplied with the invocation. Report applied changes, validation results, and proposals awaiting a decision. Keep secrets and private chat details out of shared artifacts.
+When the execution plan uses subagents, run independent branches in parallel as their required evidence becomes ready. Keep all workers as direct children of the coordinator.
 
-## Reference
+For new improvements, give a diagnosis worker the [diagnosis guide](DIAGNOSIS.md), relevant evidence, and project conventions. Read the guide yourself when performing that role.
 
-### Implementation vs Review
+When earlier implemented changes may apply, give prior-change workers the [evaluation guide](PRIOR-CHANGES.md), selected journal records, and their relevant evidence. Assign one change or a tightly related group per worker. Read the guide yourself when performing that role. This branch records observations about selected work and can combine them with existing journal observations; it does not search unrelated histories.
 
-Remember that all work goes through two stages: implementation and review. The implementation agent has the most **context pressure**. They are responsible for exploration, writing code, and debugging failures.
+When delegation is unavailable, perform the roles sequentially with the same bounded inputs and outputs. Checkpoint scope, coverage, assignments, and unresolved comparisons before exceeding the applicable context policy. Use the host's supported continuation mechanism without inventing token counts.
 
-The review agent has the least context pressure - it receives a diff, so no exploration needed. It often does not need to write code or debug.
+Completion criterion: diagnosis candidates have source evidence and an owner; every selected prior change has an observation, a non-applicability result, or an explicit evidence gap.
 
-This means that the review agent should be responsible for imposing coding standards, not the implementation agent.
+## 4. Reconcile and present the result
 
-### Files
+Check source support, coverage, incident identity, applicability, and exposure across the results. Request a bounded source reread when a material conclusion lacks context. When findings overlap or disagree about facts, causes, or remedies, follow [reconciliation](RECONCILIATION.md), including when both branches concern the same earlier change.
 
-You have access to several files in the repo:
+Present observed effects of prior changes separately from new proposals. For each proposal, give its source correction, episode, or inspected repository condition, its consequence, knowledge to retain, owning file or check, scope, and concrete change. Rank by demonstrated consequence. Include coverage gaps and uncertainty. Report when no new change is justified.
 
-- `CLAUDE.md`/`AGENTS.md`: these files are pushed to the context window of any agent working in this repo. They should be used incredibly sparingly, usually only for **navigation pointers** to other files.
-- `CODING_STANDARDS.md`: this file is read during review, not implementation. Add **navigation pointers** to docs folders if the standards file gets more than 1,000 lines long.
-- Docs: use docs as references files, pointed to by other files. Look for existing docs before writing new ones.
-- Skills: use skills for docs (since their description goes into the agent's context window), or for user-invoked commands. Follow the advice in the `writing-for-agents` skill.
+The coordinator saves a reconciled observation for every selected prior change under the journal contract, including harmful, unsupported, non-applicable, and insufficient-evidence results. Report an explicit write gap for anything not saved.
+
+Completion criterion: conclusions and proposals have distinct purposes, overlapping findings form one issue with its remedy options, each material disagreement has an evidence-backed resolution or explicit alternatives and the missing evidence or decision, and journal observation writes are verified or reported as pending.
+
+## 5. Apply accepted changes and record them
+
+For accepted changes, including authorization supplied with the invocation, follow the journal contract for recording, implementation evidence, and reporting. Apply only authorized changes within their scope using the owning project's editing and validation procedures. Project-local installation alone does not authorize a remedy.
+
+Report applied changes, validation results, journal record IDs, pending proposals, and recording gaps. Keep secrets and private chat details out of shared artifacts.
+
+End at the selected observation cutoff. Changes made during this retrospective await later independent work for evaluation.
+
+Completion criterion: every accepted change has an implementation result or explicit deferral, and the journal's recording requirements are met or gaps reported.

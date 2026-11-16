@@ -21,7 +21,7 @@ Keep each skill in a directory named after its unique frontmatter `name`. Suppor
 
 The Skills CLI copies individual skill directories. References outside a skill's directory need bundled copies to survive installation.
 
-Canonical sources live in their owning skill or in `skills/engineering/federated-workflow/`. Edit those files. `references/bundled/` inside a skill is generated distribution content and is checked into Git so installation needs no build step.
+Canonical sources live in their owning skill or in `skills/engineering/federated-workflow/`. Edit those files. `references/bundled/` inside a skill is generated distribution content and is checked into Git so installation needs no build step. The [private journal contract](skills/engineering/retro/references/JOURNAL.md) belongs to `retro`; journal records and local retrospective policy stay outside the repository.
 
 After editing a source or adding a relative Markdown link:
 
@@ -61,6 +61,8 @@ Check discovery with `--list` and repeat with `--copy` when changing packaging. 
 ## Documentation and attribution
 
 Keep the [workflow guide](docs/workflow.md) consistent with the skill rules. Update the [catalog](docs/skills.md) when adding or removing a skill. Use English for repository documentation and sentence case for headings.
+
+In overview documents such as the README, catalog, and workflow guide, explain when to use a skill, what it does, its inputs and outputs, and the user decisions needed to use it. Link to the owning skill or reference for detailed procedures, role assignments, record formats, and edge cases. Maintain those details only in their owning sources. Include a short invocation example when it helps the reader start.
 
 Preserve upstream copyright and skill-specific credits. Include the source and license for substantial third-party contributions. Remove credentials and private project data from examples and issue reports.
 
