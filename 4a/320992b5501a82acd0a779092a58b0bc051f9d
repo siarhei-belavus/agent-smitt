@@ -1,0 +1,49 @@
+skills/engineering/README.md
+  s_6f9f3f3fbc7c2a::t_8e2454fe1b3366 38,47
+tests/smoke_skills_cli.py
+  s_6f9f3f3fbc7c2a::t_8e2454fe1b3366 19
+skills/engineering/retro/PRIOR-CHANGES.md
+  s_6f9f3f3fbc7c2a::t_8e2454fe1b3366 1-25
+CONTRIBUTING.md
+  s_6f9f3f3fbc7c2a::t_8e2454fe1b3366 24
+skills/engineering/retro/references/JOURNAL.md
+  s_6f9f3f3fbc7c2a::t_8e2454fe1b3366 1-113
+skills/engineering/retro/SKILL.md
+  s_6f9f3f3fbc7c2a::t_8e2454fe1b3366 3,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55-67
+docs/workflow.md
+  s_6f9f3f3fbc7c2a::t_8e2454fe1b3366 183,189,191,193-203
+skills/engineering/retro/CREDITS.md
+  s_6f9f3f3fbc7c2a::t_8e2454fe1b3366 5
+README.md
+  s_6f9f3f3fbc7c2a::t_8e2454fe1b3366 48,104
+docs/installation.md
+  s_6f9f3f3fbc7c2a::t_8e2454fe1b3366 37-38
+skills/engineering/retro/WORK-SCOPE.md
+  s_6f9f3f3fbc7c2a::t_8e2454fe1b3366 1-27
+skills/engineering/retro/DIAGNOSIS.md
+  s_6f9f3f3fbc7c2a::t_8e2454fe1b3366 1-77
+docs/skills.md
+  s_6f9f3f3fbc7c2a::t_8e2454fe1b3366 40
+skills/engineering/retro/RECONCILIATION.md
+  s_6f9f3f3fbc7c2a::t_8e2454fe1b3366 1-35
+skills/engineering/retro/ANALYSIS-WORKERS.md
+  s_6f9f3f3fbc7c2a::t_8e2454fe1b3366 1-55
+skills/engineering/ask-smitt/SKILL.md
+  s_6f9f3f3fbc7c2a::t_8e2454fe1b3366 79
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "4a320992b5501a82acd0a779092a58b0bc051f9d",
+  "prompts": {},
+  "sessions": {
+    "s_6f9f3f3fbc7c2a": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1e40d-82a4-7de3-b4ef-022ff245e231",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    }
+  }
+}
