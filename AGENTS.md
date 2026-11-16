@@ -17,5 +17,5 @@ its rules for conditional context pointers.
 - Keep linked reference sources in their owning directories. Regenerate
   `references/bundled/` with `python3 bin/sync-skill-references`; do not edit
   generated copies directly. Run its `--check` mode before delivery.
-- Keep the public catalog in `docs/skills.md` and workflow guide in
-  `docs/workflow.md` consistent with the retained skills.
+- When editing overview documentation, follow the
+  [documentation guidance](CONTRIBUTING.md#documentation-and-attribution).

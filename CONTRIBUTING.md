@@ -62,6 +62,8 @@ Check discovery with `--list` and repeat with `--copy` when changing packaging. 
 
 Keep the [workflow guide](docs/workflow.md) consistent with the skill rules. Update the [catalog](docs/skills.md) when adding or removing a skill. Use English for repository documentation and sentence case for headings.
 
+In overview documents such as the README, catalog, and workflow guide, explain when to use a skill, what it does, its inputs and outputs, and the user decisions needed to use it. Link to the owning skill or reference for detailed procedures, role assignments, record formats, and edge cases. Maintain those details only in their owning sources. Include a short invocation example when it helps the reader start.
+
 Preserve upstream copyright and skill-specific credits. Include the source and license for substantial third-party contributions. Remove credentials and private project data from examples and issue reports.
 
 Describe validation and behavioral consequences in pull requests. Leave unrelated skill instructions unchanged when changing distribution or documentation.
