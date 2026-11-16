@@ -45,6 +45,7 @@ You can install an individual skill with `--skill diagnosing-bugs`. Its linked r
 | Deliver one ready ticket across its repositories | `deliver-ticket` |
 | Implement a small, settled task directly | `implement` |
 | Investigate a failure | `diagnosing-bugs` |
+| Learn from selected work and check whether prior improvements helped | `retro` |
 | Choose a route through the skills | `ask-smitt` |
 
 Ask your agent to use a skill by name. Invocation syntax depends on the agent. For example:
@@ -100,7 +101,7 @@ Keep idea refinement, specification, and ticket preparation in one conversation.
 
 - [Engineering](skills/engineering/README.md): planning, domain modeling, implementation, testing, review, and delivery.
 - [Productivity](skills/productivity/README.md): interviews, handoffs, learning, and writing for agents.
-- [Shared workflow contracts](skills/engineering/federated-workflow/): the records and rules used by planning and delivery skills.
+- [Shared workflow contracts](skills/engineering/federated-workflow/): the records and rules used by planning, delivery, and review skills.
 
 The public catalog contains stable skills. Experimental writing tools, one-off migrations, and personal collection-maintenance tools are outside this pack.
 

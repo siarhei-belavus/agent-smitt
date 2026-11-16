@@ -34,6 +34,8 @@ npx skills add siarhei-belavus/agent-smitt --list
 
 Each skill includes the Markdown references it links to. A reference copy does not install another skill's invocation entry. Install the complete pack when using the planning and delivery workflow, because its skills invoke each other by name.
 
+A project-owned skill copy can be adapted as part of the project's documentation. For symlink installations, resolve the maintained source before proposing edits; a link inside the project does not grant ownership of an external checkout. Generated reference bundles follow their owning source's packaging procedure.
+
 To inspect or update installations, use `npx skills list`, `npx skills check`, and `npx skills update`. Refer to the [CLI documentation](https://github.com/vercel-labs/skills) for agent identifiers and current options.
 
 ## Develop from a checkout

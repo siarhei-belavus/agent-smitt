@@ -180,17 +180,27 @@ That invocation authorizes the scoped completion record, tracker transition, and
 
 ## Learn from selected work
 
-Invoke `retro` manually whenever you want to learn from work so far. You can select the current chat, several chats, Review Proposals such as PRs or MRs, or a delivery and its coordinator chat.
+Invoke `retro` manually whenever you want to learn from work so far. Select the current chat, several chats, Review Proposals such as PRs or MRs, or a delivery and its coordinator chat.
 
 ```text
 Use retro for this specification, starting from its coordinator chat and related sessions.
 ```
 
-For a delivery, `retro` follows checkpoints and execution references to its implementation, validation, review, and recovery sessions. It examines your corrections and the surrounding actions, counts a shared incident once, and reports gaps in available history.
+For a delivery, `retro` follows checkpoints and execution references to implementation, validation, review, and recovery, including delegated chats, subagent histories, and archived attempts. A selected specification includes its member tickets; a selected ticket does not automatically include siblings. Repeated reports of one event count as one incident.
 
-For supplied or linked Review Proposals, it also reads your general and inline comments, review summaries, and resolved or closed discussions, including comments on outdated diffs. It traces remarks to the reviewed code and subsequent changes, and counts feedback repeated in chat as one incident. Missing access or uncertain authorship appears in the coverage gaps.
+For supplied or linked Review Proposals, it collects your general and inline comments, review summaries, and resolved or closed discussions, including comments on outdated diffs. It traces corrections to surrounding actions and later decisions. Missing access, uncertain authorship, and inaccessible histories appear as coverage gaps.
 
-Proposals can affect any project documentation, including agent instructions, README files, runbooks, domain and architecture records, and coding standards. The skill fits changes into the existing structure and style. It can propose a new file where knowledge has no suitable home, or consolidate and remove stale material. Mechanical failures can lead to check or tooling proposals. You choose which changes to apply, or authorize a scope when invoking the skill.
+Proposals can affect any project documentation, including project instructions, README files, runbooks, domain and architecture records, ADRs, coding standards, and local skills. They can also affect project checks and tools. The skill identifies the maintained owner before proposing an edit, including whether a project path links to an external source. A project-local correction does not automatically change the upstream pack. You choose which proposals to apply or authorize a scope with the invocation.
+
+Each accepted change enters the private journal with its source, applicability, expected behavior and outcome, and observation criteria. Implementation adds its effective time, changed paths, version evidence, and validation result. The [journal contract](../skills/engineering/retro/references/JOURNAL.md) defines the location and format. Records stay outside repositories and skill installations.
+
+The same retrospective checks earlier implemented changes against the selected work. It records whether they applied, whether the agent used them, and what happened. It can combine those observations with comparable prior journal evidence. The incident that produced a remedy cannot validate it through its own retries or related chats. Event times and effective versions determine comparison groups; chat creation dates alone do not.
+
+For larger histories, the coordinator assigns source segments to readers once for both branches. Diagnosis workers propose improvements, while prior-change workers evaluate one change or a related group. Every delegated run uses the worker coordination rules. Independent jobs run in parallel with fresh contexts and self-contained assignments. All workers report to the same coordinator, which reconciles results and writes the journal. A small case can use the same roles without extra agents.
+
+When branch findings overlap or disagree, the coordinator matches the incident, prior change, and effective version. It checks disagreements about facts or causes against the sources, then compares remedy options by expected effect and cost. The result is one issue with a justified recommendation or explicit alternatives and the evidence or user decision still needed. Observations about an earlier change remain separate from approval to revise it.
+
+The retrospective stays within the selected work and observation cutoff. New searches of unrelated histories need a broader user-selected scope. The journal contract travels with the skill; its private README contains storage metadata. Optional `retro-policy.md` supplies local context and reporting settings, with compatible legacy `audit-policy.md` settings used where the new policy omits them. Policy does not expand history scope.
 
 ## Use a shorter route when appropriate
 

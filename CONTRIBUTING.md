@@ -21,7 +21,7 @@ Keep each skill in a directory named after its unique frontmatter `name`. Suppor
 
 The Skills CLI copies individual skill directories. References outside a skill's directory need bundled copies to survive installation.
 
-Canonical sources live in their owning skill or in `skills/engineering/federated-workflow/`. Edit those files. `references/bundled/` inside a skill is generated distribution content and is checked into Git so installation needs no build step.
+Canonical sources live in their owning skill or in `skills/engineering/federated-workflow/`. Edit those files. `references/bundled/` inside a skill is generated distribution content and is checked into Git so installation needs no build step. The [private journal contract](skills/engineering/retro/references/JOURNAL.md) belongs to `retro`; journal records and local retrospective policy stay outside the repository.
 
 After editing a source or adding a relative Markdown link:
 
