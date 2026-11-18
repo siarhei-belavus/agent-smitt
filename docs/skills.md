@@ -60,4 +60,6 @@ Skills marked Explicit declare `disable-model-invocation: true`. Invoke them by 
 
 The public pack excludes experimental skills, one-off setup and migration tools, and personal maintenance skills. `ask-smitt` routes through the public collection.
 
+Delivery and review skills bundle their role-specific contracts and an optional [mechanical delivery validator](../skills/engineering/federated-workflow/MECHANICAL-VALIDATION.md). These are supporting files, not separately invokable skills. The Python helper checks declared facts; agents retain semantic review and workflow authority.
+
 See [credits](credits.md) for the upstream lineage and [the workflow guide](workflow.md) for the complete planning and delivery route.

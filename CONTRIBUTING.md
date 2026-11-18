@@ -31,6 +31,8 @@ python3 bin/sync-skill-references
 
 The packager follows linked Markdown files transitively and includes only the references each skill needs. It rewrites link destinations for their installed locations and includes the root license in each skill. Copied skill instructions use `SKILL.reference.md` so they do not become duplicate skill entries. A bundled copy supplies reference text, not another skill's invocation.
 
+Linked non-Markdown assets, including Python helpers, are copied byte-for-byte without parsing their contents as links. Link a shared helper from its owning reference document so isolated skill installs include it.
+
 For a new cross-skill reference, write the ordinary relative Markdown link to its canonical source, then run the packager. It converts that link to the bundled destination. Links in fenced examples remain example content.
 
 Do not edit generated copies directly. The check mode detects drift and stale files:

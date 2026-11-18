@@ -65,9 +65,11 @@ Apply the execution-preparation rules to the resolved delivery. Fetch its select
 
 ## 5. Execute one flat attempt
 
+Start each new Implementation Agent with a fresh context, without inheriting the parent conversation. Give it a self-contained assignment and readable references to the required sources. Continue the assigned agent for corrections while its execution remains available.
+
 Start exactly one direct-child Implementation Agent for each prepared delivery requiring changes. Give it one complete textual narrowing assignment for its Repository Scope entry and run `implement`. Include the Repository ID and Reference, Execution Worktree, branch, fixed base, accepted Context Pack entry path, repository-specific outcome, Settled Seams and test approaches, Validation Obligations, and repository instruction and validation-source pointers. `implement` resolves repository validation commands through those sources. For corrections, include actionable feedback by permanent provider ID and require an attributable disposition for every item. Require its one Repository Delivery result. Record validation-only and no-change deliveries directly. The Implementation Agent reads the accepted pack selectively and performs no Context Assembly or provider read.
 
-Verify every result against its assigned worktree and base; classify an expected change with no diff as unchanged.
+Verify every result against its assigned worktree and base; classify an expected change with no diff as unchanged. For mechanical worktree and evidence comparisons, use the optional [delivery validator](references/bundled/federated-workflow/MECHANICAL-VALIDATION.md) or the existing manual checks. A consistent report does not replace scope, completeness, or semantic review.
 
 **Complete when:** every changed assignment preserves the Authority input from step 2, every scope entry has exactly one attributable result, every changed worktree is clean at its exact local head, all repository validation is bound to that head, and any discovered contradiction or material design decision has entered the [human-boundary branch](HUMAN-BOUNDARY.md) with affected and dependent work paused.
 
@@ -84,6 +86,10 @@ Using each changed repository's Code Host binding, publish its delivery branch a
 **Complete when:** each pending changed delivery has one verified Draft Review Proposal at its exact Published Delivery Head, confirmed merged deliveries remain preserved, and this publication step has changed no Target Branch.
 
 ## 8. Validate the bundle
+
+Start each Validation Agent with a fresh context, without inheriting the parent conversation. Give it a self-contained assignment and readable references to the required sources.
+
+Supply [Context reading](references/bundled/federated-workflow/CONTEXT-READING.md) to each Validation Agent for consuming the accepted authority. The coordinator retains pack ownership, provider operations, lifecycle records, and evidence freshness decisions.
 
 Ad hoc validation is allowed. Keep one-off validation code outside the committed delivery. If a check belongs in the MR or PR, implement it as a regular test following the repository's existing test conventions. Do not commit ad hoc runners or their supporting configuration and documentation.
 

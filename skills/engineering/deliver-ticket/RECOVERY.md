@@ -28,6 +28,8 @@ The ticket must be open and explicitly returned to exactly `ready-for-agent`. Re
 
 ## Evidence validity
 
+For mechanical comparison of recorded dependencies with current observations, use the optional [delivery validator](references/bundled/federated-workflow/MECHANICAL-VALIDATION.md) or the existing manual checks. Establish the complete governing source set and semantic dependencies first. The report does not authorize a Resume Gate or replace provider truth.
+
 Compare every recorded evidence dependency with current provider revisions. A changed delivery head invalidates its repository validation and Standards result, every cross-repository result it influences, and Bundle Spec. A changed influencing Validation Source commit invalidates only dependent cross-repository evidence and Bundle Spec.
 
 A changed Fixed Review Base invalidates the affected Standards result and Bundle Spec; validation of a synchronized result also follows the changed-head rule. Target advancement alone is a merge-readiness change, not a new delivery head or proof of integration. Before an outstanding automatic merge, return to target synchronization and applicable evidence refresh. For a confirmed merge, preserve the historical source/result pair and its verified relationship to the evidence. A different commit ID from squash or rebase alone does not invalidate identical validated content; an unproven relationship enters the human boundary.
