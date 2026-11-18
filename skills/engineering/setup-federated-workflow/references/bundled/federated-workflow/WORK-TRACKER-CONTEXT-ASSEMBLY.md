@@ -10,7 +10,7 @@ Provider bindings own representation and operations. This contract owns artifact
 
 ## Invocation and ownership
 
-The requesting workflow owns profile selection and the three-part invocation input. Start one dedicated Context Assembly subagent for that invocation. Give it this complete contract and the Ticket Origin Repository's Work Tracker binding. The subagent owns the whole assembly and final classification. The requesting workflow and downstream agents consume its returned file instead of repeating provider reads or rebuilding any part of the pack.
+The requesting workflow owns profile selection and the three-part invocation input. Start one dedicated Context Assembly subagent with a fresh context, without inheriting the parent conversation. Give it the complete invocation input, this contract, and a readable reference to the Ticket Origin Repository's Work Tracker binding. The subagent owns the whole assembly and final classification. The requesting workflow and downstream agents consume its returned file instead of repeating provider reads or rebuilding any part of the pack.
 
 The binding is the sole owner of provider-specific commands, operations, credentials, relationship traversal, pagination, and authorized fallback. Its directed procedure acquires complete provider data, translates it deterministically into the provider-neutral records required here, preserves exact bodies and permanent references, removes credentials and irrelevant transport metadata, and reports technical or structural diagnostics. It does not judge whether arbitrary prose agrees semantically. If the binding's procedure cannot produce the requested profile, it reports the gap and returns control to the subagent without inventing an access path.
 

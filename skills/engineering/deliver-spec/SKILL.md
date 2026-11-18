@@ -40,6 +40,8 @@ Budget capacity across the delegation tree. Independent tickets may run in paral
 
 ## 3. Execute and close eligible tickets
 
+Start each new ticket coordinator in a fresh context without the specification coordinator's conversation, whether it runs as a subagent or a separate chat. Supply the complete ticket assignment and required source references. On resume, continue the recorded execution instead of creating a new coordinator.
+
 Use current tracker dependency rules to select only eligible tickets in the agreed set. Recheck state before dispatch. Record launch intent and its ticket before starting a coordinator; record and re-read the returned execution reference afterward. Use the runtime's available lookup to reconcile an uncertain launch before any retry.
 
 Give each coordinator an explicit ticket reference, Ticket Origin Repository, and `Automatic merge: allowed`. Supply `Target Branch` entries only for repositories in that ticket's published Repository Scope, using each repository's recorded specification branch. Include relevant orchestration decisions and resource ownership. An already accepted matching ticket pack may be passed explicitly with its complete directory; do not acquire one merely to dispatch. Invoke `deliver-ticket` in that separate context. It owns live eligibility and claim verification, its Delivery Context, target synchronization, conflicts, validation, review, merges, handoff, and ticket recovery. Its isolated ticket source branches and per-ticket proposals remain part of delivery. Scheduling state does not replace its pre-claim check.

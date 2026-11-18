@@ -19,7 +19,7 @@ Surface architectural friction and propose **deepening opportunities**: refactor
 
 Read the project's domain glossary (`CONTEXT.md`) and any ADRs in the area you're touching first.
 
-Then delegate a bounded codebase exploration to a subagent. Don't follow rigid heuristics — explore organically and note where you experience friction:
+Then delegate a bounded codebase exploration to a subagent with a fresh context without the parent conversation. Give it a self-contained assignment and readable references to the relevant repositories and required sources. Explore organically and note where you experience friction:
 
 - Where does understanding one concept require bouncing between many small modules?
 - Where are modules **shallow** — interface nearly as complex as the implementation?

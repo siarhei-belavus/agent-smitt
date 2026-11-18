@@ -9,6 +9,7 @@ its rules for conditional context pointers.
 - Keep each skill and all of its relative references in one complete directory
   tree.
 - Give every skill a unique `name` in its `SKILL.md` front matter.
+- When a skill starts new subagents or delegated chats, require fresh contexts without the parent conversation and self-contained assignments with readable source references. Keep runtime-specific launch parameters in the runtime's instructions.
 - Put stable engineering skills under `skills/engineering` and stable personal
   workflow skills under `skills/productivity`. Keep experiments and private
   maintenance tools outside the public catalog.

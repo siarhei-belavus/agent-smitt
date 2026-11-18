@@ -16,7 +16,7 @@ Show this to the user, then immediately proceed to Step 2.
 
 ### 2. Spawn sub-agents
 
-Spawn 3+ sub-agents in parallel. Each must produce a **radically different** interface for the deepened module.
+Spawn 3+ sub-agents in parallel, each with a fresh context without the parent conversation. Each must produce a **radically different** interface for the deepened module.
 
 Give each sub-agent a self-contained technical brief containing file paths, coupling details, dependency category from [DEEPENING.md](DEEPENING.md), and what sits behind the seam. Include the module vocabulary and the project's applicable canonical domain vocabulary. Give each agent a different design constraint:
 

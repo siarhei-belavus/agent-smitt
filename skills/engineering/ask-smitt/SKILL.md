@@ -68,7 +68,7 @@ A phase is a coherent stretch of work such as grilling, specification, implement
 1. **Continue in the current task** when the next phase advances the same objective in the same working context and benefits from the reasoning already here. Use this path normally through grilling, `to-spec`, and `to-tickets`.
 2. **Let automatic compaction continue the task** when earlier turns are summarized automatically. Compaction does not create a new task or transfer ownership. Continue from the summary, checking durable artifacts when exact decisions matter.
 3. **Use `handoff` for another task or repository** when the work needs a new owner, a separate task history, or a different repository context. The handoff file carries the relevant decisions and evidence across that boundary. A prototype in its own task or repository is the standard case.
-4. **Delegate a concrete, bounded subtask to a subagent** when it can run independently and report back without taking ownership of the parent task. Give it an explicit deliverable and exclusive scope. Keep integration and phase decisions in the parent task.
+4. **Delegate a concrete, bounded subtask to a subagent** when it can run independently and report back without taking ownership of the parent task. Start it with a fresh context without the parent conversation. Give it a self-contained assignment, readable references to required sources, an explicit deliverable, and exclusive scope. Keep integration and phase decisions in the parent task.
 
 Do not create a handoff merely because automatic compaction occurred. Do not delegate an open-ended phase whose result needs ongoing steering or whose authority belongs in the parent task.
 
