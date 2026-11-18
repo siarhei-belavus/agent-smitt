@@ -37,7 +37,7 @@ Skills marked Explicit declare `disable-model-invocation: true`. Invoke them by 
 | [deliver-spec](../skills/engineering/deliver-spec/SKILL.md) | Explicit | Coordinate prepared tickets into shared specification branches and final human review. |
 | [deliver-ticket](../skills/engineering/deliver-ticket/SKILL.md) | Agent or explicit | Deliver one prepared ticket through implementation, review, validation, and handoff. |
 | [code-review](../skills/engineering/code-review/SKILL.md) | Agent or explicit | Review fixed repository targets in Standards, Spec, or combined modes. |
-| [retro](../skills/engineering/retro/SKILL.md) | Explicit | Learn from selected sessions, user corrections, and Review Feedback to improve project documentation, checks, and tooling. |
+| [retro](../skills/engineering/retro/SKILL.md) | Explicit | Diagnose selected work, evaluate prior changes, and propose scoped improvements to project documentation, skills, checks, and tools. |
 | [review-feedback](../skills/engineering/review-feedback/SKILL.md) | Agent or explicit | Draft or publish human feedback and explicitly return a ticket for correction. |
 | [change-walkthrough](../skills/engineering/change-walkthrough/SKILL.md) | Explicit | Explore changes one scenario and logical step at a time. |
 | [pr](../skills/engineering/pr/SKILL.md) | Agent or explicit | Write a PR or MR description using repository templates and evidence. |
@@ -59,5 +59,7 @@ Skills marked Explicit declare `disable-model-invocation: true`. Invoke them by 
 ## Scope of the public pack
 
 The public pack excludes experimental skills, one-off setup and migration tools, and personal maintenance skills. `ask-smitt` routes through the public collection.
+
+Delivery and review skills bundle their role-specific contracts and an optional [mechanical delivery validator](../skills/engineering/federated-workflow/MECHANICAL-VALIDATION.md). These are supporting files, not separately invokable skills. The Python helper checks declared facts; agents retain semantic review and workflow authority.
 
 See [credits](credits.md) for the upstream lineage and [the workflow guide](workflow.md) for the complete planning and delivery route.

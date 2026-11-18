@@ -88,6 +88,27 @@ class DistributionTest(unittest.TestCase):
             self.assertEqual(name, skill.parent.name)
             self.assertRegex(text, r"(?m)^description: .+")
 
+    def test_packager_copies_linked_scripts_without_parsing_them_as_markdown(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            repository = Path(temp)
+            script = repository / "bin" / "sync-skill-references"
+            script.parent.mkdir()
+            shutil.copy2(ROOT / "bin" / "sync-skill-references", script)
+            (repository / "LICENSE").write_text("Test license\n")
+            consumer = repository / "skills" / "engineering" / "consumer"
+            shared = repository / "skills" / "engineering" / "shared"
+            consumer.mkdir(parents=True)
+            shared.mkdir()
+            (consumer / "SKILL.md").write_text("Read [helper](../shared/helper.md).\n")
+            (shared / "helper.md").write_text("Run [script](helper.py).\n")
+            payload = b'# [literal, not a link](absent.md)\nprint("hello")\n'
+            (shared / "helper.py").write_bytes(payload)
+            result = subprocess.run(["python3", str(script)], capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            bundled = consumer / "references" / "bundled" / "shared" / "helper.py"
+            self.assertEqual(bundled.read_bytes(), payload)
+            assert_local_links(consumer)
+
     def test_public_documentation_links_resolve(self) -> None:
         files = [ROOT / "README.md", ROOT / "CONTRIBUTING.md", *(ROOT / "docs").glob("*.md")]
         files.extend((ROOT / "skills").glob("*/README.md"))

@@ -14,9 +14,11 @@ its rules for conditional context pointers.
   workflow skills under `skills/productivity`. Keep experiments and private
   maintenance tools outside the public catalog.
 - Run the installer tests after changing skill layout or installation behavior.
+- After changing skills or updating a checkout with skill changes, follow
+  [local setup refresh](CONTRIBUTING.md#refresh-local-setup) before reporting completion.
 - Do not add generated Codex symlinks to this repository.
 - Keep linked reference sources in their owning directories. Regenerate
   `references/bundled/` with `python3 bin/sync-skill-references`; do not edit
   generated copies directly. Run its `--check` mode before delivery.
-- Keep the public catalog in `docs/skills.md` and workflow guide in
-  `docs/workflow.md` consistent with the retained skills.
+- When editing overview documentation, follow the
+  [documentation guidance](CONTRIBUTING.md#documentation-and-attribution).

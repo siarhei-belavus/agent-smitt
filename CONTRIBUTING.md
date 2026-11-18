@@ -21,7 +21,7 @@ Keep each skill in a directory named after its unique frontmatter `name`. Suppor
 
 The Skills CLI copies individual skill directories. References outside a skill's directory need bundled copies to survive installation.
 
-Canonical sources live in their owning skill or in `skills/engineering/federated-workflow/`. Edit those files. `references/bundled/` inside a skill is generated distribution content and is checked into Git so installation needs no build step.
+Canonical sources live in their owning skill or in `skills/engineering/federated-workflow/`. Edit those files. `references/bundled/` inside a skill is generated distribution content and is checked into Git so installation needs no build step. The [private journal contract](skills/engineering/retro/references/JOURNAL.md) belongs to `retro`; journal records and local retrospective policy stay outside the repository.
 
 After editing a source or adding a relative Markdown link:
 
@@ -30,6 +30,8 @@ python3 bin/sync-skill-references
 ```
 
 The packager follows linked Markdown files transitively and includes only the references each skill needs. It rewrites link destinations for their installed locations and includes the root license in each skill. Copied skill instructions use `SKILL.reference.md` so they do not become duplicate skill entries. A bundled copy supplies reference text, not another skill's invocation.
+
+Linked non-Markdown assets, including Python helpers, are copied byte-for-byte without parsing their contents as links. Link a shared helper from its owning reference document so isolated skill installs include it.
 
 For a new cross-skill reference, write the ordinary relative Markdown link to its canonical source, then run the packager. It converts that link to the bundled destination. Links in fenced examples remain example content.
 
@@ -58,9 +60,17 @@ npx skills add /absolute/path/to/agent-smitt --skill '*' --agent codex --yes
 
 Check discovery with `--list` and repeat with `--copy` when changing packaging. Never add generated agent installation links to this repository.
 
+## Refresh local setup
+
+After changing skills or updating a checkout with skill changes, refresh existing local installations before reporting completion. Inspect their source and installation method first. For live links to this checkout, verify that changed files resolve and rerun the local installer when skills are added or renamed. For copied installations, reinstall from the updated source using the existing method and destination. Preserve local customizations and unrelated skills.
+
+Verify that affected skills and their references are available through the installed paths. Report the destination and verification result, or explain any remaining setup gap. See [installation instructions](docs/installation.md) for supported methods.
+
 ## Documentation and attribution
 
 Keep the [workflow guide](docs/workflow.md) consistent with the skill rules. Update the [catalog](docs/skills.md) when adding or removing a skill. Use English for repository documentation and sentence case for headings.
+
+In overview documents such as the README, catalog, and workflow guide, explain when to use a skill, what it does, its inputs and outputs, and the user decisions needed to use it. Link to the owning skill or reference for detailed procedures, role assignments, record formats, and edge cases. Maintain those details only in their owning sources. Include a short invocation example when it helps the reader start.
 
 Preserve upstream copyright and skill-specific credits. Include the source and license for substantial third-party contributions. Remove credentials and private project data from examples and issue reports.
 
