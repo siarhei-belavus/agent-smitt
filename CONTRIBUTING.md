@@ -58,6 +58,12 @@ npx skills add /absolute/path/to/agent-smitt --skill '*' --agent codex --yes
 
 Check discovery with `--list` and repeat with `--copy` when changing packaging. Never add generated agent installation links to this repository.
 
+## Refresh local setup
+
+After changing skills or updating a checkout with skill changes, refresh existing local installations before reporting completion. Inspect their source and installation method first. For live links to this checkout, verify that changed files resolve and rerun the local installer when skills are added or renamed. For copied installations, reinstall from the updated source using the existing method and destination. Preserve local customizations and unrelated skills.
+
+Verify that affected skills and their references are available through the installed paths. Report the destination and verification result, or explain any remaining setup gap. See [installation instructions](docs/installation.md) for supported methods.
+
 ## Documentation and attribution
 
 Keep the [workflow guide](docs/workflow.md) consistent with the skill rules. Update the [catalog](docs/skills.md) when adding or removing a skill. Use English for repository documentation and sentence case for headings.
