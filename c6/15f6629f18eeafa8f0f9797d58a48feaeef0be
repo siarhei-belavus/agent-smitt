@@ -1,0 +1,19 @@
+skills/productivity/writing-for-agents/SKILL.md
+  s_d0fe9a23a4dac0::t_44bac12c5491a6 88
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c615f6629f18eeafa8f0f9797d58a48feaeef0be",
+  "prompts": {},
+  "sessions": {
+    "s_d0fe9a23a4dac0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1ee1d-22e1-7ae1-8f46-2f93897fb0ea",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    }
+  }
+}
