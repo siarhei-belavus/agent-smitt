@@ -1,0 +1,41 @@
+skills/engineering/code-review/SKILL.md
+  s_fe2662c9b506db::t_204e2c76d7b376 77-78
+  s_fe2662c9b506db::t_595ed84650838b 75,79-81,85,91
+  s_fe2662c9b506db::t_4ee47bf2187ae5 76
+skills/engineering/code-review/STANDARDS-REVIEWER.md
+  s_fe2662c9b506db::t_595ed84650838b 3,20
+skills/engineering/code-review/references/bundled/codebase-design/DEEPENING.md
+  s_fe2662c9b506db::t_538c350f18e134 1-33
+skills/engineering/code-review/references/bundled/codebase-design/DESIGN-IT-TWICE.md
+  s_fe2662c9b506db::t_991dbd8246a664 1-40
+skills/engineering/code-review/references/bundled/codebase-design/SKILL.reference.md
+  s_fe2662c9b506db::t_3fbea5e3572229 1-150
+skills/engineering/code-review/references/bundled/codebase-design/TEST-SURFACE.md
+  s_fe2662c9b506db::t_d9192ad96ba368 1-9
+skills/engineering/code-review/references/bundled/domain-modeling/ADR-FORMAT.md
+  s_fe2662c9b506db::t_5ba2afe8c662e9 1-27
+skills/engineering/code-review/references/bundled/domain-modeling/CONTEXT-FORMAT.md
+  s_fe2662c9b506db::t_564a45ecb49955 1-31
+skills/engineering/code-review/references/bundled/domain-modeling/CONTEXT-MAP-FORMAT.md
+  s_fe2662c9b506db::t_ede251102896eb 1-29
+skills/engineering/code-review/references/bundled/domain-modeling/DOMAIN-MODEL-DELTA.md
+  s_fe2662c9b506db::t_d44838c9315933 1-7
+skills/engineering/code-review/references/bundled/domain-modeling/SKILL.reference.md
+  s_fe2662c9b506db::t_2d5008e52674fd 1-59
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3078a5bd2df8dfe1058435c2fbc932c5646c0707",
+  "prompts": {},
+  "sessions": {
+    "s_fe2662c9b506db": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1ee42-2b51-79e3-9642-97a07f78933f",
+        "model": "gpt-6.2-astra"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    }
+  }
+}
