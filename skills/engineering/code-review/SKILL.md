@@ -72,17 +72,23 @@ For each selected Standards target, discover and read its applicable repository 
 Record each source's path, applicability, and immutable revision or content fingerprint with the Authority evidence. Use accepted source versions from the supplied authority, falling back to the captured Comparison base for repository files. Changes to standards in the reviewed diff are proposals until authoritative input accepts them as governing this review. Pass the source list and exact contents or readable immutable references to the Standards Reviewer. A missing optional standards file leaves the other applicable sources and baseline in force; an unavailable required source leaves coverage incomplete.
 
 When preparing Standards inputs, use the smell baseline in [Standards reviewer](STANDARDS-REVIEWER.md).
-Determine per target whether the change introduces or reshapes a module, interface, seam, adapter, logical ownership, physical decomposition, or contract, or changes current-truth documentation. When it does, require the Standards Reviewer to read the `codebase-design` skill in full and apply its relevant deletion-test, proportional-design, and final-state rules.
+Choose the Standards reviewer's design reading from the whole target diff. Record the reason and pass the selected sections or full skill as readable sources.
+
+- When code introduces or reshapes a module, interface, seam, adapter, ownership, physical decomposition, or contract, assign the full [codebase-design skill](references/bundled/codebase-design/SKILL.reference.md). Also assign it when a document proposes a structural redesign or the design question remains unclear after checking the governing sources.
+- For a change to a documented guarantee that external callers rely on, assign [Clean breaks](references/bundled/codebase-design/SKILL.reference.md#clean-breaks). When the review concerns consistency across current documents, assign [Final state](references/bundled/codebase-design/SKILL.reference.md#final-state). Assign both sections when both questions apply.
+- A meaning-preserving edit needs only the Standards baseline. For a factual claim about existing behavior or ownership, supply the implementation or governing decision that the reviewer should check.
+
+A full read covers the section assignments for the same target.
 
 Route requirement or settled-decision violations to Spec. Route structural and change-pressure findings to Standards.
 
-Done when each selected Standards target has an attributable source set, applicable rules, and design trigger result ready for its reviewer.
+Done when each selected Standards target has an attributable source set, applicable rules, and a justified reading assignment.
 
 ### 4. Run the selected fresh reviews
 
 Start each reviewer, including every repeat review, with a fresh context without the parent conversation. Supply its role file and readable source references, rather than the preparation and aggregation instructions in this skill.
 
-For the Standards axis, start one fresh Standards Reviewer per selected Repository Target using [Standards reviewer](STANDARDS-REVIEWER.md). Supply only its captured target, commit list, repository-local standards, design trigger result, authoritative seam context, accepted Authority input, and validation claims.
+For the Standards axis, start one fresh Standards Reviewer per selected Repository Target using [Standards reviewer](STANDARDS-REVIEWER.md). Supply only its captured target, commit list, repository-local standards, reading assignment and supporting sources, authoritative seam context, accepted Authority input, and validation claims.
 
 For the Spec axis, start one fresh Bundle Spec Reviewer over the complete selected target set using [Spec reviewer](SPEC-REVIEWER.md). Supply all captured targets and diffs, accepted Authority inputs, authoritative sources, settled seams, and repository and cross-repository validation evidence.
 
