@@ -75,6 +75,14 @@ You win twice: fewer tokens, and a sharper hook for the agent to hang its thinki
 
 **Negation** is the failure mode beside this lever: steering by prohibition drags the forbidden behaviour into context and makes it _more_ available, not less. _Don't think of an elephant_, and the elephant is all there is; the negation is a weak modifier the strongly-activated concept overruns, so the ban half-reads as an instruction to do the thing. Prompt the **positive**: state the target behaviour ("write one-line comments") so the banned one is never spoken. A prohibition earns its place only as a hard guardrail you cannot phrase positively; even then, pair it with the positive target so attention lands on what to do.
 
+## Final state
+
+Write maintained instructions as the current contract, using the intended names, owners, rules and layout. Integrate a change into that model instead of appending an exception or teaching the previous and current approaches together. Keep migration narration, issue references and one-off validation in delivery records unless they serve an ongoing operational purpose.
+
+After changing a rule, identify its affected documents, incoming pointers, examples and disclosed references, including those outside the initial diff. Reread that set as complete documents, without the diff. Reconcile stale terms, conflicting instructions and duplicated rules at their owning sources. Review peers at the same level for proportionate detail and emphasis; the document's structure should follow its responsibilities rather than which part changed most recently. Preserve applicable safeguards while integrating the change. Finish when a reader can follow one coherent current model without knowing the change history.
+
+Respect each document's role. A README gives an overview and navigation; agent instructions give working rules and conditional pointers; detailed procedures belong with their owner. Keep overviews representative of the whole area and link to detail instead of copying it. Intentional history artifacts, such as changelogs, superseded decision records and learning journals, may preserve chronology. Appended notes alone do not make an operational document a history artifact.
+
 ## Pruning
 
 - Keep each meaning in a **single source of truth**: one authoritative place, so changing the behaviour is a one-place edit. **Duplication** (the same meaning in more than one place) costs maintenance and tokens, and inflates a meaning's prominence on the ladder past its real rank. (The accidental inverse of a leading word, which repeats a token on purpose, never the meaning.)
