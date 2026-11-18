@@ -1,0 +1,21 @@
+AGENTS.md
+  s_6f9f3f3fbc7c2a::t_bbc125746c9bc6 16-17
+CONTRIBUTING.md
+  s_6f9f3f3fbc7c2a::t_bbc125746c9bc6 61-66
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "cf556bcfcd9e0f1dfb6f9a445116f714011386de",
+  "prompts": {},
+  "sessions": {
+    "s_6f9f3f3fbc7c2a": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1e40d-82a4-7de3-b4ef-022ff245e231",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    }
+  }
+}
