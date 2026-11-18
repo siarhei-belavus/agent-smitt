@@ -1,0 +1,219 @@
+AGENTS.md
+  s_fe2662c9b506db::t_e3523ad42aba77 17-18,23-24
+bin/sync-skill-references
+  s_fe2662c9b506db::t_e3523ad42aba77 79-85
+skills/engineering/code-review/SKILL.md
+  s_fe2662c9b506db::t_e3523ad42aba77 8,48,74-75,77-79,81,85,89,91,93,95,117-119
+skills/engineering/retro/references/JOURNAL.md
+  s_fe2662c9b506db::t_e3523ad42aba77 1-113
+skills/productivity/writing-for-agents/SKILL.md
+  s_fe2662c9b506db::t_e3523ad42aba77 78-85,88
+skills/engineering/federated-workflow/AUTHORITY-EVIDENCE.md
+  s_fe2662c9b506db::t_e3523ad42aba77 1-5
+skills/engineering/deliver-ticket/RECOVERY.md
+  s_fe2662c9b506db::t_e3523ad42aba77 31-32
+skills/engineering/retro/ANALYSIS-WORKERS.md
+  s_fe2662c9b506db::t_e3523ad42aba77 1-55
+skills/engineering/federated-workflow/CONTEXT-PACK.md
+  s_fe2662c9b506db::t_e3523ad42aba77 3,15,21
+skills/engineering/retro/PRIOR-CHANGES.md
+  s_fe2662c9b506db::t_e3523ad42aba77 1-25
+docs/workflow.md
+  s_fe2662c9b506db::t_e3523ad42aba77 145-150,189,195,197
+skills/engineering/federated-workflow/MECHANICAL-VALIDATION.md
+  s_fe2662c9b506db::t_e3523ad42aba77 1-68
+skills/engineering/retro/DIAGNOSIS.md
+  s_fe2662c9b506db::t_e3523ad42aba77 1-77
+tests/test_distribution.py
+  s_fe2662c9b506db::t_e3523ad42aba77 91-111
+skills/engineering/retro/WORK-SCOPE.md
+  s_fe2662c9b506db::t_e3523ad42aba77 1-27
+README.md
+  s_fe2662c9b506db::t_e3523ad42aba77 48,104
+skills/engineering/retro/SKILL.md
+  s_fe2662c9b506db::t_e3523ad42aba77 3,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55-67
+skills/engineering/federated-workflow/DELIVERY-RECORDS.md
+  s_fe2662c9b506db::t_e3523ad42aba77 3,9,11
+skills/engineering/federated-workflow/scripts/validate_delivery.py
+  s_fe2662c9b506db::t_e3523ad42aba77 1-212
+skills/engineering/code-review/WIP-REVIEW.md
+  s_fe2662c9b506db::t_e3523ad42aba77 1-3
+skills/engineering/retro/RECONCILIATION.md
+  s_fe2662c9b506db::t_e3523ad42aba77 1-35
+docs/installation.md
+  s_fe2662c9b506db::t_e3523ad42aba77 37-38
+tests/test_delivery_validator.py
+  s_fe2662c9b506db::t_e3523ad42aba77 1-290
+skills/engineering/code-review/STANDARDS-REVIEWER.md
+  s_fe2662c9b506db::t_e3523ad42aba77 1-22
+skills/engineering/retro/CREDITS.md
+  s_fe2662c9b506db::t_e3523ad42aba77 5
+skills/engineering/code-review/SPEC-REVIEWER.md
+  s_fe2662c9b506db::t_e3523ad42aba77 1-7
+tests/smoke_skills_cli.py
+  s_fe2662c9b506db::t_e3523ad42aba77 19
+CONTRIBUTING.md
+  s_fe2662c9b506db::t_e3523ad42aba77 24,34-35,63-68,73
+  s_fe2662c9b506db::t_c4c44a710809e2 74
+skills/engineering/deliver-ticket/SKILL.md
+  s_fe2662c9b506db::t_e3523ad42aba77 72,92-93
+docs/skills.md
+  s_fe2662c9b506db::t_e3523ad42aba77 40,63
+  s_fe2662c9b506db::t_43058758ba4d8d 64
+skills/engineering/code-review/REVIEWER-CONTRACT.md
+  s_fe2662c9b506db::t_e3523ad42aba77 1-15
+skills/engineering/implement/SKILL.md
+  s_fe2662c9b506db::t_e3523ad42aba77 8,37
+skills/engineering/implement/COORDINATOR-NARROWED.md
+  s_fe2662c9b506db::t_e3523ad42aba77 5
+.github/workflows/validate.yml
+  s_fe2662c9b506db::t_e3523ad42aba77 11-21
+skills/engineering/federated-workflow/CONTEXT-READING.md
+  s_fe2662c9b506db::t_e3523ad42aba77 1-15
+skills/engineering/ask-smitt/SKILL.md
+  s_fe2662c9b506db::t_e3523ad42aba77 79
+skills/engineering/README.md
+  s_fe2662c9b506db::t_e3523ad42aba77 38,47
+skills/engineering/federated-workflow/IMPLEMENTATION-CONTRACT.md
+  s_fe2662c9b506db::t_e3523ad42aba77 1-63
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/AUTHORITY-EVIDENCE.md
+  s_fe2662c9b506db::t_0a66d8a213cc27 1-5
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_fe2662c9b506db::t_4d3f8480990d06 3,15,21
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/CONTEXT-READING.md
+  s_fe2662c9b506db::t_f7f79a16b99a01 1-15
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_fe2662c9b506db::t_28957defef62ee 3,9,11
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/IMPLEMENTATION-CONTRACT.md
+  s_fe2662c9b506db::t_45759f7a756d3b 1,3,27
+skills/engineering/code-review/references/bundled/codebase-design/DEEPENING.md
+  s_fe2662c9b506db::t_7cda1198e69d09 1-33
+skills/engineering/code-review/references/bundled/codebase-design/DESIGN-IT-TWICE.md
+  s_fe2662c9b506db::t_3585f3fad9dff9 1-40
+skills/engineering/code-review/references/bundled/codebase-design/SKILL.reference.md
+  s_fe2662c9b506db::t_3b8c977c62a339 1-150
+skills/engineering/code-review/references/bundled/codebase-design/TEST-SURFACE.md
+  s_fe2662c9b506db::t_ac1273ac3efe7c 1-9
+skills/engineering/code-review/references/bundled/domain-modeling/ADR-FORMAT.md
+  s_fe2662c9b506db::t_791323fd799e07 1-27
+skills/engineering/code-review/references/bundled/domain-modeling/CONTEXT-FORMAT.md
+  s_fe2662c9b506db::t_b001e0115f5b91 1-31
+skills/engineering/code-review/references/bundled/domain-modeling/CONTEXT-MAP-FORMAT.md
+  s_fe2662c9b506db::t_ad381c8b76785b 1-29
+skills/engineering/code-review/references/bundled/domain-modeling/DOMAIN-MODEL-DELTA.md
+  s_fe2662c9b506db::t_f588814f925573 1-7
+skills/engineering/code-review/references/bundled/domain-modeling/SKILL.reference.md
+  s_fe2662c9b506db::t_0dd143c3ce5866 1-59
+skills/engineering/code-review/references/bundled/federated-workflow/AUTHORITY-EVIDENCE.md
+  s_fe2662c9b506db::t_02ffb292cd49c4 1-5
+skills/engineering/code-review/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_fe2662c9b506db::t_20fc130ca98519 3,15,21
+skills/engineering/code-review/references/bundled/federated-workflow/CONTEXT-READING.md
+  s_fe2662c9b506db::t_0ea90a5ece95a8 1-15
+skills/engineering/code-review/references/bundled/federated-workflow/IMPLEMENTATION-CONTRACT.md
+  s_fe2662c9b506db::t_6dfcea222602bf 1,3,27
+skills/engineering/code-review/references/bundled/federated-workflow/MECHANICAL-VALIDATION.md
+  s_fe2662c9b506db::t_b34c1f43f71cc9 1-68
+skills/engineering/code-review/references/bundled/federated-workflow/scripts/validate_delivery.py
+  s_fe2662c9b506db::t_f0ba4e6effa424 1-212
+skills/engineering/deliver-spec/references/bundled/federated-workflow/AUTHORITY-EVIDENCE.md
+  s_fe2662c9b506db::t_504f572e912a83 1-5
+skills/engineering/deliver-spec/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_fe2662c9b506db::t_d6152393649871 3,15,21
+skills/engineering/deliver-spec/references/bundled/federated-workflow/CONTEXT-READING.md
+  s_fe2662c9b506db::t_bad6c65e6d73fd 1-15
+skills/engineering/deliver-spec/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_fe2662c9b506db::t_8c7ddbcc2c7ae0 3,9,11
+skills/engineering/deliver-spec/references/bundled/federated-workflow/IMPLEMENTATION-CONTRACT.md
+  s_fe2662c9b506db::t_44d31a1913a108 1,3,27
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/AUTHORITY-EVIDENCE.md
+  s_fe2662c9b506db::t_b7accb219df852 1-5
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_fe2662c9b506db::t_42e9bb679d5470 3,15,21
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/CONTEXT-READING.md
+  s_fe2662c9b506db::t_f5f56f86122586 1-15
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_fe2662c9b506db::t_0ba406be01ee4a 3,9,11
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/IMPLEMENTATION-CONTRACT.md
+  s_fe2662c9b506db::t_2e8bb8c115116c 1,3,27
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/MECHANICAL-VALIDATION.md
+  s_fe2662c9b506db::t_7e86884ba57f80 1-68
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/scripts/validate_delivery.py
+  s_fe2662c9b506db::t_d1d1ff32bec230 1-212
+skills/engineering/implement/references/bundled/federated-workflow/AUTHORITY-EVIDENCE.md
+  s_fe2662c9b506db::t_9fd0588194028e 1-5
+skills/engineering/implement/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_fe2662c9b506db::t_36acec8bc7e0a6 3,15,21
+skills/engineering/implement/references/bundled/federated-workflow/CONTEXT-READING.md
+  s_fe2662c9b506db::t_22dc077adf318a 1-15
+skills/engineering/implement/references/bundled/federated-workflow/IMPLEMENTATION-CONTRACT.md
+  s_fe2662c9b506db::t_cb70bfbedf9c84 1-63
+skills/engineering/review-feedback/references/bundled/federated-workflow/AUTHORITY-EVIDENCE.md
+  s_fe2662c9b506db::t_448e89b7372a3f 1-5
+skills/engineering/review-feedback/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_fe2662c9b506db::t_90ef45892e6ab9 3,15,21
+skills/engineering/review-feedback/references/bundled/federated-workflow/CONTEXT-READING.md
+  s_fe2662c9b506db::t_39f6a24f736103 1-15
+skills/engineering/review-feedback/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_fe2662c9b506db::t_ebc2299bd45937 3,9,11
+skills/engineering/review-feedback/references/bundled/federated-workflow/IMPLEMENTATION-CONTRACT.md
+  s_fe2662c9b506db::t_9037a196b5f0f4 1-63
+skills/engineering/setup-federated-workflow/references/bundled/federated-workflow/AUTHORITY-EVIDENCE.md
+  s_fe2662c9b506db::t_54b19e78ab3b0d 1-5
+skills/engineering/setup-federated-workflow/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_fe2662c9b506db::t_17b49ba5083dff 3,15,21
+skills/engineering/setup-federated-workflow/references/bundled/federated-workflow/CONTEXT-READING.md
+  s_fe2662c9b506db::t_338a42630fdf79 1-15
+skills/engineering/to-spec/references/bundled/federated-workflow/AUTHORITY-EVIDENCE.md
+  s_fe2662c9b506db::t_a27a1ebc7e0568 1-5
+skills/engineering/to-spec/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_fe2662c9b506db::t_da3911a21bd1e7 3,15,21
+skills/engineering/to-spec/references/bundled/federated-workflow/CONTEXT-READING.md
+  s_fe2662c9b506db::t_5d3c4d4e4b437e 1-15
+skills/engineering/to-spec/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_fe2662c9b506db::t_37261a0d6c7583 3,9,11
+skills/engineering/to-spec/references/bundled/federated-workflow/IMPLEMENTATION-CONTRACT.md
+  s_fe2662c9b506db::t_00304dd7f60cf7 1-63
+skills/engineering/to-tickets/references/bundled/federated-workflow/AUTHORITY-EVIDENCE.md
+  s_fe2662c9b506db::t_38f0ecb4fd9142 1-5
+skills/engineering/to-tickets/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_fe2662c9b506db::t_fb0317464e70a9 3,15,21
+skills/engineering/to-tickets/references/bundled/federated-workflow/CONTEXT-READING.md
+  s_fe2662c9b506db::t_d7560637b22528 1-15
+skills/engineering/to-tickets/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_fe2662c9b506db::t_55e9c7b15991ea 3,9,11
+skills/engineering/to-tickets/references/bundled/federated-workflow/IMPLEMENTATION-CONTRACT.md
+  s_fe2662c9b506db::t_5e5acd6d1c77de 1-63
+skills/engineering/triage/references/bundled/federated-workflow/AUTHORITY-EVIDENCE.md
+  s_fe2662c9b506db::t_659adb786b6418 1-5
+skills/engineering/triage/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_fe2662c9b506db::t_c3fed7bf184366 3,15,21
+skills/engineering/triage/references/bundled/federated-workflow/CONTEXT-READING.md
+  s_fe2662c9b506db::t_5c2ab18fb8225e 1-15
+skills/engineering/triage/references/bundled/federated-workflow/DELIVERY-RECORDS.md
+  s_fe2662c9b506db::t_a76eafb0f4b662 3,9,11
+skills/engineering/triage/references/bundled/federated-workflow/IMPLEMENTATION-CONTRACT.md
+  s_fe2662c9b506db::t_a57498853cc7ae 1-63
+skills/engineering/wayfinder/references/bundled/federated-workflow/AUTHORITY-EVIDENCE.md
+  s_fe2662c9b506db::t_422eed9aa1828b 1-5
+skills/engineering/wayfinder/references/bundled/federated-workflow/CONTEXT-PACK.md
+  s_fe2662c9b506db::t_1e21753f11d905 3,15,21
+skills/engineering/wayfinder/references/bundled/federated-workflow/CONTEXT-READING.md
+  s_fe2662c9b506db::t_2423344bb7227a 1-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d84039aa2c34b9848ca189b3b0221187637504f1",
+  "prompts": {},
+  "sessions": {
+    "s_fe2662c9b506db": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1ee42-2b51-79e3-9642-97a07f78933f",
+        "model": "gpt-6.2-astra"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    }
+  }
+}
