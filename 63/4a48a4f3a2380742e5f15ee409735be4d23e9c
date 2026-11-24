@@ -1,0 +1,38 @@
+skills/engineering/ask-smitt/SKILL.md
+  s_450c86de467fef::t_8dd4da37a378f1 15,44
+skills/engineering/closeout/SKILL.md
+  s_450c86de467fef::t_8dd4da37a378f1 3-4,9
+skills/engineering/deliver-spec/SKILL.md
+  s_450c86de467fef::t_8dd4da37a378f1 9
+  s_450c86de467fef::t_4036bf5d2bd23c 51
+docs/skills.md
+  s_450c86de467fef::t_8dd4da37a378f1 11,44
+skills/engineering/closeout/agents/openai.yaml
+  s_450c86de467fef::t_8dd4da37a378f1 1-2
+skills/engineering/setup-federated-workflow/agents/openai.yaml
+  s_450c86de467fef::t_8dd4da37a378f1 4-5
+docs/workflow.md
+  s_450c86de467fef::t_8dd4da37a378f1 9,106,179
+skills/engineering/setup-federated-workflow/SKILL.md
+  s_450c86de467fef::t_8dd4da37a378f1 4
+skills/engineering/deliver-spec/RECOVERY.md
+  s_450c86de467fef::t_4036bf5d2bd23c 33-34
+skills/engineering/deliver-spec/references/bundled/closeout/SKILL.reference.md
+  s_450c86de467fef::t_5994ec7655bb73 1-63
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "634a48a4f3a2380742e5f15ee409735be4d23e9c",
+  "prompts": {},
+  "sessions": {
+    "s_450c86de467fef": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a20dec-f508-7d01-945b-e355284d6609",
+        "model": "gpt-6.2-sol"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    }
+  }
+}
