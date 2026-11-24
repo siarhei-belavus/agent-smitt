@@ -8,7 +8,7 @@ Skills marked Explicit declare `disable-model-invocation: true`. Invoke them by 
 
 | Skill | Invocation | Use it to |
 | --- | --- | --- |
-| [setup-federated-workflow](../skills/engineering/setup-federated-workflow/SKILL.md) | Agent or explicit | Configure one repository, establish a federation, or join an existing one. |
+| [setup-federated-workflow](../skills/engineering/setup-federated-workflow/SKILL.md) | Explicit | Configure one repository, establish a federation, or join an existing one. |
 | [ask-smitt](../skills/engineering/ask-smitt/SKILL.md) | Explicit | Choose the skill or flow for the current situation. |
 | [grill-with-docs](../skills/engineering/grill-with-docs/SKILL.md) | Explicit | Sharpen an idea with domain modeling against an existing codebase. |
 | [wayfinder](../skills/engineering/wayfinder/SKILL.md) | Explicit | Map a large uncertain effort into decision tickets. |
@@ -41,7 +41,7 @@ Skills marked Explicit declare `disable-model-invocation: true`. Invoke them by 
 | [review-feedback](../skills/engineering/review-feedback/SKILL.md) | Agent or explicit | Draft or publish human feedback and explicitly return a ticket for correction. |
 | [change-walkthrough](../skills/engineering/change-walkthrough/SKILL.md) | Explicit | Explore changes one scenario and logical step at a time. |
 | [pr](../skills/engineering/pr/SKILL.md) | Agent or explicit | Write a PR or MR description using repository templates and evidence. |
-| [closeout](../skills/engineering/closeout/SKILL.md) | Agent or explicit | Close an accepted delivery under explicit user or delegated authority and clean up disposable resources. |
+| [closeout](../skills/engineering/closeout/SKILL.md) | Explicit | Close an accepted delivery and clean up disposable resources. |
 | [wizard](../skills/engineering/wizard/SKILL.md) | Agent or explicit | Guide a human through provisioning, credentials, or other manual steps. |
 
 ## Thinking and communication

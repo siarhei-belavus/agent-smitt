@@ -6,7 +6,7 @@ The skill files define the workflow rules. This guide explains how to use them t
 
 ## Configure the repositories
 
-Install the pack and make sure your agent can access the code host, tracker, and project tools. Then invoke `setup-federated-workflow` in the repository you want to configure:
+Install the pack and make sure your agent can access the code host, tracker, and project tools. Then explicitly select `setup-federated-workflow` in the repository you want to configure and give it your setup directions.
 
 ```text
 Use setup-federated-workflow to configure this repository.
@@ -103,7 +103,7 @@ The coordinator reads the complete related-ticket set, published writable scopes
 
 The runtime must support ticket coordinators that can delegate their own implementation and review. Follow the user's context preference, such as separate chats in the same project, and reuse existing execution references on resume. A missing runtime capability is an explicit blocker, not a reason to silently flatten the workflow.
 
-After each ticket meets its own completion criteria, the coordinator invokes `closeout` for that ticket. Confirmed closure releases its dependents before final specification merge. Required acceptance or deployment evidence still applies. Shared specification branches and worktrees survive ticket cleanup.
+After each ticket meets its own completion criteria, the coordinator follows the bundled closeout procedure for that ticket. Confirmed closure releases its dependents before final specification merge. Required acceptance or deployment evidence still applies. Shared specification branches and worktrees survive ticket cleanup.
 
 When the agreed tickets are complete, `deliver-spec` validates and independently reviews the assembled result, then publishes one final proposal per changed repository to its recorded final target. You review and merge those proposals. The Specification stays open for explicit closeout.
 
@@ -176,7 +176,7 @@ Missing authority, a material design contradiction, or a persistent environment 
 
 ## Accept and close out
 
-After review, merge any proposals still awaiting human merge and verify any required deployment. Automatic merge does not supply acceptance or deployment evidence. Once the result meets its completion criteria and you have accepted it:
+After review, merge any proposals still awaiting human merge and verify any required deployment. Automatic merge does not supply acceptance or deployment evidence. Once the result meets its completion criteria and you have accepted it, explicitly select `closeout` and identify the delivery.
 
 ```text
 Use closeout for this delivery.

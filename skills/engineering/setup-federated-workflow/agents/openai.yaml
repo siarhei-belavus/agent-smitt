@@ -1,3 +1,5 @@
 interface:
   display_name: "Setup Federated Workflow"
   short_description: "Prepare independent provider and federation bindings"
+policy:
+  allow_implicit_invocation: false

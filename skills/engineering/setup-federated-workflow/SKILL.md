@@ -1,6 +1,7 @@
 ---
 name: setup-federated-workflow
 description: Configure independent Code Host bindings and human-confirmed Work Tracker, Routing Label, Domain Orientation, and Domain Federation bindings, including Establish and Join operations.
+disable-model-invocation: true
 ---
 
 # Setup Federated Workflow

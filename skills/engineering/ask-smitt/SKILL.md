@@ -12,7 +12,7 @@ A **flow** is a path through the skills. Most paths run along one **main flow**,
 
 ## Repository setup
 
-Use `setup-federated-workflow` to configure a repository's Code Host, Work Tracker, Routing Labels, and Domain Orientation before using configured planning and delivery. For several repositories, it can establish a Domain Federation or join an existing one. Confirm domain ownership, Home, and Ticket Origins through setup. Review and accept the configuration into every participating repository's configured Base Branch before treating it as authoritative.
+For configured planning and delivery, direct the user to invoke `setup-federated-workflow` explicitly to set up the repository's Code Host, Work Tracker, Routing Labels, and Domain Orientation. For several repositories, it can establish a Domain Federation or join an existing one. Confirm domain ownership, Home, and Ticket Origins through setup. Review and accept the configuration into every participating repository's configured Base Branch before treating it as authoritative.
 
 ## The main flow: idea → ship
 
@@ -41,7 +41,7 @@ Implementation starts from complete ticket authority, whether the ticket changes
 
 Use `change-walkthrough` to explore a result and `review-feedback` to draft or publish authorized feedback. Returning the ticket for correction is an explicit `review-feedback` operation. Use `code-review` for a separate review of fixed repository targets and `pr` to write a PR or MR description.
 
-After acceptance and any required deployment verification, invoke `closeout` to record completion, transition the ticket, and remove verified disposable worktrees and branches. For an interrupted coordinated delivery, invoke `deliver-ticket` with the same ticket reference so it can reconcile existing state before resuming.
+After acceptance and any required deployment verification, direct the user to invoke `closeout` explicitly to record completion, transition the ticket, and remove verified disposable worktrees and branches. For an interrupted coordinated delivery, invoke `deliver-ticket` with the same ticket reference so it can reconcile existing state before resuming.
 
 ## On-ramps
 

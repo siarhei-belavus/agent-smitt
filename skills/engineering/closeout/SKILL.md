@@ -1,11 +1,12 @@
 ---
 name: closeout
-description: Close an accepted delivery and remove its disposable resources when the user requests closeout or an authorized workflow delegates it.
+description: Close an accepted delivery and clean up its disposable resources.
+disable-model-invocation: true
 ---
 
 # Closeout
 
-Finish the current delivery after acceptance. An explicit user request or a delegated closeout assignment carrying the user's authorization permits the scoped completion comment, tracker transition, and removal of disposable worktrees and local and remote branches. Honor the assignment's scope and retained resources. Automatic skill selection alone grants no closure or deletion authority.
+Finish the current delivery after acceptance. An explicit user request or a delegated closeout assignment carrying the user's authorization permits the scoped completion comment, tracker transition, and removal of disposable worktrees and local and remote branches. Honor the assignment's scope and retained resources.
 
 Use the conversation and existing delivery records to resolve the task. Reuse the user's acceptance and earlier permissions. Ask only for missing information that prevents a specific action. Continue independent work while that action remains blocked.
 

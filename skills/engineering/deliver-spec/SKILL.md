@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 Coordinate one published Specification and its prepared delivery tickets. Accept its permanent reference in its Ticket Origin Repository. This invocation authorizes specification branches and proposals, ticket execution with automatic merge into those branches, and ticket closeout when each ticket's own completion criteria pass. Final specification merge and closeout remain human-controlled.
 
-Use `deliver-ticket` for each ticket, `closeout` for completed tickets, Standalone `implement` for specification corrections, and `code-review` for independent review. These skills must be available as invokable skills. Their bundled instructions are reference material, not installed entry points.
+Use `deliver-ticket` for each ticket, Standalone `implement` for specification corrections, and `code-review` for independent review. These three skills must be available as invokable skills.
 
 Use repository-owned bindings for provider operations. Preserve host protections, unrelated work, and intermediate human decisions. Keep specification progress on the Specification and detailed ticket execution in its existing checkpoints.
 
@@ -48,7 +48,7 @@ Give each coordinator an explicit ticket reference, Ticket Origin Repository, an
 
 Observe or continue existing executions through their recorded references. For a ticket human-action checkpoint, retain the ticket's request as the response location and link it from the Specification. Surface the required action and pause affected and dependent work. Continue independent work only when its authority and prerequisites remain valid. A response resumes through `deliver-ticket`'s gate. A specification-level question belongs on the Specification with the affected work, required decision, owner, response location, and completion condition.
 
-After a successful ticket handoff with confirmed merges or valid no-change results, check that ticket's actual completion criteria. Invoke `closeout` with exact revision evidence only when they pass. Explicitly scope cleanup to that ticket's disposable resources and identify specification branches and worktrees as retained shared resources. Merge alone supplies neither missing acceptance nor required deployment evidence. Preserve the human boundary until those conditions are met.
+After a successful ticket handoff with confirmed merges or valid no-change results, check that ticket's actual completion criteria. Apply the [closeout procedure](references/bundled/closeout/SKILL.reference.md) with exact revision evidence only when they pass. Explicitly scope cleanup to that ticket's disposable resources and identify specification branches and worktrees as retained shared resources. Merge alone supplies neither missing acceptance nor required deployment evidence. Preserve the human boundary until those conditions are met.
 
 After confirmed tracker closure, reconsider dependents without waiting for final specification merge. Distinguish closure from cleanup; incomplete cleanup need not undo proven closure. Recover missing effects through their existing owner and update the specification checkpoint.
 
