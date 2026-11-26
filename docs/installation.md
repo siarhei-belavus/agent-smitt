@@ -8,10 +8,11 @@ The [Skills CLI](https://github.com/vercel-labs/skills) installs the `SKILL.md` 
 npx skills add siarhei-belavus/agent-smitt
 ```
 
-The interactive installer selects skills and agents. Project installation is the default. For all skills in a specific agent:
+The interactive installer selects skills and agents. Project installation is the default. For all skills in a specific agent, such as Codex or Claude Code:
 
 ```sh
 npx skills add siarhei-belavus/agent-smitt --skill '*' --agent codex
+npx skills add siarhei-belavus/agent-smitt --skill '*' --agent claude-code
 ```
 
 For a global installation:
@@ -46,20 +47,20 @@ cd agent-smitt
 npx skills add . --skill '*' --agent codex
 ```
 
-The repository also keeps a dependency-free Python installer for Codex contributors who want live links to the checkout:
+The repository also keeps a dependency-free Python installer for contributors who want live links to the checkout:
 
 ```sh
 ./bin/install-codex-skills
 ```
 
-It links skills into `~/.agents/skills`, along with the shared workflow contract directory. Edits in the checkout are immediately visible through these links. It is idempotent and refuses to replace an unrelated existing path. Use `--target /path/to/skills` for an isolated installation. Inspect existing entries before switching installation methods over the same destination.
+It links skills into `~/.agents/skills`, the Codex default, along with the shared workflow contract directory. For Claude Code, pass `--target "$HOME/.claude/skills"`. Edits in the checkout are immediately visible through these links. It is idempotent and refuses to replace an unrelated existing path. Use `--target /path/to/skills` for an isolated installation. Inspect existing entries before switching installation methods over the same destination.
 
 ## Prepare your agent
 
 Installing instructions does not configure a project or grant provider access. Planning and delivery need:
 
 - An agent that can read repository files and run Git and repository validation commands.
-- Subagent support for skills that delegate research, implementation, or review. `deliver-spec` also needs separate ticket-coordinator contexts capable of their own delegation, with a mechanism to observe, continue, and recover them. The runtime and user preferences determine whether these are nested agents or separate chats.
+- Subagent support for skills that delegate research, implementation, or review. `deliver-spec` also needs separate ticket-coordinator contexts capable of their own delegation, with a mechanism to observe, continue, and recover them. When the runtime's subagents cannot start subagents, as in Claude Code, ticket coordinators run as separate top-level sessions. The [execution host contract](../skills/engineering/federated-workflow/EXECUTION-HOST.md) defines the required capabilities.
 - Authenticated access to the selected Code Host and Work Tracker. The setup skill records how to use those providers in the repository's bindings.
 - The project's normal build, test, and development tools.
 

@@ -32,7 +32,7 @@ Reuse attributable branches and suitable isolated specification worktrees. Creat
 
 Reconcile adopted results and active deliveries through [recovery](RECOVERY.md#reconcile-observed-state). A completed ticket must be represented in the assembled result. An active delivery on another target needs explicit reconciliation before reuse; never silently retarget it.
 
-Select a context mechanism that can start, observe, continue, and recover ticket coordinators which themselves delegate implementation and review. Follow user preferences and actual runtime capabilities. When the user selects separate chats in the same project, use those chats for ticket coordinators and their subagents for repository work. Verify that capability before dispatch. If unavailable, report the limitation and obtain an authorized alternative rather than flattening context isolation.
+Read the [execution host contract](references/bundled/federated-workflow/EXECUTION-HOST.md) before choosing a context mechanism. Ticket coordinators delegate implementation, validation, review, and Context Assembly, so each needs one further level of delegation. Choose a mechanism that can start, observe, continue, and recover them, following user preferences and verified host capabilities. When the host's delegated contexts cannot delegate, start each ticket coordinator as a separate top-level session under that contract's delegated-context rule.
 
 Budget capacity across the delegation tree. Independent tickets may run in parallel, including two tickets writing the same repository through separate ticket worktrees. Shared repository identity is not a scheduling dependency. Retain execution references for reuse; runtime preferences belong to the user and execution host, not repository setup.
 

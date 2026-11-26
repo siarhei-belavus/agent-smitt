@@ -35,6 +35,20 @@ class DistributionTest(unittest.TestCase):
                 assert_local_links(isolated)
                 self.assertEqual((isolated / "LICENSE").read_bytes(), (ROOT / "LICENSE").read_bytes())
 
+    def test_invocation_policy_matches_across_agents(self) -> None:
+        for skill_file in (ROOT / "skills").glob("*/*/SKILL.md"):
+            with self.subTest(skill=skill_file.parent.name):
+                front_matter = skill_file.read_text(encoding="utf-8").split("---", 2)[1]
+                manual = re.search(r"^disable-model-invocation:\s*true\s*$", front_matter, re.M) is not None
+                metadata = skill_file.parent / "agents" / "openai.yaml"
+                policy = re.search(
+                    r"^\s*allow_implicit_invocation:\s*(true|false)\s*$",
+                    metadata.read_text(encoding="utf-8") if metadata.exists() else "",
+                    re.M,
+                )
+                implicit = policy is None or policy.group(1) == "true"
+                self.assertEqual(manual, not implicit, f"{skill_file} and {metadata} disagree")
+
     def test_generated_references_are_current(self) -> None:
         result = subprocess.run(
             ["python3", str(ROOT / "bin" / "sync-skill-references"), "--check"],
