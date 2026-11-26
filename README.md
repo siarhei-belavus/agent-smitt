@@ -15,10 +15,11 @@ With Node.js and npm available, run this in your project:
 npx skills add siarhei-belavus/agent-smitt
 ```
 
-Choose the skills and agents in the installer. To install the complete workflow for Codex:
+Choose the skills and agents in the installer. To install the complete workflow for Codex or Claude Code:
 
 ```sh
 npx skills add siarhei-belavus/agent-smitt --skill '*' --agent codex
+npx skills add siarhei-belavus/agent-smitt --skill '*' --agent claude-code
 ```
 
 Add `--global` to install across projects. To browse the catalog first:

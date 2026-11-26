@@ -2,19 +2,19 @@
 
 Read [provider concepts](PROVIDER-CONCEPTS.md) and [domain orientation](DOMAIN-ORIENTATION.md) before applying this contract.
 
-Work Tracker Context Assembly is the provider-neutral acquisition contract for planning and delivery artifacts. Each invocation starts one dedicated Context Assembly subagent and creates one ephemeral, immutable Context Pack. Consumers follow [Context Pack consumption](CONTEXT-PACK.md); acquisition and consumer reading are separate operations.
+Work Tracker Context Assembly is the provider-neutral acquisition contract for planning and delivery artifacts. Each invocation starts one dedicated Context Assembly Agent and creates one ephemeral, immutable Context Pack. Consumers follow [Context Pack consumption](CONTEXT-PACK.md); acquisition and consumer reading are separate operations.
 
-The requesting workflow supplies the Ticket Origin Repository, one selected public profile, and one permanent root reference. The subagent follows only that repository's Work Tracker binding. It returns exactly one result, `Complete`, `Incomplete`, or `Ambiguous`, and the pack's runtime-local Markdown entry path. Only `Complete` lets the requesting workflow continue.
+The requesting workflow supplies the Ticket Origin Repository, one selected public profile, and one permanent root reference. The agent follows only that repository's Work Tracker binding. It returns exactly one result, `Complete`, `Incomplete`, or `Ambiguous`, and the pack's runtime-local Markdown entry path. Only `Complete` lets the requesting workflow continue.
 
 Provider bindings own representation and operations. This contract owns artifact meaning, Authority Sources, profile contents, Resolution succession, reconciliation semantics, final result classification, the Context Pack shape, and the handoff to Domain Orientation. Real Work Trackers and Local Markdown preserve the same meaning.
 
 ## Invocation and ownership
 
-The requesting workflow owns profile selection and the three-part invocation input. Start one dedicated Context Assembly subagent with a fresh context, without inheriting the parent conversation. Give it the complete invocation input, this contract, and a readable reference to the Ticket Origin Repository's Work Tracker binding. The subagent owns the whole assembly and final classification. The requesting workflow and downstream agents consume its returned file instead of repeating provider reads or rebuilding any part of the pack.
+The requesting workflow owns profile selection and the three-part invocation input. Start one dedicated Context Assembly Agent in a fresh delegated context of the [execution host](EXECUTION-HOST.md#delegated-contexts), without inheriting the parent conversation. Give it the complete invocation input, this contract, and a readable reference to the Ticket Origin Repository's Work Tracker binding. The agent owns the whole assembly and final classification. The requesting workflow and downstream agents consume its returned file instead of repeating provider reads or rebuilding any part of the pack.
 
-The binding is the sole owner of provider-specific commands, operations, credentials, relationship traversal, pagination, and authorized fallback. Its directed procedure acquires complete provider data, translates it deterministically into the provider-neutral records required here, preserves exact bodies and permanent references, removes credentials and irrelevant transport metadata, and reports technical or structural diagnostics. It does not judge whether arbitrary prose agrees semantically. If the binding's procedure cannot produce the requested profile, it reports the gap and returns control to the subagent without inventing an access path.
+The binding is the sole owner of provider-specific commands, operations, credentials, relationship traversal, pagination, and authorized fallback. Its directed procedure acquires complete provider data, translates it deterministically into the provider-neutral records required here, preserves exact bodies and permanent references, removes credentials and irrelevant transport metadata, and reports technical or structural diagnostics. It does not judge whether arbitrary prose agrees semantically. If the binding's procedure cannot produce the requested profile, it reports the gap and returns control to the agent without inventing an access path.
 
-The Context Assembly subagent applies this provider-independent contract to the translated records. It owns semantic interpretation and the final result, including whether a claimed `Supplements` Resolution conflicts with effective authority.
+The Context Assembly Agent applies this provider-independent contract to the translated records. It owns semantic interpretation and the final result, including whether a claimed `Supplements` Resolution conflicts with effective authority.
 
 Each invocation writes one new runtime-local pack. Never overwrite a pack already supplied to a consumer. Re-read provider state only where the requesting workflow's freshness contract requires a new assembly. Context Assembly does not poll continuously.
 
@@ -26,17 +26,17 @@ The entry file contains, in order:
 - a concise assessment linked to the permanent evidence and diagnostics that determine the result; and
 - an index of permanent sources, their roles and relationships, and where to read their complete bodies and comments.
 
-Keep each artifact's full payload together in a linked Markdown file, or inline when the pack contains only one small artifact. Preserve every acquired authoritative body, comment, relationship, permanent reference, effective Resolution, and required profile field without summarization. Acquisition time and source content revisions or fingerprints, when supplied by the provider procedure, accompany the index or source records. Index links resolve within the private directory; an index is not a substitute for the payload. A provider acquisition index is input, not the subagent's final semantic result.
+Keep each artifact's full payload together in a linked Markdown file, or inline when the pack contains only one small artifact. Preserve every acquired authoritative body, comment, relationship, permanent reference, effective Resolution, and required profile field without summarization. Acquisition time and source content revisions or fingerprints, when supplied by the provider procedure, accompany the index or source records. Index links resolve within the private directory; an index is not a substitute for the payload. A provider acquisition index is input, not the agent's final semantic result.
 
 For `Incomplete` or `Ambiguous`, preserve all acquired input losslessly and name every known missing, unreadable, competing, or conflicting permanent reference in the assessment. Keep assessment, index, and source files in this one pack; create no separate cache or registry.
 
 ## Private runtime lifecycle
 
-The requesting workflow owns the Context Pack lifecycle. Before dispatch, it creates one fresh private directory through the execution host's standard temporary-file facility and passes that directory to the Context Assembly subagent.
+The requesting workflow owns the Context Pack lifecycle. Before dispatch, it creates one fresh private directory through the execution host's standard temporary-file facility and passes that directory to the Context Assembly Agent.
 
-The subagent writes the Context Pack in that directory and returns its entry path. Follow the consumption contract for retention, sharing, and cleanup.
+The agent writes the Context Pack in that directory and returns its entry path. Follow the consumption contract for retention, sharing, and cleanup.
 
-The directory and Context Pack remain runtime-local and accessible only to the workflow and its subagents. They never enter durable workflow state.
+The directory and Context Pack remain runtime-local and accessible only to the workflow and its delegated contexts. They never enter durable workflow state.
 
 ## Artifact roles and provenance
 
@@ -88,7 +88,7 @@ Wayfinder is optional. Supported planning paths include `grill-me` to `to-spec` 
 
 ## Assembly rules
 
-The dedicated subagent directs the repository-owned Work Tracker binding's complete procedure. A preferred optional helper is an optimization beside a complete manual recipe. Its absence never changes the result or makes the manual recipe incomplete. An unavailable or insufficient binding procedure returns `Incomplete`; use no provider command or fallback that the binding does not authorize.
+The dedicated agent directs the repository-owned Work Tracker binding's complete procedure. A preferred optional helper is an optimization beside a complete manual recipe. Its absence never changes the result or makes the manual recipe incomplete. An unavailable or insufficient binding procedure returns `Incomplete`; use no provider command or fallback that the binding does not authorize.
 
 For the requested profile:
 
@@ -155,7 +155,7 @@ The result is `Incomplete` when any blocker edge, page, permanent reference, bod
 
 ## Results
 
-The Context Assembly subagent returns exactly one result with the entry path. Classify recognized Resolution succession before general missing-material checks, so the variants remain disjoint:
+The Context Assembly Agent returns exactly one result with the entry path. Classify recognized Resolution succession before general missing-material checks, so the variants remain disjoint:
 
 - `Complete` means the requested root is unique; every required Work Tracker or Local Markdown body, comment page, relationship, permanent reference, effective Resolution, and profile field is present; every canonical repository Authority Source has one valid Repository-qualified Context Pointer; and the assembled records are internally consistent.
 - `Incomplete` means required material is missing, unreadable, unresolved, only partly paginated, or too large to carry without loss. It also covers an absent compatible root. A recognized succession reference is excluded from this variant.

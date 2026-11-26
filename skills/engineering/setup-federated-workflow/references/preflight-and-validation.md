@@ -2,7 +2,7 @@
 
 ## Work Tracker binding check
 
-A Work Tracker binding passes when it satisfies every requirement in the loaded provider-binding and Context Assembly contracts against representative provider artifacts. Verify that its `## Context assembly` section owns complete provider-native acquisition and deterministic translation for every public profile, including commands, relationship traversal, pagination, credential handling, transport-metadata removal, diagnostics, and every authorized fallback. It must leave semantic comparison and final `Complete`, `Incomplete`, or `Ambiguous` classification to one dedicated Context Assembly subagent. Record each capability's contract-selected verification state.
+A Work Tracker binding passes when it satisfies every requirement in the loaded provider-binding and Context Assembly contracts against representative provider artifacts. Verify that its `## Context assembly` section owns complete provider-native acquisition and deterministic translation for every public profile, including commands, relationship traversal, pagination, credential handling, transport-metadata removal, diagnostics, and every authorized fallback. It must leave semantic comparison and final `Complete`, `Incomplete`, or `Ambiguous` classification to one dedicated Context Assembly Agent. Record each capability's contract-selected verification state.
 
 ## Complete read-only preflight
 
@@ -28,7 +28,7 @@ For every operation:
 
 - every provider binding satisfies the loaded provider contract and its locators and required metadata are readable non-destructively;
 - every Work Tracker binding passes the common check above with its human-confirmed mapping;
-- representative Context Assembly runs dispatch one dedicated subagent, use only the binding-directed provider procedure, return one entry path and final result, preserve all required payloads inline or in readable linked source files, and keep the pack private and immutable without a shared cache;
+- representative Context Assembly runs start one dedicated agent in a fresh context, use only the binding-directed provider procedure, return one entry path and final result, preserve all required payloads inline or in readable linked source files, and keep the pack private and immutable without a shared cache;
 - no credential, account binding, machine-local path, or registry entered repository configuration or durable workflow state, and no probe artifact, commit, branch, or Review Proposal was created;
 - a second preview produces an empty diff.
 
