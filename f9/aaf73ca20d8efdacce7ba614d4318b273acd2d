@@ -1,0 +1,109 @@
+README.md
+  s_fb64c1afc674ed::t_5ba96406437543 18,22
+docs/installation.md
+  s_fb64c1afc674ed::t_63b7a3c0e977b1 11,15,50,56,63
+docs/workflow.md
+  s_fb64c1afc674ed::t_23d3f0f9952909 104
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/EXECUTION-HOST.md
+  s_fb64c1afc674ed::t_2cb5c36dc14733 1-31
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md
+  s_fb64c1afc674ed::t_036e132a5e5774 29,49
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_fb64c1afc674ed::t_33f01d52aa415a 5,7,13,15,17,29,35,37,39,91,158
+skills/engineering/code-review/references/bundled/federated-workflow/EXECUTION-HOST.md
+  s_fb64c1afc674ed::t_08edf4182eabc9 1-31
+skills/engineering/code-review/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_fb64c1afc674ed::t_236ef658379044 5,7,13,15,17,29,35,37,39,91,158
+skills/engineering/deliver-spec/RECOVERY.md
+  s_fb64c1afc674ed::t_59cf8b930434bc 11,13,23,31
+skills/engineering/deliver-spec/SKILL.md
+  s_fb64c1afc674ed::t_35b84c33bbf0af 35
+skills/engineering/deliver-spec/references/bundled/federated-workflow/EXECUTION-HOST.md
+  s_fb64c1afc674ed::t_29322a31f34116 1-31
+skills/engineering/deliver-spec/references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md
+  s_fb64c1afc674ed::t_3defe49c7ae761 29,49
+skills/engineering/deliver-spec/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_fb64c1afc674ed::t_ebc2e17462b666 5,7,13,15,17,29,35,37,39,91,158
+skills/engineering/deliver-ticket/EXECUTION-PREPARATION.md
+  s_fb64c1afc674ed::t_7baffefb196260 25
+skills/engineering/deliver-ticket/HUMAN-BOUNDARY.md
+  s_fb64c1afc674ed::t_ddf58c2bf2def3 5
+skills/engineering/deliver-ticket/RUNTIME-TERMINATION.md
+  s_fb64c1afc674ed::t_80421f883286bd 5,7
+skills/engineering/deliver-ticket/SKILL.md
+  s_fb64c1afc674ed::t_5487eb2cd077ea 18,70,96
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/EXECUTION-HOST.md
+  s_fb64c1afc674ed::t_aa2703c0d7e536 1-31
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md
+  s_fb64c1afc674ed::t_13d478ad270a16 29,49
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/PROVIDER-BINDINGS.md
+  s_fb64c1afc674ed::t_ab7004901bcf5a 72
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_fb64c1afc674ed::t_4d6f0b36f1f871 5,7,13,15,17,29,35,37,39,91,158
+skills/engineering/federated-workflow/EXECUTION-HOST.md
+  s_fb64c1afc674ed::t_cb62649e6d2cde 1-31
+skills/engineering/federated-workflow/LIFECYCLE-ARTIFACTS.md
+  s_fb64c1afc674ed::t_9d9b81d4746323 29,49
+skills/engineering/federated-workflow/PROVIDER-BINDINGS.md
+  s_fb64c1afc674ed::t_001456dadbd30b 72
+skills/engineering/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_fb64c1afc674ed::t_3cb8a994e2c727 5,7,13,15,17,29,35,37,39,91,158
+skills/engineering/implement/references/bundled/federated-workflow/EXECUTION-HOST.md
+  s_fb64c1afc674ed::t_fbc734826c5a17 1-31
+skills/engineering/implement/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_fb64c1afc674ed::t_10781d2f1d24ba 5,7,13,15,17,29,35,37,39,91,158
+skills/engineering/resolving-merge-conflicts/agents/openai.yaml
+  s_fb64c1afc674ed::t_223507136447d5 4-5
+skills/engineering/review-feedback/references/bundled/federated-workflow/EXECUTION-HOST.md
+  s_fb64c1afc674ed::t_91748337f887aa 1-31
+skills/engineering/review-feedback/references/bundled/federated-workflow/LIFECYCLE-ARTIFACTS.md
+  s_fb64c1afc674ed::t_c5aaea0d4b4575 29,49
+skills/engineering/review-feedback/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_fb64c1afc674ed::t_b5b4857a1d49a8 5,7,13,15,17,29,35,37,39,91,158
+skills/engineering/setup-federated-workflow/SKILL.md
+  s_fb64c1afc674ed::t_d1f285267e26d1 67
+skills/engineering/setup-federated-workflow/references/bundled/federated-workflow/EXECUTION-HOST.md
+  s_fb64c1afc674ed::t_77327148ea515c 1-31
+skills/engineering/setup-federated-workflow/references/bundled/federated-workflow/PROVIDER-BINDINGS.md
+  s_fb64c1afc674ed::t_db6f41ad1fcb0a 72
+skills/engineering/setup-federated-workflow/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_fb64c1afc674ed::t_001cdabd854497 5,7,13,15,17,29,35,37,39,91,158
+skills/engineering/setup-federated-workflow/references/preflight-and-validation.md
+  s_fb64c1afc674ed::t_5d4f4cf3df04b8 5,31
+skills/engineering/to-spec/references/bundled/federated-workflow/EXECUTION-HOST.md
+  s_fb64c1afc674ed::t_a4a80c01a47eff 1-31
+skills/engineering/to-spec/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_fb64c1afc674ed::t_edd6153ebfb5ed 5,7,13,15,17,29,35,37,39,91,158
+skills/engineering/to-tickets/references/bundled/federated-workflow/EXECUTION-HOST.md
+  s_fb64c1afc674ed::t_b3bcfb74058b90 1-31
+skills/engineering/to-tickets/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_fb64c1afc674ed::t_da0e02f795a9ca 5,7,13,15,17,29,35,37,39,91,158
+skills/engineering/triage/references/bundled/federated-workflow/EXECUTION-HOST.md
+  s_fb64c1afc674ed::t_ec3c2250afc151 1-31
+skills/engineering/triage/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_fb64c1afc674ed::t_c67bde370a107e 5,7,13,15,17,29,35,37,39,91,158
+skills/engineering/wayfinder/references/bundled/federated-workflow/EXECUTION-HOST.md
+  s_fb64c1afc674ed::t_c830723566ee5a 1-31
+skills/engineering/wayfinder/references/bundled/federated-workflow/WORK-TRACKER-CONTEXT-ASSEMBLY.md
+  s_fb64c1afc674ed::t_3b7d43486ba95a 5,7,13,15,17,29,35,37,39,91,158
+skills/engineering/wizard/agents/openai.yaml
+  s_fb64c1afc674ed::t_79258786923a44 4-5
+tests/test_distribution.py
+  s_fb64c1afc674ed::t_93dd1006c002fe 38-51
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f9aaf73ca20d8efdacce7ba614d4318b273acd2d",
+  "prompts": {},
+  "sessions": {
+    "s_fb64c1afc674ed": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "97349627-109f-4cea-9936-fbba7d53c2a5",
+        "model": "unknown"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    }
+  }
+}
