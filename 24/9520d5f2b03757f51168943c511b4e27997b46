@@ -1,0 +1,51 @@
+docs/installation.md
+  s_fb64c1afc674ed::t_22fc2b868122b4 63
+docs/workflow.md
+  s_fb64c1afc674ed::t_14a3d293e69b2c 104
+skills/engineering/change-walkthrough/references/bundled/federated-workflow/EXECUTION-HOST.md
+  s_fb64c1afc674ed::t_104aa061747d1e 10,15-16,21-23,31
+skills/engineering/code-review/references/bundled/federated-workflow/EXECUTION-HOST.md
+  s_fb64c1afc674ed::t_a0a2aa32c77ca6 10,15-16,21-23,31
+skills/engineering/deliver-spec/RECOVERY.md
+  s_fb64c1afc674ed::t_5dfbe896c61809 31
+skills/engineering/deliver-spec/SKILL.md
+  s_fb64c1afc674ed::t_96478e6ad4c2e7 35
+skills/engineering/deliver-spec/references/bundled/federated-workflow/EXECUTION-HOST.md
+  s_fb64c1afc674ed::t_8ce5f67fb06090 10,15-16,21-23,31
+skills/engineering/deliver-ticket/SKILL.md
+  s_fb64c1afc674ed::t_cc14fe65d4f708 18-19,32
+skills/engineering/deliver-ticket/references/bundled/federated-workflow/EXECUTION-HOST.md
+  s_fb64c1afc674ed::t_17cfa771513fe1 10,15-16,21-23,31
+skills/engineering/federated-workflow/EXECUTION-HOST.md
+  s_fb64c1afc674ed::t_a5c1f0184938cf 10,15-16,21-23,31
+skills/engineering/implement/references/bundled/federated-workflow/EXECUTION-HOST.md
+  s_fb64c1afc674ed::t_3b87e198e2eba8 10,15-16,21-23,31
+skills/engineering/review-feedback/references/bundled/federated-workflow/EXECUTION-HOST.md
+  s_fb64c1afc674ed::t_4007f0406531b6 10,15-16,21-23,31
+skills/engineering/setup-federated-workflow/references/bundled/federated-workflow/EXECUTION-HOST.md
+  s_fb64c1afc674ed::t_bb00a589bc7159 10,15-16,21-23,31
+skills/engineering/to-spec/references/bundled/federated-workflow/EXECUTION-HOST.md
+  s_fb64c1afc674ed::t_4e804aceac6276 10,15-16,21-23,31
+skills/engineering/to-tickets/references/bundled/federated-workflow/EXECUTION-HOST.md
+  s_fb64c1afc674ed::t_e700723ac3447b 10,15-16,21-23,31
+skills/engineering/triage/references/bundled/federated-workflow/EXECUTION-HOST.md
+  s_fb64c1afc674ed::t_5c192e107b65b7 10,15-16,21-23,31
+skills/engineering/wayfinder/references/bundled/federated-workflow/EXECUTION-HOST.md
+  s_fb64c1afc674ed::t_f06f37e640f5b7 10,15-16,21-23,31
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "249520d5f2b03757f51168943c511b4e27997b46",
+  "prompts": {},
+  "sessions": {
+    "s_fb64c1afc674ed": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "97349627-109f-4cea-9936-fbba7d53c2a5",
+        "model": "unknown"
+      },
+      "human_author": "Siarhei Belavus <Siarhei_Belavus@epam.com>"
+    }
+  }
+}
