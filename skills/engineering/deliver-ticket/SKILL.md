@@ -15,6 +15,8 @@ Use repository-owned bindings for every provider operation. Persist no provider 
 
 ## 1. Establish activation authority
 
+This activation delegates Context Assembly, implementation, validation, and review. Before any provider read or mutation, confirm that this context has a tool that starts delegated contexts. Without one, return a [Capability Blocker](references/bundled/federated-workflow/EXECUTION-HOST.md#delegated-contexts) and stop.
+
 Resolve tickets only through the configured Ticket Origin Repository. Read its repository agent instructions (`AGENTS.md` or `CLAUDE.md`), Work Tracker, and Routing Label bindings before selecting a ticket. Load repository preparation, domain, and Code Host instructions when the next action needs them.
 
 Choose one activation ticket. With a supplied reference, resolve exactly that ticket and never substitute another. Without a reference, read the Work Tracker's ordinary Markdown `## Delivery frontier` instructions and query the configured tracker. Authoritatively re-read every candidate's ticket, Routing Labels, assignees, and dependencies before deciding eligibility. Keep open, unblocked, unassigned tickets carrying exactly `ready-for-agent`, then order them as the binding says. If no eligible ticket remains, finish successfully without creating a bundle or changing provider state.
@@ -27,7 +29,7 @@ When any prior checkpoint, request, response, Resumption Record, existing Review
 
 For a ticketless activation, any pre-claim change or failed post-claim verification recomputes the ordered frontier from current provider state. Repeat the selection and recovery checks, then attempt another claim. Stop after the first verified claim, so the activation claims at most one ticket. For a named ticket, the same race enters the applicable human boundary instead of selecting another ticket.
 
-**Complete when:** the ticketless frontier is empty; recovery has produced and verified its terminal or resumable durable result; or one open, unblocked, exactly `ready-for-agent` ticket is solely assigned to the Workflow Identity through a claim verified in this Coordinator Activation.
+**Complete when:** a Capability Blocker has been returned with nothing changed; the ticketless frontier is empty; recovery has produced and verified its terminal or resumable durable result; or one open, unblocked, exactly `ready-for-agent` ticket is solely assigned to the Workflow Identity through a claim verified in this Coordinator Activation.
 
 ## 2. Accept the prepared ticket
 

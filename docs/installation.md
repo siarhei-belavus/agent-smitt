@@ -60,7 +60,7 @@ It links skills into `~/.agents/skills`, the Codex default, along with the share
 Installing instructions does not configure a project or grant provider access. Planning and delivery need:
 
 - An agent that can read repository files and run Git and repository validation commands.
-- Subagent support for skills that delegate research, implementation, or review. `deliver-spec` also needs separate ticket-coordinator contexts capable of their own delegation, with a mechanism to observe, continue, and recover them. When the runtime's subagents cannot start subagents, as in Claude Code, ticket coordinators run as separate top-level sessions. The [execution host contract](../skills/engineering/federated-workflow/EXECUTION-HOST.md) defines the required capabilities.
+- Subagent support for skills that delegate research, implementation, or review. `deliver-spec` also needs separate ticket-coordinator contexts capable of their own delegation, with a mechanism to observe, continue, and recover them. Coordinators start as ordinary subagents; one that cannot delegate reports that before claiming its ticket and is relaunched as a separate top-level session. The [execution host contract](../skills/engineering/federated-workflow/EXECUTION-HOST.md) defines the required capabilities.
 - Authenticated access to the selected Code Host and Work Tracker. The setup skill records how to use those providers in the repository's bindings.
 - The project's normal build, test, and development tools.
 
